@@ -1,0 +1,33 @@
+base_locale: en
+fallback_strategy: base_locale
+input_directory: assets/i18n
+input_file_pattern: .json
+output_directory: lib/core/i18n
+output_file_name: app_localization.g.dart
+string_interpolation: braces
+locale_handling: true
+flutter_integration: true
+namespaces: false
+flat_map: false
+translate_var: t
+enum_name: AppLocale
+key_map_case: null
+param_case: camel
+translation_class_visibility: public
+pluralization:
+  auto: cardinal
+  default_parameter: n
+  cardinal:
+    - someKey.apple
+  ordinal:
+    - someKey.place
+contexts:
+  gender_context:
+    enum:
+      - male
+      - female
+      - none
+    paths:
+      - my.path.to.greet
+    default_parameter: gender
+    generate_enum: true
