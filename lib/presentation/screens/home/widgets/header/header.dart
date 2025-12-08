@@ -10,7 +10,7 @@ class _Header extends StatelessWidget {
         minHeight: 600,
         maxHeight: context.sizeOf.height.clamp(600, double.infinity),
       ),
-      child: Stack(
+      child: const Stack(
         alignment: Alignment.center,
         children: [
           _HeaderBackground(),

@@ -1,6 +1,7 @@
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:injectable/injectable.dart';
-import 'package:landing/core/domain/models/device_type.dart';
+
+import '../models/device_type.dart';
 
 @singleton
 class DeviceInfoService {

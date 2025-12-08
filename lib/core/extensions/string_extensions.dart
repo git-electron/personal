@@ -4,7 +4,7 @@ extension StringExtensions on String {
   }
 
   String extractNumerals() {
-    return split('').where((char) => int.tryParse(char) != null).join('');
+    return split('').where((char) => int.tryParse(char) != null).join();
   }
 }
 

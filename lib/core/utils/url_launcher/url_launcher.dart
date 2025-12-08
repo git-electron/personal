@@ -1,6 +1,7 @@
 import 'package:injectable/injectable.dart';
-import 'package:landing/core/extensions/string_extensions.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+import '../../extensions/string_extensions.dart';
 
 @injectable
 class UrlLauncher {
@@ -8,14 +9,14 @@ class UrlLauncher {
     final Uri? uri = Uri.tryParse(url);
     if (uri == null) return false;
     if (!(await canLaunchUrl(uri))) return false;
-    return await launchUrl(uri);
+    return launchUrl(uri);
   }
 
   Future<bool> launchPhoneNumberString(String number) async {
-    return await launchUrlString('tel:${number.extractNumerals()}');
+    return launchUrlString('tel:${number.extractNumerals()}');
   }
 
   Future<bool> launchEmailString(String email) async {
-    return await launchUrlString('mailto:$email');
+    return launchUrlString('mailto:$email');
   }
 }

@@ -6,10 +6,13 @@ class _HeaderBackground extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(
-      alignment: Alignment.center,
+      alignment: Alignment.bottomCenter,
       children: [
-        WebPaddingWrapper(child: _BackgroundBlur()),
-        _BackgroundGrid(),
+        WebPaddingWrapper(
+          isEnabled: context.isDesktopLayout,
+          child: const _BackgroundBlur(),
+        ),
+        const _BackgroundGrid(),
       ],
     );
   }
@@ -36,14 +39,14 @@ class _BackgroundGrid extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
-        double width = constraints.maxWidth;
-        double height = constraints.maxHeight;
-        var h = Container(width: 1, height: height, color: context.colors.onBackground.copyWithOpacity(.025));
-        var v = Container(width: width, height: 1, color: context.colors.onBackground.copyWithOpacity(.025));
+        final double width = constraints.maxWidth;
+        final double height = constraints.maxHeight;
+        final h = Container(width: 1, height: height, color: context.colors.onBackground.copyWithOpacity(.025));
+        final v = Container(width: width, height: 1, color: context.colors.onBackground.copyWithOpacity(.025));
         return Stack(children: <Widget>[
           ...List.generate((width / space).round(), (index) => Positioned(left: index * space, child: h)),
           ...List.generate((height / space).round(), (index) => Positioned(top: index * space, child: v)),
-        ]);
+        ],);
       },
     );
   }

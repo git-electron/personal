@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:landing/core/extensions/context_extensions.dart';
-import 'package:landing/core/gen/assets.gen.dart';
-import 'package:landing/presentation/ui/wrappers/tappable.dart';
+import '../../../core/extensions/context_extensions.dart';
+import '../../../core/gen/assets.gen.dart';
+import '../wrappers/tappable.dart';
 
 class AppIconButton extends StatelessWidget {
   const AppIconButton({

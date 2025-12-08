@@ -11,7 +11,7 @@ import 'core/theme/app_theme.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await initInjector();
-  runApp(TranslationProvider(child: App()));
+  runApp(TranslationProvider(child: const App()));
 }
 
 class App extends StatelessWidget {

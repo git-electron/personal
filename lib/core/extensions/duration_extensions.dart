@@ -1,22 +1,22 @@
 extension DurationExtensions on Duration {
   String toMMss({bool shoudApplyPaddingToMinutes = false}) {
-    int minutes = inMinutes.remainder(60).abs();
-    int seconds = inSeconds.remainder(60).abs();
+    final int minutes = inMinutes.remainder(60).abs();
+    final int seconds = inSeconds.remainder(60).abs();
 
     return '${shoudApplyPaddingToMinutes ? _pad(minutes) : minutes}:${_pad(seconds)}';
   }
 
   String toHHmmSS({bool shoudApplyPaddingToHours = false}) {
-    int hours = inHours.remainder(24).abs();
-    int minutes = inMinutes.remainder(60).abs();
-    int seconds = inSeconds.remainder(60).abs();
+    final int hours = inHours.remainder(24).abs();
+    final int minutes = inMinutes.remainder(60).abs();
+    final int seconds = inSeconds.remainder(60).abs();
 
     return '${shoudApplyPaddingToHours ? _pad(hours) : hours}:${_pad(minutes)}:${_pad(seconds)}';
   }
 
   String toHHplural({bool withMinutes = true, bool isCompact = false}) {
-    int hours = inHours.remainder(24).abs();
-    int minutes = inMinutes.remainder(60).abs();
+    final int hours = inHours.remainder(24).abs();
+    final int minutes = inMinutes.remainder(60).abs();
 
     if (isCompact) return '$hoursч${withMinutes ? ' $minutesм' : ''}';
     return '$hours ${_hoursPlural(hours)}${withMinutes ? ' $minutes ${_minutesPlural(minutes)}' : ''}';

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:landing/core/di/injector.dart';
-import 'package:landing/core/domain/services/device_info_service.dart';
 import 'package:web_smooth_scroll/web_smooth_scroll.dart';
+
+import '../di/injector.dart';
+import '../domain/services/device_info_service.dart';
 
 class WebScrollWrapper extends StatelessWidget {
   const WebScrollWrapper({

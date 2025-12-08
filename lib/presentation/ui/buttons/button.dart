@@ -51,10 +51,9 @@ class _AppButtonState extends State<AppButton> {
             border: Border.all(
               strokeAlign: BorderSide.strokeAlignOutside,
               color: context.colors.buttonHighlight,
-              width: 1,
             ),
           ),
-          padding: Pad(
+          padding: const Pad(
             vertical: 8,
             horizontal: 20,
           ),

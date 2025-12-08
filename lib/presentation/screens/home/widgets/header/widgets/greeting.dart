@@ -16,13 +16,12 @@ class _Greeting extends StatelessWidget {
             spacing: context.layoutDependantValue(desktop: 40, orElse: 20),
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
+            children: const [
               _Avatar(),
               _Title(),
             ],
           ),
-          mobile: Column(
+          mobile: const Column(
             spacing: 30,
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.center,
@@ -33,8 +32,8 @@ class _Greeting extends StatelessWidget {
             ],
           ),
         ),
-        _Description(),
-        _Buttons(),
+        const _Description(),
+        const _Buttons(),
       ],
     );
   }
@@ -131,7 +130,6 @@ class _Buttons extends StatelessWidget {
       children: [
         Row(
           mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.center,
           spacing: context.layoutDependantValue(desktop: 20, orElse: 10),
           children: [
             AppButton(
@@ -154,11 +152,11 @@ class _Buttons extends StatelessWidget {
                   color: context.colors.onBackground.copyWithOpacity(.75),
                 ),
               ),
-              _Contacts(),
-            ]
+              const _Contacts(),
+            ],
           ],
         ),
-        if (context.isMobileLayout) _Contacts(),
+        if (context.isMobileLayout) const _Contacts(),
       ],
     );
   }

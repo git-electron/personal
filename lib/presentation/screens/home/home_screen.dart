@@ -5,6 +5,7 @@ import 'package:super_sliver_list/super_sliver_list.dart';
 
 import '../../../core/extensions/color_extensions.dart';
 import '../../../core/extensions/context_extensions.dart';
+import '../../../core/extensions/list_extensions.dart';
 import '../../../core/gen/assets.gen.dart';
 import '../../../core/i18n/app_localization.g.dart';
 import '../../../core/theme/theme_extensions.dart';
@@ -55,9 +56,15 @@ class _HomeScreenState extends State<HomeScreen> {
           controller: _scrollController,
           listController: _listController,
           children: [
-            _Header(),
+            const _Header(),
             SizedBox(height: context.sizeOf.height),
-          ],
+          ].alternateWith(
+            Divider(
+              height: 0,
+              thickness: 1,
+              color: context.colors.onBackground.copyWithOpacity(.2),
+            ),
+          ),
         ),
       ),
     );

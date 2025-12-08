@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:landing/core/domain/models/layout_type.dart';
-import 'package:landing/core/theme/theme_extensions.dart';
+
+import '../domain/models/layout_type.dart';
+import '../theme/theme_extensions.dart';
 
 extension BuildContextExtensions on BuildContext {
   MediaQueryData get mediaQueryOf => MediaQuery.of(this);
