@@ -2,7 +2,7 @@
     "name": "Egor Myadzuta",
     "short_name": "Egor Myadzuta",
     "start_url": ".",
-    "display": "standalone",
+    "display": "fullscreen",
     "background_color": "#080708",
     "theme_color": "#59FFA0",
     "description": "Flutter developer's portfolio page",
