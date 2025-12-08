@@ -21,6 +21,7 @@ class AppRouter extends RootStackRouter {
   List<AutoRoute> get routes => [
         ...customRoutes,
         AutoRoute(page: HomeRoute.page, path: '/home', initial: true),
+        AutoRoute(page: ProjectsRoute.page, path: '/projects'),
         ...redirections,
       ];
 

@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 import 'core/di/injector.dart';
@@ -27,6 +28,8 @@ class App extends StatelessWidget {
       localizationsDelegates: GlobalMaterialLocalizations.delegates,
       routerConfig: $<AppRouter>().config(),
       builder: (context, child) => child ?? const SizedBox(),
-    );
+    ).animate().fadeIn(
+          duration: 400.ms,
+        );
   }
 }

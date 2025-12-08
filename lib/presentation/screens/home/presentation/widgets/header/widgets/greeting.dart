@@ -138,7 +138,7 @@ class _Buttons extends StatelessWidget {
               text: context.t.home.header.contact_button,
             ),
             AppButton(
-              onTap: () {},
+              onTap: () => $<AppRouter>().push(const ProjectsRoute()),
               icon: Assets.icons.general.project.light,
               text: context.t.home.header.projects_button,
             ),

@@ -21,11 +21,6 @@
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
   <meta name="description" content="Flutter developer's landing page">
 
-  <!-- iOS Safari fullscreen fix -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
   <!-- iOS meta tags & icons -->
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -40,24 +35,53 @@
 </head>
 
 <body>
+  <style>
+    body {
+      background-color: #080708;
+      height: 100vh;
+      width: 100vw;
+      margin: 0px;
+    }
+
+    .main-content {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 4s ease-out;
+    }
+
+    img {
+      width: 100px;
+      height: 100px;
+      position: absolute;
+    }
+
+    .logo {
+      width: 100px;
+      height: 100px;
+      animation: fadePulse 1s ease-in-out infinite;
+    }
+
+    @keyframes fadePulse {
+      0% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0.25;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
+  <div class="main-content" id="loader-content">
+    <img src="assets/icons/general/logo.svg" class="logo" alt="logo" />
+  </div>
   <script src="flutter_bootstrap.js" async></script>
-  <script>
-    var element = document.getElementsByTagName('body')[0];
-
-    var handleScroll = function () {
-      element.scrollTo(0, 0);  // required when scroll bar is drgged
-    };
-
-    element.addEventListener('scroll', handleScroll, false);
-
-    var handleEvent = function (e) {
-      e.preventDefault();      // disables scrolling by mouse wheel and touch move
-    };
-
-    element.addEventListener('scroll', handleEvent, { passive: false });
-    element.addEventListener('mousewheel', handleEvent, { passive: false });
-    element.addEventListener('touchmove', handleEvent, { passive: false });
-  </script>
 </body>
 
 </html>

@@ -3,7 +3,6 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:gap/gap.dart';
-import 'package:logger/logger.dart';
 import 'package:super_sliver_list/super_sliver_list.dart';
 
 import '../../../../core/di/injector.dart';
@@ -12,6 +11,8 @@ import '../../../../core/extensions/context_extensions.dart';
 import '../../../../core/extensions/list_extensions.dart';
 import '../../../../core/gen/assets.gen.dart';
 import '../../../../core/i18n/app_localization.g.dart';
+import '../../../../core/router/router.dart';
+import '../../../../core/router/router.gr.dart';
 import '../../../../core/theme/theme_extensions.dart';
 import '../../../../core/wrappers/web_scroll_wrapper.dart';
 import '../../../ui/buttons/button.dart';
@@ -55,10 +56,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    $<Logger>().i(context.sizeOf);
-    $<Logger>().i(context.sizeOf.height);
-    
     return Scaffold(
+      extendBody: true,
       extendBodyBehindAppBar: true,
       backgroundColor: context.colors.background,
       body: WebScrollWrapper(
