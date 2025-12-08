@@ -90,8 +90,9 @@ class _$SkillCopyWithImpl<$Res> implements $SkillCopyWith<$Res> {
 
 /// @nodoc
 
-class _Skill implements Skill {
-  _Skill({required this.title, required this.description, required this.icon});
+class _Skill extends Skill {
+  _Skill({required this.title, required this.description, required this.icon})
+      : super._();
 
   @override
   final String title;

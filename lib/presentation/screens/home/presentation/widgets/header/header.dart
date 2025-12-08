@@ -14,7 +14,7 @@ class _Header extends StatelessWidget {
         alignment: Alignment.center,
         children: [
           _HeaderBackground(),
-          WebPaddingWrapper(child: _Greeting()),
+          WebPaddingWrapper(child: _HeaderContent()),
         ],
       ),
     );

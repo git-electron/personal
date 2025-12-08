@@ -1,46 +1,25 @@
 part of '../../../home_screen.dart';
 
-class _HeaderBackground extends StatelessWidget {
-  const _HeaderBackground();
+class _ProjectsBackground extends StatelessWidget {
+  const _ProjectsBackground();
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      alignment: Alignment.center,
-      children: [
-        WebPaddingWrapper(
-          isEnabled: context.isDesktopLayout,
-          child: const _HeaderBackgroundBlur(),
-        ),
-        const _HeaderBackgroundGrid(),
-      ],
-    );
+    return const _ProjectsBackgroundGrid();
   }
 }
 
-class _HeaderBackgroundBlur extends StatelessWidget {
-  const _HeaderBackgroundBlur();
+class _ProjectsBackgroundGrid extends StatelessWidget {
+  const _ProjectsBackgroundGrid();
 
-  @override
-  Widget build(BuildContext context) {
-    return Transform.flip(
-      flipX: context.isMobileLayout,
-      child: Assets.images.backgrounds.headerBackground.image(fit: BoxFit.fitWidth),
-    );
-  }
-}
-
-class _HeaderBackgroundGrid extends StatelessWidget {
-  const _HeaderBackgroundGrid();
-
-  static const double space = 30;
+  static const double space = 60;
 
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
         final double width = constraints.maxWidth;
-        final double height = constraints.maxHeight;
+        final double height = constraints.minHeight;
         final h = Container(width: 1, height: height, color: context.colors.onBackground.copyWithOpacity(.025));
         final v = Container(width: width, height: 1, color: context.colors.onBackground.copyWithOpacity(.025));
         return Stack(

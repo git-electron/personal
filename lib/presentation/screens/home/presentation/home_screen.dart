@@ -18,15 +18,21 @@ import '../../../../core/wrappers/web_scroll_wrapper.dart';
 import '../../../ui/buttons/button.dart';
 import '../../../ui/buttons/icon_button.dart';
 import '../../../ui/utils/formatted_text.dart';
+import '../../../ui/wrappers/measure_size_wrapper.dart';
 import '../../../ui/wrappers/web_padding.dart';
+import '../domain/models/project_model.dart';
 import '../domain/models/skill_model.dart';
 
 part 'widgets/header/header.dart';
-part 'widgets/header/widgets/greeting.dart';
+part 'widgets/header/widgets/header_content.dart';
 part 'widgets/header/widgets/header_background.dart';
 part 'widgets/skills/skills.dart';
 part 'widgets/skills/widgets/skill_card.dart';
 part 'widgets/skills/widgets/tech_stack_card.dart';
+part 'widgets/projects/projects.dart';
+part 'widgets/projects/widgets/project_card.dart';
+part 'widgets/projects/widgets/projects_content.dart';
+part 'widgets/projects/widgets/projects_background.dart';
 
 @RoutePage()
 class HomeScreen extends StatefulWidget {
@@ -69,6 +75,7 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             const _Header(),
             const _Skills(),
+            const _Projects(),
           ].alternateWith(
             Divider(
               height: 0,

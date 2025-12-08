@@ -1,7 +1,7 @@
 part of '../../../home_screen.dart';
 
-class _Greeting extends StatelessWidget {
-  const _Greeting();
+class _HeaderContent extends StatelessWidget {
+  const _HeaderContent();
 
   @override
   Widget build(BuildContext context) {
@@ -91,7 +91,6 @@ class _Title extends StatelessWidget {
               ),
             ],
             style: context.headerStyle.copyWith(height: 0.95),
-            
           ),
         ),
       ],

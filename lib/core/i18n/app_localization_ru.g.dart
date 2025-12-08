@@ -46,6 +46,7 @@ class TranslationsHomeRu extends TranslationsHomeEn {
 	// Translations
 	@override late final TranslationsHomeHeaderRu header = TranslationsHomeHeaderRu._(_root);
 	@override late final TranslationsHomeSkillsRu skills = TranslationsHomeSkillsRu._(_root);
+	@override late final TranslationsHomeProjectsRu projects = TranslationsHomeProjectsRu._(_root);
 }
 
 // Path: home.header
@@ -80,6 +81,17 @@ class TranslationsHomeSkillsRu extends TranslationsHomeSkillsEn {
 	@override late final TranslationsHomeSkillsStateManagementRu state_management = TranslationsHomeSkillsStateManagementRu._(_root);
 	@override late final TranslationsHomeSkillsCiCdRu ci_cd = TranslationsHomeSkillsCiCdRu._(_root);
 	@override late final TranslationsHomeSkillsTechStackRu tech_stack = TranslationsHomeSkillsTechStackRu._(_root);
+}
+
+// Path: home.projects
+class TranslationsHomeProjectsRu extends TranslationsHomeProjectsEn {
+	TranslationsHomeProjectsRu._(TranslationsRu root) : this._root = root, super.internal(root);
+
+	final TranslationsRu _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Мои проекты';
+	@override String get description => 'Демонстрация приложений, которые я создал или в которых принимал участие';
 }
 
 // Path: home.skills.flutter_and_dart
@@ -156,4 +168,5 @@ class TranslationsHomeSkillsTechStackRu extends TranslationsHomeSkillsTechStackE
 
 	// Translations
 	@override String get title => 'Технический стек';
+	@override String get and_more => 'и не только...';
 }

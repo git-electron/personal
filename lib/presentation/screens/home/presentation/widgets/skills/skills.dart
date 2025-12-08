@@ -5,7 +5,7 @@ class _Skills extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final List<Skill> skills = _getSkills(context);
+    final List<Skill> skills = Skill.values(context);
 
     return WebPaddingWrapper(
       child: Padding(
@@ -60,7 +60,7 @@ class _Skills extends StatelessWidget {
                   ),
                   const Gap(0),
                   Text(
-                    'and more...',
+                    context.t.home.skills.tech_stack.and_more,
                     style: context.bodyStyle.copyWith(
                       color: context.colors.text.copyWithOpacity(.5),
                     ),
@@ -73,39 +73,6 @@ class _Skills extends StatelessWidget {
       ),
     );
   }
-
-  List<Skill> _getSkills(BuildContext context) => [
-        Skill(
-          title: context.t.home.skills.flutter_and_dart.title,
-          description: context.t.home.skills.flutter_and_dart.description,
-          icon: Assets.icons.skills.code.light,
-        ),
-        Skill(
-          title: context.t.home.skills.cross_platform.title,
-          description: context.t.home.skills.cross_platform.description,
-          icon: Assets.icons.skills.mobile.light,
-        ),
-        Skill(
-          title: context.t.home.skills.performance.title,
-          description: context.t.home.skills.performance.description,
-          icon: Assets.icons.skills.lightning.light,
-        ),
-        Skill(
-          title: context.t.home.skills.ui_ux_design.title,
-          description: context.t.home.skills.ui_ux_design.description,
-          icon: Assets.icons.skills.palette.light,
-        ),
-        Skill(
-          title: context.t.home.skills.state_management.title,
-          description: context.t.home.skills.state_management.description,
-          icon: Assets.icons.skills.database.light,
-        ),
-        Skill(
-          title: context.t.home.skills.ci_cd.title,
-          description: context.t.home.skills.ci_cd.description,
-          icon: Assets.icons.skills.pipeline.light,
-        ),
-      ];
 
   static const List<String> _techStackItems = [
     'Flutter',

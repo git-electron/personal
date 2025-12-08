@@ -51,6 +51,7 @@ class TranslationsHomeEn {
 	// Translations
 	late final TranslationsHomeHeaderEn header = TranslationsHomeHeaderEn.internal(_root);
 	late final TranslationsHomeSkillsEn skills = TranslationsHomeSkillsEn.internal(_root);
+	late final TranslationsHomeProjectsEn projects = TranslationsHomeProjectsEn.internal(_root);
 }
 
 // Path: home.header
@@ -104,6 +105,21 @@ class TranslationsHomeSkillsEn {
 	late final TranslationsHomeSkillsStateManagementEn state_management = TranslationsHomeSkillsStateManagementEn.internal(_root);
 	late final TranslationsHomeSkillsCiCdEn ci_cd = TranslationsHomeSkillsCiCdEn.internal(_root);
 	late final TranslationsHomeSkillsTechStackEn tech_stack = TranslationsHomeSkillsTechStackEn.internal(_root);
+}
+
+// Path: home.projects
+class TranslationsHomeProjectsEn {
+	TranslationsHomeProjectsEn.internal(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'My projects'
+	String get title => 'My projects';
+
+	/// en: 'A showcase of mobile applications I've built or participated in'
+	String get description => 'A showcase of mobile applications I\'ve built or participated in';
 }
 
 // Path: home.skills.flutter_and_dart
@@ -206,4 +222,7 @@ class TranslationsHomeSkillsTechStackEn {
 
 	/// en: 'Tech stack'
 	String get title => 'Tech stack';
+
+	/// en: 'and more...'
+	String get and_more => 'and more...';
 }

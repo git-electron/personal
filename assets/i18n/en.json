@@ -38,8 +38,13 @@
         "description": "Automated testing and deployment pipelines for reliable app releases."
       },
       "tech_stack": {
-        "title": "Tech stack"
+        "title": "Tech stack",
+        "and_more": "and more..."
       }
+    },
+    "projects": {
+      "title": "My projects",
+      "description": "A showcase of mobile applications I've built or participated in"
     }
   }
 }
