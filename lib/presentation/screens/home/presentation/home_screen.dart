@@ -59,6 +59,7 @@ class _HomeScreenState extends State<HomeScreen> {
       body: WebScrollWrapper(
         controller: _scrollController,
         child: SuperListView(
+          clipBehavior: Clip.none,
           controller: _scrollController,
           listController: _listController,
           children: [
