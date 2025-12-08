@@ -18,8 +18,7 @@ class _TechStackCardState extends State<_TechStackCard> {
       cursor: SystemMouseCursors.basic,
       onEnter: (_) => setState(() => _isHovered = true),
       onExit: (_) => setState(() => _isHovered = false),
-      child: AnimatedContainer(
-        duration: const Duration(milliseconds: 100),
+      child: Container(
         padding: const Pad(
           vertical: 8,
           horizontal: 20,
