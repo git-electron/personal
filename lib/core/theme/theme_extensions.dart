@@ -19,6 +19,7 @@ class Colors extends ThemeExtension<Colors> with _$ColorsTailorMixin {
     required this.text,
     required this.warning,
     required this.error,
+    required this.buttonHighlight,
     required this.primary,
     required this.primaryGradientEnd,
     required this.primaryGradientStart,
@@ -56,6 +57,9 @@ class Colors extends ThemeExtension<Colors> with _$ColorsTailorMixin {
 
   @override
   final Color error;
+
+  @override
+  final Color buttonHighlight;
 
   @override
   final Color primary;
@@ -103,6 +107,7 @@ const Colors colors = Colors(
   text: _Colors.text,
   warning: _Colors.warning,
   error: _Colors.error,
+  buttonHighlight: _Colors.buttonHighlight,
   primary: _Colors.primary,
   primaryGradientEnd: _Colors.primaryGradientEnd,
   primaryGradientStart: _Colors.primaryGradientStart,

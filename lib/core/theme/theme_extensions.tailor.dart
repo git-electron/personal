@@ -18,6 +18,7 @@ mixin _$ColorsTailorMixin on ThemeExtension<Colors> {
   Color get text;
   Color get warning;
   Color get error;
+  Color get buttonHighlight;
   Color get primary;
   Color get primaryGradientStart;
   Color get primaryGradientEnd;
@@ -41,6 +42,7 @@ mixin _$ColorsTailorMixin on ThemeExtension<Colors> {
     Color? text,
     Color? warning,
     Color? error,
+    Color? buttonHighlight,
     Color? primary,
     Color? primaryGradientStart,
     Color? primaryGradientEnd,
@@ -63,6 +65,7 @@ mixin _$ColorsTailorMixin on ThemeExtension<Colors> {
       text: text ?? this.text,
       warning: warning ?? this.warning,
       error: error ?? this.error,
+      buttonHighlight: buttonHighlight ?? this.buttonHighlight,
       primary: primary ?? this.primary,
       primaryGradientStart: primaryGradientStart ?? this.primaryGradientStart,
       primaryGradientEnd: primaryGradientEnd ?? this.primaryGradientEnd,
@@ -93,6 +96,7 @@ mixin _$ColorsTailorMixin on ThemeExtension<Colors> {
       text: Color.lerp(text, other.text, t)!,
       warning: Color.lerp(warning, other.warning, t)!,
       error: Color.lerp(error, other.error, t)!,
+      buttonHighlight: Color.lerp(buttonHighlight, other.buttonHighlight, t)!,
       primary: Color.lerp(primary, other.primary, t)!,
       primaryGradientStart:
           Color.lerp(primaryGradientStart, other.primaryGradientStart, t)!,
@@ -133,6 +137,8 @@ mixin _$ColorsTailorMixin on ThemeExtension<Colors> {
             const DeepCollectionEquality().equals(text, other.text) &&
             const DeepCollectionEquality().equals(warning, other.warning) &&
             const DeepCollectionEquality().equals(error, other.error) &&
+            const DeepCollectionEquality()
+                .equals(buttonHighlight, other.buttonHighlight) &&
             const DeepCollectionEquality().equals(primary, other.primary) &&
             const DeepCollectionEquality()
                 .equals(primaryGradientStart, other.primaryGradientStart) &&
@@ -168,6 +174,7 @@ mixin _$ColorsTailorMixin on ThemeExtension<Colors> {
       const DeepCollectionEquality().hash(text),
       const DeepCollectionEquality().hash(warning),
       const DeepCollectionEquality().hash(error),
+      const DeepCollectionEquality().hash(buttonHighlight),
       const DeepCollectionEquality().hash(primary),
       const DeepCollectionEquality().hash(primaryGradientStart),
       const DeepCollectionEquality().hash(primaryGradientEnd),

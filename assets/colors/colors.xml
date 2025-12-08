@@ -7,6 +7,7 @@
     <color name="text">#FCF7F8</color>
     <color name="warning">#FFE312</color>
     <color name="error">#FF5858</color>
+    <color name="button_highlight">#383738</color>
     <color name="primary">#59FFA0</color>
     <color name="secondary">#593C8F</color>
     <color name="accent">#9FA0C3</color>

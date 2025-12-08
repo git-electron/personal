@@ -74,4 +74,10 @@ class TranslationsHomeHeaderEn {
 
 	/// en: 'Crafting <b>high-performance, cross-platform<b> mobile applications with <b>Flutter<b>. Transforming ideas into elegant, user-friendly apps for iOS and Android.'
 	String get description => 'Crafting <b>high-performance, cross-platform<b> mobile applications with <b>Flutter<b>. Transforming ideas into elegant, user-friendly apps for iOS and Android.';
+
+	/// en: 'Contact me'
+	String get contact_button => 'Contact me';
+
+	/// en: 'View projects'
+	String get projects_button => 'View projects';
 }

@@ -62,9 +62,21 @@ flutter:
   uses-material-design: true
   assets:
   - assets/
+
   - assets/icons/
+  - assets/icons/general/
+  - assets/icons/general/project/
+  - assets/icons/contacts/email/
+  - assets/icons/contacts/phone/
+  - assets/icons/contacts/contact/
+  
   - assets/images/
   - assets/images/general/
+  - assets/images/backgrounds/
+  - assets/images/contacts/hh/
+  - assets/images/contacts/github/
+  - assets/images/contacts/linkedin/
+  - assets/images/contacts/telegram/
 
   fonts:
     - family: Inter

@@ -29,6 +29,9 @@ class AppColors {
   /// Color: #000000
   static const Color black = Color(0xFF000000);
 
+  /// Color: #383738
+  static const Color buttonHighlight = Color(0xFF383738);
+
   /// Color: #FF5858
   static const Color error = Color(0xFFFF5858);
 

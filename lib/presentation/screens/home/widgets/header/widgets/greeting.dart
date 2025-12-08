@@ -34,6 +34,7 @@ class _Greeting extends StatelessWidget {
           ),
         ),
         _Description(),
+        _Buttons(),
       ],
     );
   }
@@ -46,8 +47,8 @@ class _Avatar extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox.square(
       dimension: context.layoutDependantValue(
-        desktop: 150,
-        orElse: 120,
+        tablet: 120,
+        orElse: 150,
       ),
       child: Assets.images.general.a3dAvatarFilled.image(),
     );
@@ -114,6 +115,76 @@ class _Description extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+}
+
+class _Buttons extends StatelessWidget {
+  const _Buttons();
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      spacing: 20,
+      children: [
+        Row(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          spacing: context.layoutDependantValue(desktop: 20, orElse: 10),
+          children: [
+            AppButton(
+              onTap: () {},
+              icon: Assets.icons.contacts.contact.light,
+              text: context.t.home.header.contact_button,
+            ),
+            AppButton(
+              onTap: () {},
+              icon: Assets.icons.general.project.light,
+              text: context.t.home.header.projects_button,
+            ),
+            if (!context.isMobileLayout) ...[
+              Container(
+                height: context.layoutDependantValue(desktop: 20, orElse: 16),
+                width: 2,
+                margin: const Pad(horizontal: 20),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(1),
+                  color: context.colors.onBackground.copyWithOpacity(.75),
+                ),
+              ),
+              _Contacts(),
+            ]
+          ],
+        ),
+        if (context.isMobileLayout) _Contacts(),
+      ],
+    );
+  }
+}
+
+class _Contacts extends StatelessWidget {
+  const _Contacts();
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      spacing: context.layoutDependantValue(mobile: 40, orElse: 20),
+      children: [
+        AppIconButton.image(
+          image: Assets.images.contacts.github.light,
+          onTap: () {},
+        ),
+        AppIconButton.image(
+          image: Assets.images.contacts.hh.light,
+          onTap: () {},
+        ),
+        AppIconButton.image(
+          image: Assets.images.contacts.linkedin.light,
+          onTap: () {},
+        ),
+      ],
     );
   }
 }

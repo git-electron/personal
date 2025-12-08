@@ -59,4 +59,6 @@ class TranslationsHomeHeaderRu extends TranslationsHomeHeaderEn {
 	@override String get introduction_pt1 => 'Разработчик ';
 	@override String get introduction_pt2 => 'приложений';
 	@override String get description => 'Создаю <b>высокопроизводительные кроссплатформенные<b> мобильные приложения на <b>Flutter<b>. Превращаю идеи в элегантные, простые приложения для iOS и Android.';
+	@override String get contact_button => 'Связаться со мной';
+	@override String get projects_button => 'Смотреть проекты';
 }

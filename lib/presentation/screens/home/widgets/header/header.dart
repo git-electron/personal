@@ -8,10 +8,14 @@ class _Header extends StatelessWidget {
     return ConstrainedBox(
       constraints: BoxConstraints(
         minHeight: 600,
-        maxHeight: context.sizeOf.height,
+        maxHeight: context.sizeOf.height.clamp(600, double.infinity),
       ),
-      child: Center(
-        child: _Greeting(),
+      child: Stack(
+        alignment: Alignment.center,
+        children: [
+          _HeaderBackground(),
+          WebPaddingWrapper(child: _Greeting()),
+        ],
       ),
     );
   }

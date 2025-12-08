@@ -17,6 +17,8 @@ class _Colors {
 
   static const Color error = AppColors.error;
 
+  static const Color buttonHighlight = AppColors.buttonHighlight;
+
   static const Color primary = AppColors.primary;
 
   static const Color primaryGradientStart = AppColors.primaryGradientStart;
