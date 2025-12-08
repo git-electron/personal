@@ -7,6 +7,10 @@ class _TechStackCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    return Text(
+      title,
+      style: context.bodyStyle,
+    );
     return DecoratedBox(
       decoration: BoxDecoration(
         color: context.colors.onBackground.copyWithOpacity(.05),
