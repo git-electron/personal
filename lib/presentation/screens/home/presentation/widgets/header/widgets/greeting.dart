@@ -71,11 +71,11 @@ class _Title extends StatelessWidget {
                 text: context.t.home.header.hello_pt2,
                 style: context.headerStyle.copyWith(
                   color: context.colors.primary,
-                  height: 0.9,
+                  height: 0.95,
                 ),
               ),
             ],
-            style: context.headerStyle.copyWith(height: 0.9),
+            style: context.headerStyle.copyWith(height: 0.95),
           ),
         ),
         RichText(
@@ -84,10 +84,14 @@ class _Title extends StatelessWidget {
               TextSpan(text: context.t.home.header.introduction_pt1),
               TextSpan(
                 text: context.t.home.header.introduction_pt2,
-                style: context.headerStyle.copyWith(color: context.colors.primary),
+                style: context.headerStyle.copyWith(
+                  color: context.colors.primary,
+                  height: 0.95,
+                ),
               ),
             ],
-            style: context.headerStyle,
+            style: context.headerStyle.copyWith(height: 0.95),
+            
           ),
         ),
       ],

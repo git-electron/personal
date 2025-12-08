@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../core/extensions/context_extensions.dart';
+
 import '../../../core/gen/assets.gen.dart';
 import '../wrappers/tappable.dart';
 
@@ -25,7 +25,7 @@ class AppIconButton extends StatelessWidget {
     return Tappable(
       onTap: onTap,
       child: SizedBox.square(
-        dimension: context.layoutDependantValue(desktop: 25, tablet: 22, mobile: 20),
+        dimension: 25,
         child: icon != null ? icon!.svg() : image!.image(),
       ),
     );

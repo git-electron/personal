@@ -43,34 +43,36 @@ class _AppButtonState extends State<AppButton> {
         opaque: false,
         onEnter: (_) => setState(() => _isHovering = true),
         onExit: (_) => setState(() => _isHovering = false),
-        child: AnimatedContainer(
-          duration: const Duration(milliseconds: 100),
-          decoration: BoxDecoration(
-            color: _isHovering ? context.colors.buttonHighlight : context.colors.background,
-            borderRadius: BorderRadius.circular(5),
-            border: Border.all(
-              strokeAlign: BorderSide.strokeAlignOutside,
-              color: context.colors.buttonHighlight,
-            ),
-          ),
-          padding: const Pad(
-            vertical: 8,
-            horizontal: 20,
-          ),
-          child: Row(
-            spacing: context.layoutDependantValue(desktop: 10, orElse: 8),
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              if (widget.icon != null)
-                SizedBox.square(
-                  dimension: context.layoutDependantValue(desktop: 20, orElse: 16),
-                  child: widget.icon!.svg(),
-                ),
-              Text(
-                widget.text,
-                style: context.bodyStyle,
+        child: RepaintBoundary(
+          child: AnimatedContainer(
+            duration: const Duration(milliseconds: 100),
+            decoration: BoxDecoration(
+              color: _isHovering ? context.colors.buttonHighlight : context.colors.background,
+              borderRadius: BorderRadius.circular(5),
+              border: Border.all(
+                strokeAlign: BorderSide.strokeAlignOutside,
+                color: context.colors.buttonHighlight,
               ),
-            ],
+            ),
+            padding: const Pad(
+              vertical: 8,
+              horizontal: 20,
+            ),
+            child: Row(
+              spacing: context.layoutDependantValue(desktop: 10, orElse: 8),
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                if (widget.icon != null)
+                  SizedBox.square(
+                    dimension: context.layoutDependantValue(desktop: 20, orElse: 16),
+                    child: widget.icon!.svg(),
+                  ),
+                Text(
+                  widget.text,
+                  style: context.bodyStyle,
+                ),
+              ],
+            ),
           ),
         ),
       ),
