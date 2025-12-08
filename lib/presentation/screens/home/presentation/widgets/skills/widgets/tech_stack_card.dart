@@ -7,11 +7,7 @@ class _TechStackCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const Pad(
-        vertical: 8,
-        horizontal: 20,
-      ),
+    return DecoratedBox(
       decoration: BoxDecoration(
         color: context.colors.onBackground.copyWithOpacity(.05),
         borderRadius: BorderRadius.circular(10),
@@ -19,9 +15,15 @@ class _TechStackCard extends StatelessWidget {
           color: context.colors.onBackground.copyWithOpacity(.1),
         ),
       ),
-      child: Text(
-        title,
-        style: context.bodyStyle,
+      child: Padding(
+        padding: const Pad(
+          vertical: 8,
+          horizontal: 20,
+        ),
+        child: Text(
+          title,
+          style: context.bodyStyle,
+        ),
       ),
     );
   }
