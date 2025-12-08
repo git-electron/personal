@@ -38,4 +38,40 @@ class Translations with BaseTranslations<AppLocale, Translations> {
 
 	/// en: 'Egor Myadzuta'
 	String get title => 'Egor Myadzuta';
+
+	late final TranslationsHomeEn home = TranslationsHomeEn.internal(_root);
+}
+
+// Path: home
+class TranslationsHomeEn {
+	TranslationsHomeEn.internal(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	late final TranslationsHomeHeaderEn header = TranslationsHomeHeaderEn.internal(_root);
+}
+
+// Path: home.header
+class TranslationsHomeHeaderEn {
+	TranslationsHomeHeaderEn.internal(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'Hey, I'm '
+	String get hello_pt1 => 'Hey, I\'m ';
+
+	/// en: 'Egor ✨'
+	String get hello_pt2 => 'Egor ✨';
+
+	/// en: 'A '
+	String get introduction_pt1 => 'A ';
+
+	/// en: 'Software Developer'
+	String get introduction_pt2 => 'Software Developer';
+
+	/// en: 'Crafting <b>high-performance, cross-platform<b> mobile applications with <b>Flutter<b>. Transforming ideas into elegant, user-friendly apps for iOS and Android.'
+	String get description => 'Crafting <b>high-performance, cross-platform<b> mobile applications with <b>Flutter<b>. Transforming ideas into elegant, user-friendly apps for iOS and Android.';
 }

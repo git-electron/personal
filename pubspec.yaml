@@ -30,6 +30,7 @@ dependencies:
   shadcn_flutter: ^0.0.24
   device_info_plus: ^11.3.0
   web_smooth_scroll: ^2.0.0
+  super_sliver_list: ^0.4.1
   freezed_annotation: ^3.1.0
   theme_tailor_annotation: ^3.0.2
   assorted_layout_widgets: ^11.0.0
@@ -59,6 +60,11 @@ flutter_gen:
 
 flutter:
   uses-material-design: true
+  assets:
+  - assets/
+  - assets/icons/
+  - assets/images/
+  - assets/images/general/
 
   fonts:
     - family: Inter
@@ -69,8 +75,3 @@ flutter:
           weight: 400
         - asset: assets/fonts/Inter/Bold.ttf
           weight: 700
-        - asset: assets/fonts/Inter/Black.ttf
-          weight: 900
-        - asset: assets/fonts/Inter/BlackItalic.ttf
-          weight: 900
-          style: italic

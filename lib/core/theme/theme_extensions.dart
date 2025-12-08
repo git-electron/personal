@@ -117,31 +117,56 @@ const Colors colors = Colors(
   accentGradientColors: _Colors.accentGradientColors,
 );
 
-@TailorMixin(themeGetter: ThemeGetter.onBuildContext)
+@TailorMixin(themeGetter: ThemeGetter.none)
 class Styles extends ThemeExtension<Styles> with _$StylesTailorMixin {
   Styles({
-    required this.header,
-    required this.headerItalic,
-    required this.title,
-    required this.body,
+    required this.headerDesktop,
+    required this.titleDesktop,
+    required this.bodyDesktop,
+    required this.headerTablet,
+    required this.titleTablet,
+    required this.bodyTablet,
+    required this.headerMobile,
+    required this.titleMobile,
+    required this.bodyMobile,
   });
 
   @override
-  final TextStyle header;
+  final TextStyle headerDesktop;
 
   @override
-  final TextStyle headerItalic;
+  final TextStyle titleDesktop;
 
   @override
-  final TextStyle title;
+  final TextStyle bodyDesktop;
 
   @override
-  final TextStyle body;
+  final TextStyle headerTablet;
+
+  @override
+  final TextStyle titleTablet;
+
+  @override
+  final TextStyle bodyTablet;
+
+  @override
+  final TextStyle headerMobile;
+
+  @override
+  final TextStyle titleMobile;
+
+  @override
+  final TextStyle bodyMobile;
 }
 
 final Styles styles = Styles(
-  header: _Styles.header,
-  headerItalic: _Styles.headerItalic,
-  title: _Styles.title,
-  body: _Styles.body,
+  headerDesktop: _Styles.headerDesktop,
+  titleDesktop: _Styles.titleDesktop,
+  bodyDesktop: _Styles.bodyDesktop,
+  headerTablet: _Styles.headerTablet,
+  titleTablet: _Styles.titleTablet,
+  bodyTablet: _Styles.bodyTablet,
+  headerMobile: _Styles.headerMobile,
+  titleMobile: _Styles.titleMobile,
+  bodyMobile: _Styles.bodyMobile,
 );

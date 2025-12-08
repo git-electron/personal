@@ -189,23 +189,38 @@ extension ColorsBuildContext on BuildContext {
 }
 
 mixin _$StylesTailorMixin on ThemeExtension<Styles> {
-  TextStyle get header;
-  TextStyle get headerItalic;
-  TextStyle get title;
-  TextStyle get body;
+  TextStyle get headerDesktop;
+  TextStyle get titleDesktop;
+  TextStyle get bodyDesktop;
+  TextStyle get headerTablet;
+  TextStyle get titleTablet;
+  TextStyle get bodyTablet;
+  TextStyle get headerMobile;
+  TextStyle get titleMobile;
+  TextStyle get bodyMobile;
 
   @override
   Styles copyWith({
-    TextStyle? header,
-    TextStyle? headerItalic,
-    TextStyle? title,
-    TextStyle? body,
+    TextStyle? headerDesktop,
+    TextStyle? titleDesktop,
+    TextStyle? bodyDesktop,
+    TextStyle? headerTablet,
+    TextStyle? titleTablet,
+    TextStyle? bodyTablet,
+    TextStyle? headerMobile,
+    TextStyle? titleMobile,
+    TextStyle? bodyMobile,
   }) {
     return Styles(
-      header: header ?? this.header,
-      headerItalic: headerItalic ?? this.headerItalic,
-      title: title ?? this.title,
-      body: body ?? this.body,
+      headerDesktop: headerDesktop ?? this.headerDesktop,
+      titleDesktop: titleDesktop ?? this.titleDesktop,
+      bodyDesktop: bodyDesktop ?? this.bodyDesktop,
+      headerTablet: headerTablet ?? this.headerTablet,
+      titleTablet: titleTablet ?? this.titleTablet,
+      bodyTablet: bodyTablet ?? this.bodyTablet,
+      headerMobile: headerMobile ?? this.headerMobile,
+      titleMobile: titleMobile ?? this.titleMobile,
+      bodyMobile: bodyMobile ?? this.bodyMobile,
     );
   }
 
@@ -213,10 +228,15 @@ mixin _$StylesTailorMixin on ThemeExtension<Styles> {
   Styles lerp(covariant ThemeExtension<Styles>? other, double t) {
     if (other is! Styles) return this as Styles;
     return Styles(
-      header: TextStyle.lerp(header, other.header, t)!,
-      headerItalic: TextStyle.lerp(headerItalic, other.headerItalic, t)!,
-      title: TextStyle.lerp(title, other.title, t)!,
-      body: TextStyle.lerp(body, other.body, t)!,
+      headerDesktop: TextStyle.lerp(headerDesktop, other.headerDesktop, t)!,
+      titleDesktop: TextStyle.lerp(titleDesktop, other.titleDesktop, t)!,
+      bodyDesktop: TextStyle.lerp(bodyDesktop, other.bodyDesktop, t)!,
+      headerTablet: TextStyle.lerp(headerTablet, other.headerTablet, t)!,
+      titleTablet: TextStyle.lerp(titleTablet, other.titleTablet, t)!,
+      bodyTablet: TextStyle.lerp(bodyTablet, other.bodyTablet, t)!,
+      headerMobile: TextStyle.lerp(headerMobile, other.headerMobile, t)!,
+      titleMobile: TextStyle.lerp(titleMobile, other.titleMobile, t)!,
+      bodyMobile: TextStyle.lerp(bodyMobile, other.bodyMobile, t)!,
     );
   }
 
@@ -225,25 +245,39 @@ mixin _$StylesTailorMixin on ThemeExtension<Styles> {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is Styles &&
-            const DeepCollectionEquality().equals(header, other.header) &&
             const DeepCollectionEquality()
-                .equals(headerItalic, other.headerItalic) &&
-            const DeepCollectionEquality().equals(title, other.title) &&
-            const DeepCollectionEquality().equals(body, other.body));
+                .equals(headerDesktop, other.headerDesktop) &&
+            const DeepCollectionEquality()
+                .equals(titleDesktop, other.titleDesktop) &&
+            const DeepCollectionEquality()
+                .equals(bodyDesktop, other.bodyDesktop) &&
+            const DeepCollectionEquality()
+                .equals(headerTablet, other.headerTablet) &&
+            const DeepCollectionEquality()
+                .equals(titleTablet, other.titleTablet) &&
+            const DeepCollectionEquality()
+                .equals(bodyTablet, other.bodyTablet) &&
+            const DeepCollectionEquality()
+                .equals(headerMobile, other.headerMobile) &&
+            const DeepCollectionEquality()
+                .equals(titleMobile, other.titleMobile) &&
+            const DeepCollectionEquality()
+                .equals(bodyMobile, other.bodyMobile));
   }
 
   @override
   int get hashCode {
     return Object.hash(
       runtimeType.hashCode,
-      const DeepCollectionEquality().hash(header),
-      const DeepCollectionEquality().hash(headerItalic),
-      const DeepCollectionEquality().hash(title),
-      const DeepCollectionEquality().hash(body),
+      const DeepCollectionEquality().hash(headerDesktop),
+      const DeepCollectionEquality().hash(titleDesktop),
+      const DeepCollectionEquality().hash(bodyDesktop),
+      const DeepCollectionEquality().hash(headerTablet),
+      const DeepCollectionEquality().hash(titleTablet),
+      const DeepCollectionEquality().hash(bodyTablet),
+      const DeepCollectionEquality().hash(headerMobile),
+      const DeepCollectionEquality().hash(titleMobile),
+      const DeepCollectionEquality().hash(bodyMobile),
     );
   }
-}
-
-extension StylesBuildContext on BuildContext {
-  Styles get styles => Theme.of(this).extension<Styles>()!;
 }

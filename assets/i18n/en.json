@@ -1,3 +1,12 @@
 {
-  "title": "Egor Myadzuta"
+  "title": "Egor Myadzuta",
+  "home": {
+    "header": {
+      "hello_pt1": "Hey, I'm ",
+      "hello_pt2": "Egor ✨",
+      "introduction_pt1": "A ",
+      "introduction_pt2": "Software Developer",
+      "description": "Crafting <b>high-performance, cross-platform<b> mobile applications with <b>Flutter<b>. Transforming ideas into elegant, user-friendly apps for iOS and Android."
+    }
+  }
 }

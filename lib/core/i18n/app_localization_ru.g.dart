@@ -34,4 +34,29 @@ class TranslationsRu extends Translations with BaseTranslations<AppLocale, Trans
 
 	// Translations
 	@override String get title => 'Егор Мядзюта';
+	@override late final TranslationsHomeRu home = TranslationsHomeRu._(_root);
+}
+
+// Path: home
+class TranslationsHomeRu extends TranslationsHomeEn {
+	TranslationsHomeRu._(TranslationsRu root) : this._root = root, super.internal(root);
+
+	final TranslationsRu _root; // ignore: unused_field
+
+	// Translations
+	@override late final TranslationsHomeHeaderRu header = TranslationsHomeHeaderRu._(_root);
+}
+
+// Path: home.header
+class TranslationsHomeHeaderRu extends TranslationsHomeHeaderEn {
+	TranslationsHomeHeaderRu._(TranslationsRu root) : this._root = root, super.internal(root);
+
+	final TranslationsRu _root; // ignore: unused_field
+
+	// Translations
+	@override String get hello_pt1 => 'Привет, я ';
+	@override String get hello_pt2 => 'Егор ✨';
+	@override String get introduction_pt1 => 'Разработчик ';
+	@override String get introduction_pt2 => 'приложений';
+	@override String get description => 'Создаю <b>высокопроизводительные кроссплатформенные<b> мобильные приложения на <b>Flutter<b>. Превращаю идеи в элегантные, простые приложения для iOS и Android.';
 }
