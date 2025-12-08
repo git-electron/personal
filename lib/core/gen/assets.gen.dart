@@ -22,6 +22,9 @@ class $AssetsIconsGen {
 
   /// Directory path: assets/icons/general
   $AssetsIconsGeneralGen get general => const $AssetsIconsGeneralGen();
+
+  /// Directory path: assets/icons/skills
+  $AssetsIconsSkillsGen get skills => const $AssetsIconsSkillsGen();
 }
 
 class $AssetsImagesGen {
@@ -66,6 +69,32 @@ class $AssetsIconsGeneralGen {
 
   /// List of all assets
   List<SvgGenImage> get values => [logo];
+}
+
+class $AssetsIconsSkillsGen {
+  const $AssetsIconsSkillsGen();
+
+  /// Directory path: assets/icons/skills/code
+  $AssetsIconsSkillsCodeGen get code => const $AssetsIconsSkillsCodeGen();
+
+  /// Directory path: assets/icons/skills/database
+  $AssetsIconsSkillsDatabaseGen get database =>
+      const $AssetsIconsSkillsDatabaseGen();
+
+  /// Directory path: assets/icons/skills/lightning
+  $AssetsIconsSkillsLightningGen get lightning =>
+      const $AssetsIconsSkillsLightningGen();
+
+  /// Directory path: assets/icons/skills/mobile
+  $AssetsIconsSkillsMobileGen get mobile => const $AssetsIconsSkillsMobileGen();
+
+  /// Directory path: assets/icons/skills/palette
+  $AssetsIconsSkillsPaletteGen get palette =>
+      const $AssetsIconsSkillsPaletteGen();
+
+  /// Directory path: assets/icons/skills/pipeline
+  $AssetsIconsSkillsPipelineGen get pipeline =>
+      const $AssetsIconsSkillsPipelineGen();
 }
 
 class $AssetsImagesBackgroundsGen {
@@ -184,6 +213,120 @@ class $AssetsIconsGeneralProjectGen {
   /// File path: assets/icons/general/project/light.svg
   SvgGenImage get light =>
       const SvgGenImage('assets/icons/general/project/light.svg');
+
+  /// List of all assets
+  List<SvgGenImage> get values => [brand, dark, light];
+}
+
+class $AssetsIconsSkillsCodeGen {
+  const $AssetsIconsSkillsCodeGen();
+
+  /// File path: assets/icons/skills/code/brand.svg
+  SvgGenImage get brand =>
+      const SvgGenImage('assets/icons/skills/code/brand.svg');
+
+  /// File path: assets/icons/skills/code/dark.svg
+  SvgGenImage get dark =>
+      const SvgGenImage('assets/icons/skills/code/dark.svg');
+
+  /// File path: assets/icons/skills/code/light.svg
+  SvgGenImage get light =>
+      const SvgGenImage('assets/icons/skills/code/light.svg');
+
+  /// List of all assets
+  List<SvgGenImage> get values => [brand, dark, light];
+}
+
+class $AssetsIconsSkillsDatabaseGen {
+  const $AssetsIconsSkillsDatabaseGen();
+
+  /// File path: assets/icons/skills/database/brand.svg
+  SvgGenImage get brand =>
+      const SvgGenImage('assets/icons/skills/database/brand.svg');
+
+  /// File path: assets/icons/skills/database/dark.svg
+  SvgGenImage get dark =>
+      const SvgGenImage('assets/icons/skills/database/dark.svg');
+
+  /// File path: assets/icons/skills/database/light.svg
+  SvgGenImage get light =>
+      const SvgGenImage('assets/icons/skills/database/light.svg');
+
+  /// List of all assets
+  List<SvgGenImage> get values => [brand, dark, light];
+}
+
+class $AssetsIconsSkillsLightningGen {
+  const $AssetsIconsSkillsLightningGen();
+
+  /// File path: assets/icons/skills/lightning/brand.svg
+  SvgGenImage get brand =>
+      const SvgGenImage('assets/icons/skills/lightning/brand.svg');
+
+  /// File path: assets/icons/skills/lightning/dark.svg
+  SvgGenImage get dark =>
+      const SvgGenImage('assets/icons/skills/lightning/dark.svg');
+
+  /// File path: assets/icons/skills/lightning/light.svg
+  SvgGenImage get light =>
+      const SvgGenImage('assets/icons/skills/lightning/light.svg');
+
+  /// List of all assets
+  List<SvgGenImage> get values => [brand, dark, light];
+}
+
+class $AssetsIconsSkillsMobileGen {
+  const $AssetsIconsSkillsMobileGen();
+
+  /// File path: assets/icons/skills/mobile/brand.svg
+  SvgGenImage get brand =>
+      const SvgGenImage('assets/icons/skills/mobile/brand.svg');
+
+  /// File path: assets/icons/skills/mobile/dark.svg
+  SvgGenImage get dark =>
+      const SvgGenImage('assets/icons/skills/mobile/dark.svg');
+
+  /// File path: assets/icons/skills/mobile/light.svg
+  SvgGenImage get light =>
+      const SvgGenImage('assets/icons/skills/mobile/light.svg');
+
+  /// List of all assets
+  List<SvgGenImage> get values => [brand, dark, light];
+}
+
+class $AssetsIconsSkillsPaletteGen {
+  const $AssetsIconsSkillsPaletteGen();
+
+  /// File path: assets/icons/skills/palette/brand.svg
+  SvgGenImage get brand =>
+      const SvgGenImage('assets/icons/skills/palette/brand.svg');
+
+  /// File path: assets/icons/skills/palette/dark.svg
+  SvgGenImage get dark =>
+      const SvgGenImage('assets/icons/skills/palette/dark.svg');
+
+  /// File path: assets/icons/skills/palette/light.svg
+  SvgGenImage get light =>
+      const SvgGenImage('assets/icons/skills/palette/light.svg');
+
+  /// List of all assets
+  List<SvgGenImage> get values => [brand, dark, light];
+}
+
+class $AssetsIconsSkillsPipelineGen {
+  const $AssetsIconsSkillsPipelineGen();
+
+  /// File path: assets/icons/skills/pipeline/brand.svg
+  SvgGenImage get brand =>
+      const SvgGenImage('assets/icons/skills/pipeline/brand.svg');
+
+  /// File path: assets/icons/skills/pipeline/dark.svg
+  SvgGenImage get dark =>
+      const SvgGenImage('assets/icons/skills/pipeline/dark.svg');
+
+  /// File path: assets/icons/skills/pipeline/light.svg
+  SvgGenImage get light =>
+      const SvgGenImage('assets/icons/skills/pipeline/light.svg');
 
   /// List of all assets
   List<SvgGenImage> get values => [brand, dark, light];

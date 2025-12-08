@@ -1,23 +1,29 @@
 import 'package:assorted_layout_widgets/assorted_layout_widgets.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:gap/gap.dart';
 import 'package:super_sliver_list/super_sliver_list.dart';
 
-import '../../../core/extensions/color_extensions.dart';
-import '../../../core/extensions/context_extensions.dart';
-import '../../../core/extensions/list_extensions.dart';
-import '../../../core/gen/assets.gen.dart';
-import '../../../core/i18n/app_localization.g.dart';
-import '../../../core/theme/theme_extensions.dart';
-import '../../../core/wrappers/web_scroll_wrapper.dart';
-import '../../ui/buttons/button.dart';
-import '../../ui/buttons/icon_button.dart';
-import '../../ui/utils/formatted_text.dart';
-import '../../ui/wrappers/web_padding.dart';
+import '../../../../core/extensions/color_extensions.dart';
+import '../../../../core/extensions/context_extensions.dart';
+import '../../../../core/extensions/list_extensions.dart';
+import '../../../../core/gen/assets.gen.dart';
+import '../../../../core/i18n/app_localization.g.dart';
+import '../../../../core/theme/theme_extensions.dart';
+import '../../../../core/wrappers/web_scroll_wrapper.dart';
+import '../../../ui/buttons/button.dart';
+import '../../../ui/buttons/icon_button.dart';
+import '../../../ui/utils/formatted_text.dart';
+import '../../../ui/wrappers/web_padding.dart';
+import '../domain/models/skill_model.dart';
 
 part 'widgets/header/header.dart';
 part 'widgets/header/widgets/greeting.dart';
 part 'widgets/header/widgets/header_background.dart';
+part 'widgets/skills/skills.dart';
+part 'widgets/skills/widgets/skill_card.dart';
+part 'widgets/skills/widgets/tech_stack_card.dart';
 
 @RoutePage()
 class HomeScreen extends StatefulWidget {
@@ -57,7 +63,7 @@ class _HomeScreenState extends State<HomeScreen> {
           listController: _listController,
           children: [
             const _Header(),
-            SizedBox(height: context.sizeOf.height),
+            const _Skills(),
           ].alternateWith(
             Divider(
               height: 0,

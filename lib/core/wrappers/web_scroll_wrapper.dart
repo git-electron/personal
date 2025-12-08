@@ -21,7 +21,7 @@ class WebScrollWrapper extends StatelessWidget {
     if (isMobileDevice) return child;
 
     return WebSmoothScroll(
-      scrollSpeed: 1,
+      scrollSpeed: 5,
       scrollAnimationLength: 300,
       controller: controller,
       child: child,

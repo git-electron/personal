@@ -9,6 +9,37 @@
       "description": "Crafting <b>high-performance, cross-platform<b> mobile applications with <b>Flutter<b>. Transforming ideas into elegant, user-friendly apps for iOS and Android.",
       "contact_button": "Contact me",
       "projects_button": "View projects"
+    },
+    "skills": {
+      "title": "Building digital experiences",
+      "description": "I specialize in creating stunning user interfaces and developing high-quality applications that stand out.",
+      "flutter_and_dart": {
+        "title": "Flutter & Dart",
+        "description": "Expert in building cross-platform apps with Flutter framework and Dart programming language."
+      },
+      "cross_platform": {
+        "title": "Cross-Platform",
+        "description": "Single codebase for iOS and Android, ensuring consistent user experience across platforms."
+      },
+      "performance": {
+        "title": "Performance",
+        "description": "Optimized apps with smooth animations, fast load times, and efficient resource usage."
+      },
+      "ui_ux_design": {
+        "title": "UI/UX Design",
+        "description": "Implementing beautiful, intuitive interfaces following Material Design and Cupertino guidelines."
+      },
+      "state_management": {
+        "title": "State Management",
+        "description": "Proficient in BLoC, Provider, Riverpod, and MobX for scalable app architecture."
+      },
+      "ci_cd": {
+        "title": "CI/CD",
+        "description": "Automated testing and deployment pipelines for reliable app releases."
+      },
+      "tech_stack": {
+        "title": "Tech stack"
+      }
     }
   }
 }

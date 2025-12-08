@@ -17,7 +17,7 @@ class _Styles {
   );
 
   static const TextStyle bodyDesktop = TextStyle(
-    fontSize: 14,
+    fontSize: 16,
     color: _Colors.text,
     fontWeight: FontWeight.w300,
     fontFamily: FontFamily.inter,
@@ -39,7 +39,7 @@ class _Styles {
   );
 
   static const TextStyle bodyTablet = TextStyle(
-    fontSize: 12,
+    fontSize: 14,
     color: _Colors.text,
     fontWeight: FontWeight.w300,
     fontFamily: FontFamily.inter,
@@ -61,7 +61,7 @@ class _Styles {
   );
 
   static const TextStyle bodyMobile = TextStyle(
-    fontSize: 10,
+    fontSize: 12,
     color: _Colors.text,
     fontWeight: FontWeight.w300,
     fontFamily: FontFamily.inter,
