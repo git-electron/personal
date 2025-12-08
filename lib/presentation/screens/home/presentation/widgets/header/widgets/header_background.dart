@@ -6,7 +6,7 @@ class _HeaderBackground extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(
-      alignment: Alignment.bottomCenter,
+      alignment: Alignment.center,
       children: [
         WebPaddingWrapper(
           isEnabled: context.isDesktopLayout,

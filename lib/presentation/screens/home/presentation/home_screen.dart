@@ -3,8 +3,10 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:gap/gap.dart';
+import 'package:logger/logger.dart';
 import 'package:super_sliver_list/super_sliver_list.dart';
 
+import '../../../../core/di/injector.dart';
 import '../../../../core/extensions/color_extensions.dart';
 import '../../../../core/extensions/context_extensions.dart';
 import '../../../../core/extensions/list_extensions.dart';
@@ -53,6 +55,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    $<Logger>().i(context.sizeOf);
+    $<Logger>().i(context.sizeOf.height);
+    
     return Scaffold(
       extendBodyBehindAppBar: true,
       backgroundColor: context.colors.background,
