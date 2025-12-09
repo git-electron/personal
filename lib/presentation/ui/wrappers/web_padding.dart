@@ -24,11 +24,13 @@ class WebPaddingWrapper extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ConstrainedBox(
-      constraints: const BoxConstraints(maxWidth: 1600),
-      child: Padding(
-        padding: isEnabled ? Pad(horizontal: horizontalValue(context)) : Pad.zero,
-        child: child,
+    return Center(
+      child: ConstrainedBox(
+        constraints: const BoxConstraints(maxWidth: 1600),
+        child: Padding(
+          padding: isEnabled ? Pad(horizontal: horizontalValue(context)) : Pad.zero,
+          child: child,
+        ),
       ),
     );
   }
