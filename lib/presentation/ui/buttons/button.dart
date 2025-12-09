@@ -11,22 +11,14 @@ class AppButton extends StatefulWidget {
     required this.onTap,
     required this.text,
     this.icon,
-    this.isDense = false,
+    this.image,
     super.key,
   });
-
-  const AppButton.compact({
-    required this.onTap,
-    required this.text,
-    this.icon,
-    super.key,
-  }) : isDense = true;
 
   final VoidCallback onTap;
   final String text;
   final SvgGenImage? icon;
-
-  final bool isDense;
+  final AssetGenImage? image;
 
   @override
   State<AppButton> createState() => _AppButtonState();
@@ -66,6 +58,11 @@ class _AppButtonState extends State<AppButton> {
                   SizedBox.square(
                     dimension: context.layoutDependantValue(desktop: 20, orElse: 16),
                     child: widget.icon!.svg(),
+                  ),
+                if (widget.image != null && widget.icon == null)
+                  SizedBox.square(
+                    dimension: context.layoutDependantValue(desktop: 20, orElse: 16),
+                    child: widget.image!.image(),
                   ),
                 Text(
                   widget.text,

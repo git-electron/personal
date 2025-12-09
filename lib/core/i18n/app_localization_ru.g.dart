@@ -92,6 +92,12 @@ class TranslationsHomeProjectsRu extends TranslationsHomeProjectsEn {
 	// Translations
 	@override String get title => 'Мои проекты';
 	@override String get description => 'Демонстрация приложений, которые я создал или в которых принимал участие';
+	@override late final TranslationsHomeProjectsOctaRu octa = TranslationsHomeProjectsOctaRu._(_root);
+	@override late final TranslationsHomeProjectsIrealtRu irealt = TranslationsHomeProjectsIrealtRu._(_root);
+	@override late final TranslationsHomeProjectsSelineRu seline = TranslationsHomeProjectsSelineRu._(_root);
+	@override late final TranslationsHomeProjectsDotoRu doto = TranslationsHomeProjectsDotoRu._(_root);
+	@override late final TranslationsHomeProjectsEmcdRu emcd = TranslationsHomeProjectsEmcdRu._(_root);
+	@override late final TranslationsHomeProjectsFakelabRu fakelab = TranslationsHomeProjectsFakelabRu._(_root);
 }
 
 // Path: home.skills.flutter_and_dart
@@ -169,4 +175,76 @@ class TranslationsHomeSkillsTechStackRu extends TranslationsHomeSkillsTechStackE
 	// Translations
 	@override String get title => 'Технический стек';
 	@override String get and_more => 'и не только...';
+}
+
+// Path: home.projects.octa
+class TranslationsHomeProjectsOctaRu extends TranslationsHomeProjectsOctaEn {
+	TranslationsHomeProjectsOctaRu._(TranslationsRu root) : this._root = root, super.internal(root);
+
+	final TranslationsRu _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Octa Trading Lessons';
+	@override String get description => 'Приложение Octa Trading Lessons — это бесплатный обучающий инструмент для всех, кто хочет разобраться в различных аспектах трейдинга и инвестирования.\nВ этом приложении вы будете учиться непосредственно у опытных трейдеров и сразу же применять свои знания на практике во время торговли.';
+	@override String get category => 'Education';
+}
+
+// Path: home.projects.irealt
+class TranslationsHomeProjectsIrealtRu extends TranslationsHomeProjectsIrealtEn {
+	TranslationsHomeProjectsIrealtRu._(TranslationsRu root) : this._root = root, super.internal(root);
+
+	final TranslationsRu _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'iRealt';
+	@override String get description => 'Простой и удобный сервис для профессиональных и начинающих риэлторов.\nНедвижимость напрямую от застройщика с выплатой высокой комиссии в день сделки.';
+	@override String get category => 'Real Estate';
+}
+
+// Path: home.projects.seline
+class TranslationsHomeProjectsSelineRu extends TranslationsHomeProjectsSelineEn {
+	TranslationsHomeProjectsSelineRu._(TranslationsRu root) : this._root = root, super.internal(root);
+
+	final TranslationsRu _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Seline Clinic Dubai';
+	@override String get description => 'Приложение Seline Aesthetic Clinic — ваш удобный помощник при бронировании процедур, начислении баллов лояльности и просмотре информации о приеме на одной безопасной платформе.\nЭто приложение, разработанное для улучшения ваших эстетических ощущений, позволяет вам сосредоточиться на том, что действительно важно: чувствовать себя уверенно и отдохнувшим.';
+	@override String get category => 'Health & Care';
+}
+
+// Path: home.projects.doto
+class TranslationsHomeProjectsDotoRu extends TranslationsHomeProjectsDotoEn {
+	TranslationsHomeProjectsDotoRu._(TranslationsRu root) : this._root = root, super.internal(root);
+
+	final TranslationsRu _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Doto';
+	@override String get description => 'Doto — это простое в использовании мобильное торговое приложение, которое помогает вам торговать разумнее и принимать решения, основанные на данных.\nПросто установите приложение и начните торговать акциями, индексами и многим другим — лучшие мировые инструменты у вас под рукой.';
+	@override String get category => 'Trading';
+}
+
+// Path: home.projects.emcd
+class TranslationsHomeProjectsEmcdRu extends TranslationsHomeProjectsEmcdEn {
+	TranslationsHomeProjectsEmcdRu._(TranslationsRu root) : this._root = root, super.internal(root);
+
+	final TranslationsRu _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'EMCD';
+	@override String get description => 'EMCD — один из крупнейших майнинг-пулов в Европе с общим хэшрейтом более 20 EH/c и множеством других функций.\nЭто крипто-кошелек, p2p-биржа, майнинг-пул, крипто-кредиты, coinhold и многое другое.';
+	@override String get category => 'Finance & Crypto';
+}
+
+// Path: home.projects.fakelab
+class TranslationsHomeProjectsFakelabRu extends TranslationsHomeProjectsFakelabEn {
+	TranslationsHomeProjectsFakelabRu._(TranslationsRu root) : this._root = root, super.internal(root);
+
+	final TranslationsRu _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Fakelab Records MiniApp';
+	@override String get description => 'Простой и удобный Telegram MiniApp для студии звукозаписи, разработанный на Flutter Web.\nПриложение позволяет ознакомиться с информацией о студии, забронировать посещение или заказать услуги. Вместе с приложением была разработана CRM-панель для администраторов.';
+	@override String get category => 'Sales & Landing';
 }

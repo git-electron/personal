@@ -120,6 +120,13 @@ class TranslationsHomeProjectsEn {
 
 	/// en: 'A showcase of mobile applications I've built or participated in'
 	String get description => 'A showcase of mobile applications I\'ve built or participated in';
+
+	late final TranslationsHomeProjectsOctaEn octa = TranslationsHomeProjectsOctaEn.internal(_root);
+	late final TranslationsHomeProjectsIrealtEn irealt = TranslationsHomeProjectsIrealtEn.internal(_root);
+	late final TranslationsHomeProjectsSelineEn seline = TranslationsHomeProjectsSelineEn.internal(_root);
+	late final TranslationsHomeProjectsDotoEn doto = TranslationsHomeProjectsDotoEn.internal(_root);
+	late final TranslationsHomeProjectsEmcdEn emcd = TranslationsHomeProjectsEmcdEn.internal(_root);
+	late final TranslationsHomeProjectsFakelabEn fakelab = TranslationsHomeProjectsFakelabEn.internal(_root);
 }
 
 // Path: home.skills.flutter_and_dart
@@ -225,4 +232,112 @@ class TranslationsHomeSkillsTechStackEn {
 
 	/// en: 'and more...'
 	String get and_more => 'and more...';
+}
+
+// Path: home.projects.octa
+class TranslationsHomeProjectsOctaEn {
+	TranslationsHomeProjectsOctaEn.internal(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'Octa Trading Lessons'
+	String get title => 'Octa Trading Lessons';
+
+	/// en: 'Octa Trading Lessons App is a free training tool for anyone who wants to understand various aspects of trading and investing. In this app, you will learn directly from expert traders and immediately put your knowledge to practice while trading.'
+	String get description => 'Octa Trading Lessons App is a free training tool for anyone who wants to understand various aspects of trading and investing.\nIn this app, you will learn directly from expert traders and immediately put your knowledge to practice while trading.';
+
+	/// en: 'Education'
+	String get category => 'Education';
+}
+
+// Path: home.projects.irealt
+class TranslationsHomeProjectsIrealtEn {
+	TranslationsHomeProjectsIrealtEn.internal(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'iRealt'
+	String get title => 'iRealt';
+
+	/// en: 'A simple and convenient service for professional and novice realtors. Real estate directly from the developer with a high commission payment on the day of the transaction.'
+	String get description => 'A simple and convenient service for professional and novice realtors.\nReal estate directly from the developer with a high commission payment on the day of the transaction.';
+
+	/// en: 'Real Estate'
+	String get category => 'Real Estate';
+}
+
+// Path: home.projects.seline
+class TranslationsHomeProjectsSelineEn {
+	TranslationsHomeProjectsSelineEn.internal(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'Seline Clinic Dubai'
+	String get title => 'Seline Clinic Dubai';
+
+	/// en: 'Seline Aesthetic Clinic App — your streamlined companion for booking treatments, earning loyalty points, and reviewing appointment details, all in one secure platform. Designed to enhance your aesthetic experience, this app ensures you can focus on what truly matters: feeling confident and refreshed.'
+	String get description => 'Seline Aesthetic Clinic App — your streamlined companion for booking treatments, earning loyalty points, and reviewing appointment details, all in one secure platform.\nDesigned to enhance your aesthetic experience, this app ensures you can focus on what truly matters: feeling confident and refreshed.';
+
+	/// en: 'Health & Care'
+	String get category => 'Health & Care';
+}
+
+// Path: home.projects.doto
+class TranslationsHomeProjectsDotoEn {
+	TranslationsHomeProjectsDotoEn.internal(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'Doto'
+	String get title => 'Doto';
+
+	/// en: 'Doto is an easy-to-use mobile trading app that helps you trade smarter and make data-driven decisions. Just get the app and start trading on stocks, indices and a lot more — the world’s top instruments are at your fingertips.'
+	String get description => 'Doto is an easy-to-use mobile trading app that helps you trade smarter and make data-driven decisions.\nJust get the app and start trading on stocks, indices and a lot more — the world’s top instruments are at your fingertips.';
+
+	/// en: 'Trading'
+	String get category => 'Trading';
+}
+
+// Path: home.projects.emcd
+class TranslationsHomeProjectsEmcdEn {
+	TranslationsHomeProjectsEmcdEn.internal(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'EMCD'
+	String get title => 'EMCD';
+
+	/// en: 'EMCD is one of the largest mining pool in Europe with total hashrate of 20+ EH/s and many other features. It is a crypto wallet, p2p exchange, mining pool, crypto loans, coinhold and more.'
+	String get description => 'EMCD is one of the largest mining pool in Europe with total hashrate of 20+ EH/s and many other features.\nIt is a crypto wallet, p2p exchange, mining pool, crypto loans, coinhold and more.';
+
+	/// en: 'Finance & Crypto'
+	String get category => 'Finance & Crypto';
+}
+
+// Path: home.projects.fakelab
+class TranslationsHomeProjectsFakelabEn {
+	TranslationsHomeProjectsFakelabEn.internal(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'Fakelab Records MiniApp'
+	String get title => 'Fakelab Records MiniApp';
+
+	/// en: 'A simple and convenient Telegram MiniApp for recording studio, developed on Flutter Web. The application allows you to view information about the studio, book a visit or order services. A CRM panel for administrators was developed along with the application.'
+	String get description => 'A simple and convenient Telegram MiniApp for recording studio, developed on Flutter Web.\nThe application allows you to view information about the studio, book a visit or order services. A CRM panel for administrators was developed along with the application.';
+
+	/// en: 'Sales & Landing'
+	String get category => 'Sales & Landing';
 }

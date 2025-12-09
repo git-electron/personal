@@ -67,6 +67,7 @@ flutter:
 
   - assets/icons/
   - assets/icons/general/
+  - assets/icons/general/link/
   - assets/icons/general/project/
   - assets/icons/contacts/email/
   - assets/icons/contacts/phone/
@@ -86,6 +87,9 @@ flutter:
   - assets/images/contacts/github/
   - assets/images/contacts/linkedin/
   - assets/images/contacts/telegram/
+  - assets/images/stores/
+  - assets/images/stores/app_store/
+  - assets/images/stores/google_play/
 
   fonts:
     - family: Inter

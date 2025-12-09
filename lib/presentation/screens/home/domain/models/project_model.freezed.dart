@@ -21,8 +21,9 @@ mixin _$Project {
   AssetGenImage get cover;
   List<String> get skills;
   String? get gitHubUrl;
+  String? get websiteUrl;
   String? get appStoreUrl;
-  String? get playMarketUrl;
+  String? get googlePlayUrl;
 
   /// Create a copy of Project
   /// with the given fields replaced by the non-null parameter values.
@@ -45,10 +46,12 @@ mixin _$Project {
             const DeepCollectionEquality().equals(other.skills, skills) &&
             (identical(other.gitHubUrl, gitHubUrl) ||
                 other.gitHubUrl == gitHubUrl) &&
+            (identical(other.websiteUrl, websiteUrl) ||
+                other.websiteUrl == websiteUrl) &&
             (identical(other.appStoreUrl, appStoreUrl) ||
                 other.appStoreUrl == appStoreUrl) &&
-            (identical(other.playMarketUrl, playMarketUrl) ||
-                other.playMarketUrl == playMarketUrl));
+            (identical(other.googlePlayUrl, googlePlayUrl) ||
+                other.googlePlayUrl == googlePlayUrl));
   }
 
   @override
@@ -60,12 +63,13 @@ mixin _$Project {
       const DeepCollectionEquality().hash(cover),
       const DeepCollectionEquality().hash(skills),
       gitHubUrl,
+      websiteUrl,
       appStoreUrl,
-      playMarketUrl);
+      googlePlayUrl);
 
   @override
   String toString() {
-    return 'Project(title: $title, description: $description, category: $category, cover: $cover, skills: $skills, gitHubUrl: $gitHubUrl, appStoreUrl: $appStoreUrl, playMarketUrl: $playMarketUrl)';
+    return 'Project(title: $title, description: $description, category: $category, cover: $cover, skills: $skills, gitHubUrl: $gitHubUrl, websiteUrl: $websiteUrl, appStoreUrl: $appStoreUrl, googlePlayUrl: $googlePlayUrl)';
   }
 }
 
@@ -81,8 +85,9 @@ abstract mixin class $ProjectCopyWith<$Res> {
       AssetGenImage cover,
       List<String> skills,
       String? gitHubUrl,
+      String? websiteUrl,
       String? appStoreUrl,
-      String? playMarketUrl});
+      String? googlePlayUrl});
 }
 
 /// @nodoc
@@ -103,8 +108,9 @@ class _$ProjectCopyWithImpl<$Res> implements $ProjectCopyWith<$Res> {
     Object? cover = freezed,
     Object? skills = null,
     Object? gitHubUrl = freezed,
+    Object? websiteUrl = freezed,
     Object? appStoreUrl = freezed,
-    Object? playMarketUrl = freezed,
+    Object? googlePlayUrl = freezed,
   }) {
     return _then(_self.copyWith(
       title: null == title
@@ -131,13 +137,17 @@ class _$ProjectCopyWithImpl<$Res> implements $ProjectCopyWith<$Res> {
           ? _self.gitHubUrl
           : gitHubUrl // ignore: cast_nullable_to_non_nullable
               as String?,
+      websiteUrl: freezed == websiteUrl
+          ? _self.websiteUrl
+          : websiteUrl // ignore: cast_nullable_to_non_nullable
+              as String?,
       appStoreUrl: freezed == appStoreUrl
           ? _self.appStoreUrl
           : appStoreUrl // ignore: cast_nullable_to_non_nullable
               as String?,
-      playMarketUrl: freezed == playMarketUrl
-          ? _self.playMarketUrl
-          : playMarketUrl // ignore: cast_nullable_to_non_nullable
+      googlePlayUrl: freezed == googlePlayUrl
+          ? _self.googlePlayUrl
+          : googlePlayUrl // ignore: cast_nullable_to_non_nullable
               as String?,
     ));
   }
@@ -153,8 +163,9 @@ class _Project extends Project {
       required this.cover,
       required final List<String> skills,
       this.gitHubUrl,
+      this.websiteUrl,
       this.appStoreUrl,
-      this.playMarketUrl})
+      this.googlePlayUrl})
       : _skills = skills,
         super._();
 
@@ -177,9 +188,11 @@ class _Project extends Project {
   @override
   final String? gitHubUrl;
   @override
+  final String? websiteUrl;
+  @override
   final String? appStoreUrl;
   @override
-  final String? playMarketUrl;
+  final String? googlePlayUrl;
 
   /// Create a copy of Project
   /// with the given fields replaced by the non-null parameter values.
@@ -203,10 +216,12 @@ class _Project extends Project {
             const DeepCollectionEquality().equals(other._skills, _skills) &&
             (identical(other.gitHubUrl, gitHubUrl) ||
                 other.gitHubUrl == gitHubUrl) &&
+            (identical(other.websiteUrl, websiteUrl) ||
+                other.websiteUrl == websiteUrl) &&
             (identical(other.appStoreUrl, appStoreUrl) ||
                 other.appStoreUrl == appStoreUrl) &&
-            (identical(other.playMarketUrl, playMarketUrl) ||
-                other.playMarketUrl == playMarketUrl));
+            (identical(other.googlePlayUrl, googlePlayUrl) ||
+                other.googlePlayUrl == googlePlayUrl));
   }
 
   @override
@@ -218,12 +233,13 @@ class _Project extends Project {
       const DeepCollectionEquality().hash(cover),
       const DeepCollectionEquality().hash(_skills),
       gitHubUrl,
+      websiteUrl,
       appStoreUrl,
-      playMarketUrl);
+      googlePlayUrl);
 
   @override
   String toString() {
-    return 'Project(title: $title, description: $description, category: $category, cover: $cover, skills: $skills, gitHubUrl: $gitHubUrl, appStoreUrl: $appStoreUrl, playMarketUrl: $playMarketUrl)';
+    return 'Project(title: $title, description: $description, category: $category, cover: $cover, skills: $skills, gitHubUrl: $gitHubUrl, websiteUrl: $websiteUrl, appStoreUrl: $appStoreUrl, googlePlayUrl: $googlePlayUrl)';
   }
 }
 
@@ -240,8 +256,9 @@ abstract mixin class _$ProjectCopyWith<$Res> implements $ProjectCopyWith<$Res> {
       AssetGenImage cover,
       List<String> skills,
       String? gitHubUrl,
+      String? websiteUrl,
       String? appStoreUrl,
-      String? playMarketUrl});
+      String? googlePlayUrl});
 }
 
 /// @nodoc
@@ -262,8 +279,9 @@ class __$ProjectCopyWithImpl<$Res> implements _$ProjectCopyWith<$Res> {
     Object? cover = freezed,
     Object? skills = null,
     Object? gitHubUrl = freezed,
+    Object? websiteUrl = freezed,
     Object? appStoreUrl = freezed,
-    Object? playMarketUrl = freezed,
+    Object? googlePlayUrl = freezed,
   }) {
     return _then(_Project(
       title: null == title
@@ -290,13 +308,17 @@ class __$ProjectCopyWithImpl<$Res> implements _$ProjectCopyWith<$Res> {
           ? _self.gitHubUrl
           : gitHubUrl // ignore: cast_nullable_to_non_nullable
               as String?,
+      websiteUrl: freezed == websiteUrl
+          ? _self.websiteUrl
+          : websiteUrl // ignore: cast_nullable_to_non_nullable
+              as String?,
       appStoreUrl: freezed == appStoreUrl
           ? _self.appStoreUrl
           : appStoreUrl // ignore: cast_nullable_to_non_nullable
               as String?,
-      playMarketUrl: freezed == playMarketUrl
-          ? _self.playMarketUrl
-          : playMarketUrl // ignore: cast_nullable_to_non_nullable
+      googlePlayUrl: freezed == googlePlayUrl
+          ? _self.googlePlayUrl
+          : googlePlayUrl // ignore: cast_nullable_to_non_nullable
               as String?,
     ));
   }

@@ -44,7 +44,37 @@
     },
     "projects": {
       "title": "My projects",
-      "description": "A showcase of mobile applications I've built or participated in"
+      "description": "A showcase of mobile applications I've built or participated in",
+      "octa": {
+        "title": "Octa Trading Lessons",
+        "description": "Octa Trading Lessons App is a free training tool for anyone who wants to understand various aspects of trading and investing.\nIn this app, you will learn directly from expert traders and immediately put your knowledge to practice while trading.",
+        "category": "Education"
+      },
+      "irealt": {
+        "title": "iRealt",
+        "description": "A simple and convenient service for professional and novice realtors.\nReal estate directly from the developer with a high commission payment on the day of the transaction.",
+        "category": "Real Estate"
+      },
+      "seline": {
+        "title": "Seline Clinic Dubai",
+        "description": "Seline Aesthetic Clinic App — your streamlined companion for booking treatments, earning loyalty points, and reviewing appointment details, all in one secure platform.\nDesigned to enhance your aesthetic experience, this app ensures you can focus on what truly matters: feeling confident and refreshed.",
+        "category": "Health & Care"
+      },
+      "doto": {
+        "title": "Doto",
+        "description": "Doto is an easy-to-use mobile trading app that helps you trade smarter and make data-driven decisions.\nJust get the app and start trading on stocks, indices and a lot more — the world’s top instruments are at your fingertips.",
+        "category": "Trading"
+      },
+      "emcd": {
+        "title": "EMCD",
+        "description": "EMCD is one of the largest mining pool in Europe with total hashrate of 20+ EH/s and many other features.\nIt is a crypto wallet, p2p exchange, mining pool, crypto loans, coinhold and more.",
+        "category": "Finance & Crypto"
+      },
+      "fakelab": {
+        "title": "Fakelab Records MiniApp",
+        "description": "A simple and convenient Telegram MiniApp for recording studio, developed on Flutter Web.\nThe application allows you to view information about the studio, book a visit or order services. A CRM panel for administrators and Telegram bot on Dart was developed along with the application.",
+        "category": "Sales & Landing"
+      }
     }
   }
 }

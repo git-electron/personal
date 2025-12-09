@@ -39,6 +39,9 @@ class $AssetsImagesGen {
 
   /// Directory path: assets/images/general
   $AssetsImagesGeneralGen get general => const $AssetsImagesGeneralGen();
+
+  /// Directory path: assets/images/stores
+  $AssetsImagesStoresGen get stores => const $AssetsImagesStoresGen();
 }
 
 class $AssetsIconsContactsGen {
@@ -59,6 +62,9 @@ class $AssetsIconsContactsGen {
 
 class $AssetsIconsGeneralGen {
   const $AssetsIconsGeneralGen();
+
+  /// Directory path: assets/icons/general/link
+  $AssetsIconsGeneralLinkGen get link => const $AssetsIconsGeneralLinkGen();
 
   /// File path: assets/icons/general/logo.svg
   SvgGenImage get logo => const SvgGenImage('assets/icons/general/logo.svg');
@@ -142,6 +148,18 @@ class $AssetsImagesGeneralGen {
   List<AssetGenImage> get values => [a3dAvatar, a3dAvatarFilled];
 }
 
+class $AssetsImagesStoresGen {
+  const $AssetsImagesStoresGen();
+
+  /// Directory path: assets/images/stores/app_store
+  $AssetsImagesStoresAppStoreGen get appStore =>
+      const $AssetsImagesStoresAppStoreGen();
+
+  /// Directory path: assets/images/stores/google_play
+  $AssetsImagesStoresGooglePlayGen get googlePlay =>
+      const $AssetsImagesStoresGooglePlayGen();
+}
+
 class $AssetsIconsContactsContactGen {
   const $AssetsIconsContactsContactGen();
 
@@ -194,6 +212,25 @@ class $AssetsIconsContactsPhoneGen {
   /// File path: assets/icons/contacts/phone/light.svg
   SvgGenImage get light =>
       const SvgGenImage('assets/icons/contacts/phone/light.svg');
+
+  /// List of all assets
+  List<SvgGenImage> get values => [brand, dark, light];
+}
+
+class $AssetsIconsGeneralLinkGen {
+  const $AssetsIconsGeneralLinkGen();
+
+  /// File path: assets/icons/general/link/brand.svg
+  SvgGenImage get brand =>
+      const SvgGenImage('assets/icons/general/link/brand.svg');
+
+  /// File path: assets/icons/general/link/dark.svg
+  SvgGenImage get dark =>
+      const SvgGenImage('assets/icons/general/link/dark.svg');
+
+  /// File path: assets/icons/general/link/light.svg
+  SvgGenImage get light =>
+      const SvgGenImage('assets/icons/general/link/light.svg');
 
   /// List of all assets
   List<SvgGenImage> get values => [brand, dark, light];
@@ -403,6 +440,44 @@ class $AssetsImagesContactsTelegramGen {
   /// File path: assets/images/contacts/telegram/light.png
   AssetGenImage get light =>
       const AssetGenImage('assets/images/contacts/telegram/light.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [brand, dark, light];
+}
+
+class $AssetsImagesStoresAppStoreGen {
+  const $AssetsImagesStoresAppStoreGen();
+
+  /// File path: assets/images/stores/app_store/brand.png
+  AssetGenImage get brand =>
+      const AssetGenImage('assets/images/stores/app_store/brand.png');
+
+  /// File path: assets/images/stores/app_store/dark.png
+  AssetGenImage get dark =>
+      const AssetGenImage('assets/images/stores/app_store/dark.png');
+
+  /// File path: assets/images/stores/app_store/light.png
+  AssetGenImage get light =>
+      const AssetGenImage('assets/images/stores/app_store/light.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [brand, dark, light];
+}
+
+class $AssetsImagesStoresGooglePlayGen {
+  const $AssetsImagesStoresGooglePlayGen();
+
+  /// File path: assets/images/stores/google_play/brand.png
+  AssetGenImage get brand =>
+      const AssetGenImage('assets/images/stores/google_play/brand.png');
+
+  /// File path: assets/images/stores/google_play/dark.png
+  AssetGenImage get dark =>
+      const AssetGenImage('assets/images/stores/google_play/dark.png');
+
+  /// File path: assets/images/stores/google_play/light.png
+  AssetGenImage get light =>
+      const AssetGenImage('assets/images/stores/google_play/light.png');
 
   /// List of all assets
   List<AssetGenImage> get values => [brand, dark, light];
