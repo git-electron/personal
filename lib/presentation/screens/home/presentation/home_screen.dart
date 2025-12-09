@@ -6,6 +6,7 @@ import 'package:gap/gap.dart';
 import 'package:super_sliver_list/super_sliver_list.dart';
 
 import '../../../../core/di/injector.dart';
+import '../../../../core/domain/services/device_info_service.dart';
 import '../../../../core/extensions/color_extensions.dart';
 import '../../../../core/extensions/context_extensions.dart';
 import '../../../../core/extensions/list_extensions.dart';
@@ -74,7 +75,7 @@ class _HomeScreenState extends State<HomeScreen> {
           clipBehavior: Clip.none,
           controller: _scrollController,
           listController: _listController,
-          physics: const NeverScrollableScrollPhysics(),
+          physics: $<DeviceInfoService>().isMobileDevice ? null : const NeverScrollableScrollPhysics(),
           children: [
             const _Header(),
             const _Skills(),
