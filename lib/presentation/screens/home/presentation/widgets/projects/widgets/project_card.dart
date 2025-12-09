@@ -12,7 +12,7 @@ class _ProjectCard extends StatelessWidget {
         color: context.colors.background,
         borderRadius: BorderRadius.circular(20),
         border: Border.all(
-          color: context.colors.onBackground.copyWithOpacity(.1),
+          color: context.colors.cardBorder,
         ),
       ),
       child: Column(

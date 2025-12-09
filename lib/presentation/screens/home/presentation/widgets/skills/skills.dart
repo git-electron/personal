@@ -37,10 +37,10 @@ class _Skills extends StatelessWidget {
               padding: Pad(all: context.layoutDependantValue(desktop: 30, orElse: 20)),
               width: double.maxFinite,
               decoration: BoxDecoration(
-                color: context.colors.onBackground.copyWithOpacity(.05),
+                color: context.colors.cardBackground,
                 borderRadius: BorderRadius.circular(20),
                 border: Border.all(
-                  color: context.colors.onBackground.copyWithOpacity(.1),
+                  color: context.colors.cardBorder,
                 ),
               ),
               child: Column(

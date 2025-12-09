@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 import '../../../core/di/injector.dart';
@@ -37,7 +36,8 @@ class _MeasureSizeWrapperState extends State<MeasureSizeWrapper> {
   void _callback(Duration _) => _measureSize();
 
   void _measureSize() {
-    Size? size = context.size;
+    if (!mounted) return;
+    final Size? size = context.size;
     if (_isSizeMeasured && widget.shouldMeasureOnce) return;
     if (size == null) return;
     if (size == Size.zero) return;

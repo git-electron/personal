@@ -9,10 +9,10 @@ class _SkillCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return DecoratedBox(
       decoration: BoxDecoration(
-        color: context.colors.onBackground.copyWithOpacity(.05),
+        color: context.colors.cardBackground,
         borderRadius: BorderRadius.circular(20),
         border: Border.all(
-          color: context.colors.onBackground.copyWithOpacity(.1),
+          color: context.colors.cardBorder,
         ),
       ),
       child: Padding(

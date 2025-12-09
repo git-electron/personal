@@ -16,6 +16,9 @@ class Colors extends ThemeExtension<Colors> with _$ColorsTailorMixin {
     required this.black,
     required this.background,
     required this.onBackground,
+    required this.cardBackground,
+    required this.accentCardBackground,
+    required this.cardBorder,
     required this.text,
     required this.warning,
     required this.error,
@@ -48,6 +51,15 @@ class Colors extends ThemeExtension<Colors> with _$ColorsTailorMixin {
 
   @override
   final Color onBackground;
+
+  @override
+  final Color cardBackground;
+
+  @override
+  final Color accentCardBackground;
+
+  @override
+  final Color cardBorder;
 
   @override
   final Color text;
@@ -104,6 +116,9 @@ const Colors colors = Colors(
   black: _Colors.black,
   background: _Colors.background,
   onBackground: _Colors.onBackground,
+  cardBackground: _Colors.cardBackground,
+  accentCardBackground: _Colors.accentCardBackground,
+  cardBorder: _Colors.cardBorder,
   text: _Colors.text,
   warning: _Colors.warning,
   error: _Colors.error,

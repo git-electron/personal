@@ -17,6 +17,9 @@ class AppColors {
   /// Color: #9FA0C3
   static const Color accent = Color(0xFF9FA0C3);
 
+  /// Color: #201f20
+  static const Color accentCardBackground = Color(0xFF201F20);
+
   /// Color: #6161AB
   static const Color accentGradientEnd = Color(0xFF6161AB);
 
@@ -31,6 +34,12 @@ class AppColors {
 
   /// Color: #383738
   static const Color buttonHighlight = Color(0xFF383738);
+
+  /// Color: #141314
+  static const Color cardBackground = Color(0xFF141314);
+
+  /// Color: #2b2a2b
+  static const Color cardBorder = Color(0xFF2B2A2B);
 
   /// Color: #FF5858
   static const Color error = Color(0xFFFF5858);

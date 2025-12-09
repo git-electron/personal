@@ -15,6 +15,9 @@ mixin _$ColorsTailorMixin on ThemeExtension<Colors> {
   Color get black;
   Color get background;
   Color get onBackground;
+  Color get cardBackground;
+  Color get accentCardBackground;
+  Color get cardBorder;
   Color get text;
   Color get warning;
   Color get error;
@@ -39,6 +42,9 @@ mixin _$ColorsTailorMixin on ThemeExtension<Colors> {
     Color? black,
     Color? background,
     Color? onBackground,
+    Color? cardBackground,
+    Color? accentCardBackground,
+    Color? cardBorder,
     Color? text,
     Color? warning,
     Color? error,
@@ -62,6 +68,9 @@ mixin _$ColorsTailorMixin on ThemeExtension<Colors> {
       black: black ?? this.black,
       background: background ?? this.background,
       onBackground: onBackground ?? this.onBackground,
+      cardBackground: cardBackground ?? this.cardBackground,
+      accentCardBackground: accentCardBackground ?? this.accentCardBackground,
+      cardBorder: cardBorder ?? this.cardBorder,
       text: text ?? this.text,
       warning: warning ?? this.warning,
       error: error ?? this.error,
@@ -93,6 +102,10 @@ mixin _$ColorsTailorMixin on ThemeExtension<Colors> {
       black: Color.lerp(black, other.black, t)!,
       background: Color.lerp(background, other.background, t)!,
       onBackground: Color.lerp(onBackground, other.onBackground, t)!,
+      cardBackground: Color.lerp(cardBackground, other.cardBackground, t)!,
+      accentCardBackground:
+          Color.lerp(accentCardBackground, other.accentCardBackground, t)!,
+      cardBorder: Color.lerp(cardBorder, other.cardBorder, t)!,
       text: Color.lerp(text, other.text, t)!,
       warning: Color.lerp(warning, other.warning, t)!,
       error: Color.lerp(error, other.error, t)!,
@@ -134,6 +147,12 @@ mixin _$ColorsTailorMixin on ThemeExtension<Colors> {
                 .equals(background, other.background) &&
             const DeepCollectionEquality()
                 .equals(onBackground, other.onBackground) &&
+            const DeepCollectionEquality()
+                .equals(cardBackground, other.cardBackground) &&
+            const DeepCollectionEquality()
+                .equals(accentCardBackground, other.accentCardBackground) &&
+            const DeepCollectionEquality()
+                .equals(cardBorder, other.cardBorder) &&
             const DeepCollectionEquality().equals(text, other.text) &&
             const DeepCollectionEquality().equals(warning, other.warning) &&
             const DeepCollectionEquality().equals(error, other.error) &&
@@ -171,6 +190,9 @@ mixin _$ColorsTailorMixin on ThemeExtension<Colors> {
       const DeepCollectionEquality().hash(black),
       const DeepCollectionEquality().hash(background),
       const DeepCollectionEquality().hash(onBackground),
+      const DeepCollectionEquality().hash(cardBackground),
+      const DeepCollectionEquality().hash(accentCardBackground),
+      const DeepCollectionEquality().hash(cardBorder),
       const DeepCollectionEquality().hash(text),
       const DeepCollectionEquality().hash(warning),
       const DeepCollectionEquality().hash(error),
