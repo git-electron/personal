@@ -72,6 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
           clipBehavior: Clip.none,
           controller: _scrollController,
           listController: _listController,
+          physics: const NeverScrollableScrollPhysics(),
           children: [
             const _Header(),
             const _Skills(),
