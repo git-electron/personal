@@ -12,7 +12,7 @@ class _HeaderContent extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'This page is currently in development...',
+          'This page is currently in development... May be unstable :)', //TODO: remove
           style: context.bodyStyle.copyWith(color: context.colors.text.copyWithOpacity(.5)),
         ),
         context.layoutDependantValue(

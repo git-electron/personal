@@ -37,7 +37,7 @@ class _ProjectCard extends StatelessWidget {
                     aspectRatio: 16 / 9,
                     child: Center(
                       child: Text(
-                        'Cover will be added later...',
+                        'Cover will be added later...', //TODO: add covers and remove
                         style: context.bodyStyle.copyWith(
                           color: context.colors.text.copyWithOpacity(.1),
                         ),
