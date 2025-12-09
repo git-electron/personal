@@ -11,6 +11,10 @@ class _HeaderContent extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        Text(
+          'This page is currently in development...',
+          style: context.bodyStyle.copyWith(color: context.colors.text.copyWithOpacity(.5)),
+        ),
         context.layoutDependantValue(
           orElse: Row(
             spacing: context.layoutDependantValue(desktop: 40, orElse: 20),
