@@ -40,6 +40,9 @@ class $AssetsImagesGen {
   /// Directory path: assets/images/general
   $AssetsImagesGeneralGen get general => const $AssetsImagesGeneralGen();
 
+  /// Directory path: assets/images/projects
+  $AssetsImagesProjectsGen get projects => const $AssetsImagesProjectsGen();
+
   /// Directory path: assets/images/stores
   $AssetsImagesStoresGen get stores => const $AssetsImagesStoresGen();
 }
@@ -146,6 +149,37 @@ class $AssetsImagesGeneralGen {
 
   /// List of all assets
   List<AssetGenImage> get values => [a3dAvatar, a3dAvatarFilled];
+}
+
+class $AssetsImagesProjectsGen {
+  const $AssetsImagesProjectsGen();
+
+  /// File path: assets/images/projects/doto.png
+  AssetGenImage get doto =>
+      const AssetGenImage('assets/images/projects/doto.png');
+
+  /// File path: assets/images/projects/emcd.png
+  AssetGenImage get emcd =>
+      const AssetGenImage('assets/images/projects/emcd.png');
+
+  /// File path: assets/images/projects/fakelab.png
+  AssetGenImage get fakelab =>
+      const AssetGenImage('assets/images/projects/fakelab.png');
+
+  /// File path: assets/images/projects/irealt.png
+  AssetGenImage get irealt =>
+      const AssetGenImage('assets/images/projects/irealt.png');
+
+  /// File path: assets/images/projects/octa.png
+  AssetGenImage get octa =>
+      const AssetGenImage('assets/images/projects/octa.png');
+
+  /// File path: assets/images/projects/seline.png
+  AssetGenImage get seline =>
+      const AssetGenImage('assets/images/projects/seline.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [doto, emcd, fakelab, irealt, octa, seline];
 }
 
 class $AssetsImagesStoresGen {

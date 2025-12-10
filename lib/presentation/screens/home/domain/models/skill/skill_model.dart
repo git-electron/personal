@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../../../../core/gen/assets.gen.dart';
-import '../../../../../core/i18n/app_localization.g.dart';
+import '../../../../../../core/gen/assets.gen.dart';
+import '../../../../../../core/i18n/app_localization.g.dart';
 
 part 'skill_model.freezed.dart';
 

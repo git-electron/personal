@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../../../../core/gen/assets.gen.dart';
-import '../../../../../core/i18n/app_localization.g.dart';
+import '../../../../../../core/gen/assets.gen.dart';
+import '../../../../../../core/i18n/app_localization.g.dart';
 
 part 'project_model.freezed.dart';
 
@@ -32,7 +32,7 @@ sealed class Project with _$Project {
           title: context.t.home.projects.irealt.title,
           description: context.t.home.projects.irealt.description,
           category: context.t.home.projects.irealt.category,
-          cover: Assets.images.backgrounds.headerBackground,
+          cover: Assets.images.projects.irealt,
           skills: ['Flutter', 'GraphQL', 'BLoC', 'Maps'],
           websiteUrl: 'https://irealt.online',
           appStoreUrl: 'https://apps.apple.com/ru/app/irealt/id6451043247',
@@ -42,7 +42,7 @@ sealed class Project with _$Project {
           title: context.t.home.projects.doto.title,
           description: context.t.home.projects.doto.description,
           category: context.t.home.projects.doto.category,
-          cover: Assets.images.backgrounds.headerBackground,
+          cover: Assets.images.projects.doto,
           skills: ['Flutter', 'Cubit', 'REST API', 'Charts', 'KYC', 'Billing', 'Bloomreach'],
           websiteUrl: 'https://doto.com',
           appStoreUrl: 'https://apps.apple.com/za/app/doto-mobile-trading/id6447878833',
@@ -52,7 +52,7 @@ sealed class Project with _$Project {
           title: context.t.home.projects.octa.title,
           description: context.t.home.projects.octa.description,
           category: context.t.home.projects.octa.category,
-          cover: Assets.images.backgrounds.headerBackground,
+          cover: Assets.images.projects.octa,
           skills: ['Flutter', 'BLoC', 'Firebase', 'Pushwoosh'],
           websiteUrl: 'https://octatradinglessons.com',
           googlePlayUrl: 'https://play.google.com/store/apps/details?id=com.octa.trading.lessons',
@@ -61,7 +61,7 @@ sealed class Project with _$Project {
           title: context.t.home.projects.seline.title,
           description: context.t.home.projects.seline.description,
           category: context.t.home.projects.seline.category,
-          cover: Assets.images.backgrounds.headerBackground,
+          cover: Assets.images.projects.seline,
           skills: ['Flutter', 'MobX', 'REST API', 'Files', 'Local Auth'],
           websiteUrl: 'https://seline.ae',
           appStoreUrl: 'https://apps.apple.com/ru/app/seline-clinic-dubai/id6740837376',
@@ -71,7 +71,7 @@ sealed class Project with _$Project {
           title: context.t.home.projects.emcd.title,
           description: context.t.home.projects.emcd.description,
           category: context.t.home.projects.emcd.category,
-          cover: Assets.images.backgrounds.headerBackground,
+          cover: Assets.images.projects.emcd,
           skills: ['Flutter', 'BLoC', 'REST API', 'RASP', 'Encryption'],
           websiteUrl: 'https://emcd.io',
           appStoreUrl:
@@ -82,7 +82,7 @@ sealed class Project with _$Project {
           title: context.t.home.projects.fakelab.title,
           description: context.t.home.projects.fakelab.description,
           category: context.t.home.projects.fakelab.category,
-          cover: Assets.images.backgrounds.headerBackground,
+          cover: Assets.images.projects.fakelab,
           skills: ['Flutter', 'Dart', 'Web', 'BLoC', 'Firebase'],
           gitHubUrl: 'https://github.com/git-electron/fakelab_records_webapp',
           websiteUrl: 'https://t.me/fakelab_records_bot',

@@ -1,5 +1,6 @@
 import 'package:assorted_layout_widgets/assorted_layout_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 
 import '../../../core/extensions/context_extensions.dart';
 import '../../../core/gen/assets.gen.dart';
@@ -37,7 +38,7 @@ class _AppButtonState extends State<AppButton> {
         onExit: (_) => setState(() => _isHovering = false),
         child: RepaintBoundary(
           child: AnimatedContainer(
-            duration: const Duration(milliseconds: 100),
+            duration: 100.ms,
             decoration: BoxDecoration(
               color: _isHovering ? context.colors.buttonHighlight : context.colors.background,
               borderRadius: BorderRadius.circular(5),

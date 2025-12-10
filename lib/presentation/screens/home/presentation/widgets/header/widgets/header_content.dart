@@ -140,7 +140,21 @@ class _Buttons extends StatelessWidget {
           spacing: context.layoutDependantValue(desktop: 20, orElse: 10),
           children: [
             AppButton(
-              onTap: () {},
+              onTap: () async {
+                final response = await post(
+                  Uri.parse('https://api.web3forms.com/submit'),
+                  headers: {'Content-Type': 'application/json'},
+                  body: jsonEncode({
+                    'access_key': '80d3bdce-b273-40c1-bd5d-4ae3fda5a7b7',
+                    'name': 'test',
+                    'email': 'test@test.test',
+                    'message': 'new message',
+                  }),
+                );
+
+                print('Status: ${response.statusCode}');
+                print('Body: ${response.body}');
+              },
               icon: Assets.icons.contacts.contact.light,
               text: context.t.home.header.contact_button,
             ),

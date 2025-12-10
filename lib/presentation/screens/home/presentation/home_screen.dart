@@ -1,8 +1,12 @@
+import 'dart:convert';
+
 import 'package:assorted_layout_widgets/assorted_layout_widgets.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:gap/gap.dart';
+import 'package:http/http.dart';
 import 'package:super_sliver_list/super_sliver_list.dart';
 
 import '../../../../core/constants/constants.dart';
@@ -21,9 +25,10 @@ import '../../../ui/buttons/icon_button.dart';
 import '../../../ui/buttons/text_button.dart';
 import '../../../ui/utils/formatted_text.dart';
 import '../../../ui/wrappers/measure_size_wrapper.dart';
+import '../../../ui/wrappers/tappable.dart';
 import '../../../ui/wrappers/web_padding.dart';
-import '../domain/models/project_model.dart';
-import '../domain/models/skill_model.dart';
+import '../domain/models/project/project_model.dart';
+import '../domain/models/skill/skill_model.dart';
 
 part 'widgets/header/header.dart';
 part 'widgets/header/widgets/header_background.dart';
