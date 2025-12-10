@@ -17,6 +17,14 @@ import 'package:landing/core/domain/services/device_info_service.dart' as _i785;
 import 'package:landing/core/router/router.dart' as _i136;
 import 'package:landing/core/utils/debouncer/debouncer.dart' as _i516;
 import 'package:landing/core/utils/url_launcher/url_launcher.dart' as _i1054;
+import 'package:landing/presentation/screens/home/data/contact_form_repository.dart'
+    as _i693;
+import 'package:landing/presentation/screens/home/data/contact_form_repository_impl.dart'
+    as _i229;
+import 'package:landing/presentation/screens/home/domain/service/contact_form_service.dart'
+    as _i508;
+import 'package:landing/presentation/screens/home/domain/service/contact_form_service_impl.dart'
+    as _i450;
 import 'package:logger/logger.dart' as _i974;
 
 extension GetItInjectableX on _i174.GetIt {
@@ -43,6 +51,10 @@ extension GetItInjectableX on _i174.GetIt {
       },
       preResolve: true,
     );
+    gh.factory<_i693.ContactFormRepository>(
+        () => _i229.ContactFormRepositoryImpl());
+    gh.factory<_i508.ContactFormService>(
+        () => _i450.ContactFormServiceImpl(gh<_i693.ContactFormRepository>()));
     return this;
   }
 }

@@ -1,12 +1,9 @@
-import 'dart:convert';
-
 import 'package:assorted_layout_widgets/assorted_layout_widgets.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:gap/gap.dart';
-import 'package:http/http.dart';
 import 'package:super_sliver_list/super_sliver_list.dart';
 
 import '../../../../core/constants/constants.dart';
