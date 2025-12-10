@@ -145,7 +145,7 @@ class _Buttons extends StatelessWidget {
               text: context.t.home.header.contact_button,
             ),
             AppButton(
-              onTap: () => $<AppRouter>().push(const ProjectsRoute()),
+              onTap: () {},
               icon: Assets.icons.general.project.light,
               text: context.t.home.header.projects_button,
             ),
@@ -179,15 +179,15 @@ class _Contacts extends StatelessWidget {
       children: [
         AppIconButton.image(
           image: Assets.images.contacts.github.light,
-          onTap: () {},
+          onTap: () => $<UrlLauncher>().launchUrlString(Constants.githubUrl),
         ),
         AppIconButton.image(
           image: Assets.images.contacts.hh.light,
-          onTap: () {},
+          onTap: () => $<UrlLauncher>().launchUrlString(Constants.hhUrl),
         ),
         AppIconButton.image(
           image: Assets.images.contacts.linkedin.light,
-          onTap: () {},
+          onTap: () => $<UrlLauncher>().launchUrlString(Constants.linkedinUrl),
         ),
       ],
     );
