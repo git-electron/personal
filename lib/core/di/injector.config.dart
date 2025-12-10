@@ -14,6 +14,7 @@ import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
 import 'package:landing/core/di/locator.dart' as _i518;
 import 'package:landing/core/domain/services/device_info_service.dart' as _i785;
+import 'package:landing/core/domain/services/toast_service.dart' as _i210;
 import 'package:landing/core/router/router.dart' as _i136;
 import 'package:landing/core/utils/debouncer/debouncer.dart' as _i516;
 import 'package:landing/core/utils/url_launcher/url_launcher.dart' as _i1054;
@@ -43,6 +44,7 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i833.DeviceInfoPlugin>(() => locator.deviceInfoPlugin);
     gh.factory<_i1054.UrlLauncher>(() => _i1054.UrlLauncher());
     gh.factory<_i516.Debouncer>(() => _i516.Debouncer());
+    gh.singleton<_i210.ToastService>(() => _i210.ToastService());
     gh.singleton<_i136.AppRouter>(() => _i136.AppRouter(gh<_i974.Logger>()));
     await gh.singletonAsync<_i785.DeviceInfoService>(
       () {

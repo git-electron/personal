@@ -69,6 +69,10 @@ class $AssetsIconsGeneralGen {
   /// Directory path: assets/icons/general/link
   $AssetsIconsGeneralLinkGen get link => const $AssetsIconsGeneralLinkGen();
 
+  /// Directory path: assets/icons/general/location
+  $AssetsIconsGeneralLocationGen get location =>
+      const $AssetsIconsGeneralLocationGen();
+
   /// File path: assets/icons/general/logo.svg
   SvgGenImage get logo => const SvgGenImage('assets/icons/general/logo.svg');
 
@@ -109,12 +113,16 @@ class $AssetsIconsSkillsGen {
 class $AssetsImagesBackgroundsGen {
   const $AssetsImagesBackgroundsGen();
 
+  /// File path: assets/images/backgrounds/contacts_background.png
+  AssetGenImage get contactsBackground =>
+      const AssetGenImage('assets/images/backgrounds/contacts_background.png');
+
   /// File path: assets/images/backgrounds/header_background.png
   AssetGenImage get headerBackground =>
       const AssetGenImage('assets/images/backgrounds/header_background.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [headerBackground];
+  List<AssetGenImage> get values => [contactsBackground, headerBackground];
 }
 
 class $AssetsImagesContactsGen {
@@ -265,6 +273,25 @@ class $AssetsIconsGeneralLinkGen {
   /// File path: assets/icons/general/link/light.svg
   SvgGenImage get light =>
       const SvgGenImage('assets/icons/general/link/light.svg');
+
+  /// List of all assets
+  List<SvgGenImage> get values => [brand, dark, light];
+}
+
+class $AssetsIconsGeneralLocationGen {
+  const $AssetsIconsGeneralLocationGen();
+
+  /// File path: assets/icons/general/location/brand.svg
+  SvgGenImage get brand =>
+      const SvgGenImage('assets/icons/general/location/brand.svg');
+
+  /// File path: assets/icons/general/location/dark.svg
+  SvgGenImage get dark =>
+      const SvgGenImage('assets/icons/general/location/dark.svg');
+
+  /// File path: assets/icons/general/location/light.svg
+  SvgGenImage get light =>
+      const SvgGenImage('assets/icons/general/location/light.svg');
 
   /// List of all assets
   List<SvgGenImage> get values => [brand, dark, light];

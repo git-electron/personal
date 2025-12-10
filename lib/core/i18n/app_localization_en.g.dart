@@ -40,6 +40,7 @@ class Translations with BaseTranslations<AppLocale, Translations> {
 	String get title => 'Egor Myadzuta';
 
 	late final TranslationsHomeEn home = TranslationsHomeEn.internal(_root);
+	late final TranslationsGeneralEn general = TranslationsGeneralEn.internal(_root);
 }
 
 // Path: home
@@ -52,6 +53,24 @@ class TranslationsHomeEn {
 	late final TranslationsHomeHeaderEn header = TranslationsHomeHeaderEn.internal(_root);
 	late final TranslationsHomeSkillsEn skills = TranslationsHomeSkillsEn.internal(_root);
 	late final TranslationsHomeProjectsEn projects = TranslationsHomeProjectsEn.internal(_root);
+	late final TranslationsHomeContactEn contact = TranslationsHomeContactEn.internal(_root);
+}
+
+// Path: general
+class TranslationsGeneralEn {
+	TranslationsGeneralEn.internal(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'Ok'
+	String get ok => 'Ok';
+
+	/// en: 'Cancel'
+	String get cancel => 'Cancel';
+
+	late final TranslationsGeneralToastsEn toasts = TranslationsGeneralToastsEn.internal(_root);
 }
 
 // Path: home.header
@@ -118,8 +137,8 @@ class TranslationsHomeProjectsEn {
 	/// en: 'My projects'
 	String get title => 'My projects';
 
-	/// en: 'A showcase of mobile applications I've built or participated in'
-	String get description => 'A showcase of mobile applications I\'ve built or participated in';
+	/// en: 'A showcase of mobile applications I've built or participated in.'
+	String get description => 'A showcase of mobile applications I\'ve built or participated in.';
 
 	late final TranslationsHomeProjectsOctaEn octa = TranslationsHomeProjectsOctaEn.internal(_root);
 	late final TranslationsHomeProjectsIrealtEn irealt = TranslationsHomeProjectsIrealtEn.internal(_root);
@@ -127,6 +146,35 @@ class TranslationsHomeProjectsEn {
 	late final TranslationsHomeProjectsDotoEn doto = TranslationsHomeProjectsDotoEn.internal(_root);
 	late final TranslationsHomeProjectsEmcdEn emcd = TranslationsHomeProjectsEmcdEn.internal(_root);
 	late final TranslationsHomeProjectsFakelabEn fakelab = TranslationsHomeProjectsFakelabEn.internal(_root);
+}
+
+// Path: home.contact
+class TranslationsHomeContactEn {
+	TranslationsHomeContactEn.internal(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'Bringing your ideas to life'
+	String get title => 'Bringing your ideas to life';
+
+	/// en: 'Have a project in mind? I'd love to hear about it. Let's create something amazing together.'
+	String get description => 'Have a project in mind? I\'d love to hear about it. Let\'s create something amazing together.';
+
+	late final TranslationsHomeContactContactsEn contacts = TranslationsHomeContactContactsEn.internal(_root);
+	late final TranslationsHomeContactFormEn form = TranslationsHomeContactFormEn.internal(_root);
+}
+
+// Path: general.toasts
+class TranslationsGeneralToastsEn {
+	TranslationsGeneralToastsEn.internal(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	late final TranslationsGeneralToastsCopyToastEn copy_toast = TranslationsGeneralToastsCopyToastEn.internal(_root);
+	late final TranslationsGeneralToastsSubmitToastEn submit_toast = TranslationsGeneralToastsSubmitToastEn.internal(_root);
 }
 
 // Path: home.skills.flutter_and_dart
@@ -335,9 +383,185 @@ class TranslationsHomeProjectsFakelabEn {
 	/// en: 'Fakelab Records MiniApp'
 	String get title => 'Fakelab Records MiniApp';
 
-	/// en: 'A simple and convenient Telegram MiniApp for recording studio, developed on Flutter Web. The application allows you to view information about the studio, book a visit or order services. A CRM panel for administrators was developed along with the application.'
-	String get description => 'A simple and convenient Telegram MiniApp for recording studio, developed on Flutter Web.\nThe application allows you to view information about the studio, book a visit or order services. A CRM panel for administrators was developed along with the application.';
+	/// en: 'A simple and convenient Telegram MiniApp for recording studio, developed on Flutter Web. The application allows you to view information about the studio, book a visit or order services. A CRM panel for administrators and Telegram bot on Dart was developed along with the application.'
+	String get description => 'A simple and convenient Telegram MiniApp for recording studio, developed on Flutter Web.\nThe application allows you to view information about the studio, book a visit or order services. A CRM panel for administrators and Telegram bot on Dart was developed along with the application.';
 
 	/// en: 'Sales & Landing'
 	String get category => 'Sales & Landing';
+}
+
+// Path: home.contact.contacts
+class TranslationsHomeContactContactsEn {
+	TranslationsHomeContactContactsEn.internal(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'Phone'
+	String get phone => 'Phone';
+
+	/// en: 'Email'
+	String get email => 'Email';
+
+	/// en: 'Location'
+	String get location => 'Location';
+
+	/// en: 'Telegram'
+	String get telegram => 'Telegram';
+
+	late final TranslationsHomeContactContactsAvailabilityEn availability = TranslationsHomeContactContactsAvailabilityEn.internal(_root);
+}
+
+// Path: home.contact.form
+class TranslationsHomeContactFormEn {
+	TranslationsHomeContactFormEn.internal(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	late final TranslationsHomeContactFormNameEn name = TranslationsHomeContactFormNameEn.internal(_root);
+	late final TranslationsHomeContactFormEmailEn email = TranslationsHomeContactFormEmailEn.internal(_root);
+	late final TranslationsHomeContactFormMessageEn message = TranslationsHomeContactFormMessageEn.internal(_root);
+	late final TranslationsHomeContactFormSubmitButtonEn submit_button = TranslationsHomeContactFormSubmitButtonEn.internal(_root);
+}
+
+// Path: general.toasts.copy_toast
+class TranslationsGeneralToastsCopyToastEn {
+	TranslationsGeneralToastsCopyToastEn.internal(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'Copied'
+	String get title => 'Copied';
+
+	/// en: 'The text has been copied to the clipboard'
+	String get subtitle => 'The text has been copied to the clipboard';
+}
+
+// Path: general.toasts.submit_toast
+class TranslationsGeneralToastsSubmitToastEn {
+	TranslationsGeneralToastsSubmitToastEn.internal(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'Form submitted'
+	String get title => 'Form submitted';
+
+	/// en: 'I will contact you as soon as I receive the notification'
+	String get subtitle => 'I will contact you as soon as I receive the notification';
+}
+
+// Path: home.contact.contacts.availability
+class TranslationsHomeContactContactsAvailabilityEn {
+	TranslationsHomeContactContactsAvailabilityEn.internal(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	late final TranslationsHomeContactContactsAvailabilityStatusEn status = TranslationsHomeContactContactsAvailabilityStatusEn.internal(_root);
+	late final TranslationsHomeContactContactsAvailabilityDescriptionEn description = TranslationsHomeContactContactsAvailabilityDescriptionEn.internal(_root);
+}
+
+// Path: home.contact.form.name
+class TranslationsHomeContactFormNameEn {
+	TranslationsHomeContactFormNameEn.internal(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'Name'
+	String get title => 'Name';
+
+	/// en: 'Your name'
+	String get hint => 'Your name';
+
+	/// en: 'Required field'
+	String get validator => 'Required field';
+}
+
+// Path: home.contact.form.email
+class TranslationsHomeContactFormEmailEn {
+	TranslationsHomeContactFormEmailEn.internal(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'Email'
+	String get title => 'Email';
+
+	/// en: 'your.email@example.com'
+	String get hint => 'your.email@example.com';
+
+	/// en: 'Enter valid email address'
+	String get validator => 'Enter valid email address';
+}
+
+// Path: home.contact.form.message
+class TranslationsHomeContactFormMessageEn {
+	TranslationsHomeContactFormMessageEn.internal(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'Message'
+	String get title => 'Message';
+
+	/// en: 'Tell me about your project...'
+	String get hint => 'Tell me about your project...';
+
+	/// en: 'Required field'
+	String get validator => 'Required field';
+}
+
+// Path: home.contact.form.submit_button
+class TranslationsHomeContactFormSubmitButtonEn {
+	TranslationsHomeContactFormSubmitButtonEn.internal(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'Submit'
+	String get title => 'Submit';
+
+	/// en: 'Submitted'
+	String get submitted_title => 'Submitted';
+}
+
+// Path: home.contact.contacts.availability.status
+class TranslationsHomeContactContactsAvailabilityStatusEn {
+	TranslationsHomeContactContactsAvailabilityStatusEn.internal(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'Available for new projects'
+	String get available => 'Available for new projects';
+
+	/// en: 'Unavailable for new projects for a while'
+	String get unavailable => 'Unavailable for new projects for a while';
+}
+
+// Path: home.contact.contacts.availability.description
+class TranslationsHomeContactContactsAvailabilityDescriptionEn {
+	TranslationsHomeContactContactsAvailabilityDescriptionEn.internal(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'Currently accepting new projects and job offers.'
+	String get available => 'Currently accepting new projects and job offers.';
+
+	/// en: 'Currently not accepting new projects and job offers.'
+	String get unavailable => 'Currently not accepting new projects and job offers.';
 }

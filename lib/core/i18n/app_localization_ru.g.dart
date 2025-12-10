@@ -35,6 +35,7 @@ class TranslationsRu extends Translations with BaseTranslations<AppLocale, Trans
 	// Translations
 	@override String get title => 'Егор Мядзюта';
 	@override late final TranslationsHomeRu home = TranslationsHomeRu._(_root);
+	@override late final TranslationsGeneralRu general = TranslationsGeneralRu._(_root);
 }
 
 // Path: home
@@ -47,6 +48,19 @@ class TranslationsHomeRu extends TranslationsHomeEn {
 	@override late final TranslationsHomeHeaderRu header = TranslationsHomeHeaderRu._(_root);
 	@override late final TranslationsHomeSkillsRu skills = TranslationsHomeSkillsRu._(_root);
 	@override late final TranslationsHomeProjectsRu projects = TranslationsHomeProjectsRu._(_root);
+	@override late final TranslationsHomeContactRu contact = TranslationsHomeContactRu._(_root);
+}
+
+// Path: general
+class TranslationsGeneralRu extends TranslationsGeneralEn {
+	TranslationsGeneralRu._(TranslationsRu root) : this._root = root, super.internal(root);
+
+	final TranslationsRu _root; // ignore: unused_field
+
+	// Translations
+	@override String get ok => 'Oк';
+	@override String get cancel => 'Отмена';
+	@override late final TranslationsGeneralToastsRu toasts = TranslationsGeneralToastsRu._(_root);
 }
 
 // Path: home.header
@@ -91,13 +105,37 @@ class TranslationsHomeProjectsRu extends TranslationsHomeProjectsEn {
 
 	// Translations
 	@override String get title => 'Мои проекты';
-	@override String get description => 'Демонстрация приложений, которые я создал или в которых принимал участие';
+	@override String get description => 'Демонстрация приложений, которые я создал или в которых принимал участие.';
 	@override late final TranslationsHomeProjectsOctaRu octa = TranslationsHomeProjectsOctaRu._(_root);
 	@override late final TranslationsHomeProjectsIrealtRu irealt = TranslationsHomeProjectsIrealtRu._(_root);
 	@override late final TranslationsHomeProjectsSelineRu seline = TranslationsHomeProjectsSelineRu._(_root);
 	@override late final TranslationsHomeProjectsDotoRu doto = TranslationsHomeProjectsDotoRu._(_root);
 	@override late final TranslationsHomeProjectsEmcdRu emcd = TranslationsHomeProjectsEmcdRu._(_root);
 	@override late final TranslationsHomeProjectsFakelabRu fakelab = TranslationsHomeProjectsFakelabRu._(_root);
+}
+
+// Path: home.contact
+class TranslationsHomeContactRu extends TranslationsHomeContactEn {
+	TranslationsHomeContactRu._(TranslationsRu root) : this._root = root, super.internal(root);
+
+	final TranslationsRu _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Воплощаю ваши идеи в жизнь';
+	@override String get description => 'Есть идея или проект? Я был бы рад услышать о нем. Давайте создадим что-то потрясающее вместе.';
+	@override late final TranslationsHomeContactContactsRu contacts = TranslationsHomeContactContactsRu._(_root);
+	@override late final TranslationsHomeContactFormRu form = TranslationsHomeContactFormRu._(_root);
+}
+
+// Path: general.toasts
+class TranslationsGeneralToastsRu extends TranslationsGeneralToastsEn {
+	TranslationsGeneralToastsRu._(TranslationsRu root) : this._root = root, super.internal(root);
+
+	final TranslationsRu _root; // ignore: unused_field
+
+	// Translations
+	@override late final TranslationsGeneralToastsCopyToastRu copy_toast = TranslationsGeneralToastsCopyToastRu._(_root);
+	@override late final TranslationsGeneralToastsSubmitToastRu submit_toast = TranslationsGeneralToastsSubmitToastRu._(_root);
 }
 
 // Path: home.skills.flutter_and_dart
@@ -245,6 +283,135 @@ class TranslationsHomeProjectsFakelabRu extends TranslationsHomeProjectsFakelabE
 
 	// Translations
 	@override String get title => 'Fakelab Records MiniApp';
-	@override String get description => 'Простой и удобный Telegram MiniApp для студии звукозаписи, разработанный на Flutter Web.\nПриложение позволяет ознакомиться с информацией о студии, забронировать посещение или заказать услуги. Вместе с приложением была разработана CRM-панель для администраторов.';
+	@override String get description => 'Простой и удобный Telegram MiniApp для студии звукозаписи, разработанный на Flutter Web.\nПриложение позволяет ознакомиться с информацией о студии, забронировать посещение или заказать услуги. Вместе с приложением была разработана CRM-панель для администраторов и Telegram бот на Dart.';
 	@override String get category => 'Sales & Landing';
+}
+
+// Path: home.contact.contacts
+class TranslationsHomeContactContactsRu extends TranslationsHomeContactContactsEn {
+	TranslationsHomeContactContactsRu._(TranslationsRu root) : this._root = root, super.internal(root);
+
+	final TranslationsRu _root; // ignore: unused_field
+
+	// Translations
+	@override String get phone => 'Телефон';
+	@override String get email => 'Электронная почта';
+	@override String get location => 'Локация';
+	@override String get telegram => 'Telegram';
+	@override late final TranslationsHomeContactContactsAvailabilityRu availability = TranslationsHomeContactContactsAvailabilityRu._(_root);
+}
+
+// Path: home.contact.form
+class TranslationsHomeContactFormRu extends TranslationsHomeContactFormEn {
+	TranslationsHomeContactFormRu._(TranslationsRu root) : this._root = root, super.internal(root);
+
+	final TranslationsRu _root; // ignore: unused_field
+
+	// Translations
+	@override late final TranslationsHomeContactFormNameRu name = TranslationsHomeContactFormNameRu._(_root);
+	@override late final TranslationsHomeContactFormEmailRu email = TranslationsHomeContactFormEmailRu._(_root);
+	@override late final TranslationsHomeContactFormMessageRu message = TranslationsHomeContactFormMessageRu._(_root);
+	@override late final TranslationsHomeContactFormSubmitButtonRu submit_button = TranslationsHomeContactFormSubmitButtonRu._(_root);
+}
+
+// Path: general.toasts.copy_toast
+class TranslationsGeneralToastsCopyToastRu extends TranslationsGeneralToastsCopyToastEn {
+	TranslationsGeneralToastsCopyToastRu._(TranslationsRu root) : this._root = root, super.internal(root);
+
+	final TranslationsRu _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Скопировано';
+	@override String get subtitle => 'Текст был скопирован в буфер обмена';
+}
+
+// Path: general.toasts.submit_toast
+class TranslationsGeneralToastsSubmitToastRu extends TranslationsGeneralToastsSubmitToastEn {
+	TranslationsGeneralToastsSubmitToastRu._(TranslationsRu root) : this._root = root, super.internal(root);
+
+	final TranslationsRu _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Форма отправлена';
+	@override String get subtitle => 'Я свяжусь с Вами как только получу уведомление';
+}
+
+// Path: home.contact.contacts.availability
+class TranslationsHomeContactContactsAvailabilityRu extends TranslationsHomeContactContactsAvailabilityEn {
+	TranslationsHomeContactContactsAvailabilityRu._(TranslationsRu root) : this._root = root, super.internal(root);
+
+	final TranslationsRu _root; // ignore: unused_field
+
+	// Translations
+	@override late final TranslationsHomeContactContactsAvailabilityStatusRu status = TranslationsHomeContactContactsAvailabilityStatusRu._(_root);
+	@override late final TranslationsHomeContactContactsAvailabilityDescriptionRu description = TranslationsHomeContactContactsAvailabilityDescriptionRu._(_root);
+}
+
+// Path: home.contact.form.name
+class TranslationsHomeContactFormNameRu extends TranslationsHomeContactFormNameEn {
+	TranslationsHomeContactFormNameRu._(TranslationsRu root) : this._root = root, super.internal(root);
+
+	final TranslationsRu _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Имя';
+	@override String get hint => 'Ваше имя';
+	@override String get validator => 'Обязательное поле';
+}
+
+// Path: home.contact.form.email
+class TranslationsHomeContactFormEmailRu extends TranslationsHomeContactFormEmailEn {
+	TranslationsHomeContactFormEmailRu._(TranslationsRu root) : this._root = root, super.internal(root);
+
+	final TranslationsRu _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Электронная почта';
+	@override String get hint => 'your.email@example.com';
+	@override String get validator => 'Введите настоящий адрес';
+}
+
+// Path: home.contact.form.message
+class TranslationsHomeContactFormMessageRu extends TranslationsHomeContactFormMessageEn {
+	TranslationsHomeContactFormMessageRu._(TranslationsRu root) : this._root = root, super.internal(root);
+
+	final TranslationsRu _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Сообщение';
+	@override String get hint => 'Расскажите мне о своем проекте...';
+	@override String get validator => 'Обязательное поле';
+}
+
+// Path: home.contact.form.submit_button
+class TranslationsHomeContactFormSubmitButtonRu extends TranslationsHomeContactFormSubmitButtonEn {
+	TranslationsHomeContactFormSubmitButtonRu._(TranslationsRu root) : this._root = root, super.internal(root);
+
+	final TranslationsRu _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Отправить';
+	@override String get submitted_title => 'Отправлено';
+}
+
+// Path: home.contact.contacts.availability.status
+class TranslationsHomeContactContactsAvailabilityStatusRu extends TranslationsHomeContactContactsAvailabilityStatusEn {
+	TranslationsHomeContactContactsAvailabilityStatusRu._(TranslationsRu root) : this._root = root, super.internal(root);
+
+	final TranslationsRu _root; // ignore: unused_field
+
+	// Translations
+	@override String get available => 'Доступен для новых проектов';
+	@override String get unavailable => 'Пока недоступен для новых проектов';
+}
+
+// Path: home.contact.contacts.availability.description
+class TranslationsHomeContactContactsAvailabilityDescriptionRu extends TranslationsHomeContactContactsAvailabilityDescriptionEn {
+	TranslationsHomeContactContactsAvailabilityDescriptionRu._(TranslationsRu root) : this._root = root, super.internal(root);
+
+	final TranslationsRu _root; // ignore: unused_field
+
+	// Translations
+	@override String get available => 'Принимаю новые проекты и предложения о работе.';
+	@override String get unavailable => 'Не принимаю новые проекты и предложения о работе.';
 }

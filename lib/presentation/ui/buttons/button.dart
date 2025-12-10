@@ -52,8 +52,9 @@ class _AppButtonState extends State<AppButton> {
               horizontal: 20,
             ),
             child: Row(
-              spacing: context.layoutDependantValue(desktop: 10, orElse: 8),
               mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.center,
+              spacing: context.layoutDependantValue(desktop: 10, orElse: 8),
               children: [
                 if (widget.icon != null)
                   SizedBox.square(

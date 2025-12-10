@@ -1,14 +1,17 @@
 import 'package:assorted_layout_widgets/assorted_layout_widgets.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:gap/gap.dart';
+import 'package:shadcn_flutter/shadcn_flutter.dart' as shadcn;
 import 'package:super_sliver_list/super_sliver_list.dart';
 
 import '../../../../core/constants/constants.dart';
 import '../../../../core/di/injector.dart';
 import '../../../../core/domain/services/device_info_service.dart';
+import '../../../../core/domain/services/toast_service.dart';
 import '../../../../core/extensions/color_extensions.dart';
 import '../../../../core/extensions/context_extensions.dart';
 import '../../../../core/extensions/list_extensions.dart';
@@ -37,6 +40,11 @@ part 'widgets/projects/widgets/projects_content.dart';
 part 'widgets/skills/skills.dart';
 part 'widgets/skills/widgets/skill_card.dart';
 part 'widgets/skills/widgets/tech_stack_card.dart';
+part 'widgets/contact/contact.dart';
+part 'widgets/contact/widgets/contact_form.dart';
+part 'widgets/contact/widgets/contacts_block.dart';
+part 'widgets/contact/widgets/contacts_content.dart';
+part 'widgets/contact/widgets/contacts_background.dart';
 
 @RoutePage()
 class HomeScreen extends StatefulWidget {
@@ -81,6 +89,7 @@ class _HomeScreenState extends State<HomeScreen> {
             const _Header(),
             const _Skills(),
             const _Projects(),
+            const _Contact(),
           ].alternateWith(
             Divider(
               height: 0,
