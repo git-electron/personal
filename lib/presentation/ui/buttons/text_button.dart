@@ -11,6 +11,7 @@ class AppTextButton extends StatefulWidget {
     required this.text,
     this.icon,
     this.image,
+    this.style,
     super.key,
   });
 
@@ -18,6 +19,7 @@ class AppTextButton extends StatefulWidget {
   final String text;
   final SvgGenImage? icon;
   final AssetGenImage? image;
+  final TextStyle? style;
 
   @override
   State<AppTextButton> createState() => _AppTextButtonState();
@@ -53,7 +55,7 @@ class _AppTextButtonState extends State<AppTextButton> {
                 ),
               Text(
                 widget.text,
-                style: context.bodyStyle,
+                style: widget.style ?? context.bodyStyle,
               ),
             ],
           ),

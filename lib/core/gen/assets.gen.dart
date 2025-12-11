@@ -82,6 +82,9 @@ class $AssetsIconsGeneralGen {
   /// File path: assets/icons/general/logo.svg
   SvgGenImage get logo => const SvgGenImage('assets/icons/general/logo.svg');
 
+  /// Directory path: assets/icons/general/menu
+  $AssetsIconsGeneralMenuGen get menu => const $AssetsIconsGeneralMenuGen();
+
   /// Directory path: assets/icons/general/project
   $AssetsIconsGeneralProjectGen get project =>
       const $AssetsIconsGeneralProjectGen();
@@ -321,6 +324,25 @@ class $AssetsIconsGeneralLocationGen {
   /// File path: assets/icons/general/location/light.svg
   SvgGenImage get light =>
       const SvgGenImage('assets/icons/general/location/light.svg');
+
+  /// List of all assets
+  List<SvgGenImage> get values => [brand, dark, light];
+}
+
+class $AssetsIconsGeneralMenuGen {
+  const $AssetsIconsGeneralMenuGen();
+
+  /// File path: assets/icons/general/menu/brand.svg
+  SvgGenImage get brand =>
+      const SvgGenImage('assets/icons/general/menu/brand.svg');
+
+  /// File path: assets/icons/general/menu/dark.svg
+  SvgGenImage get dark =>
+      const SvgGenImage('assets/icons/general/menu/dark.svg');
+
+  /// File path: assets/icons/general/menu/light.svg
+  SvgGenImage get light =>
+      const SvgGenImage('assets/icons/general/menu/light.svg');
 
   /// List of all assets
   List<SvgGenImage> get values => [brand, dark, light];

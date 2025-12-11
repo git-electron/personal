@@ -82,7 +82,6 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: _AppBar(
         listController: _listController,
         scrollController: _scrollController,
-        isMobileLayout: context.isMobileLayout,
       ),
       extendBody: true,
       extendBodyBehindAppBar: true,

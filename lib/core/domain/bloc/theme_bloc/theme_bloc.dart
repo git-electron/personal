@@ -19,7 +19,6 @@ class ThemeBloc extends Bloc<ThemeEvent, ThemeState> {
       ThemeMode.light => ThemeMode.dark,
       _ => ThemeMode.dark,
     };
-
     emit(_ThemeState(themeMode));
   }
 }

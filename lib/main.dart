@@ -49,7 +49,9 @@ class App extends StatelessWidget {
                 ),
               ),
               child: shadcn.ToastLayer(
-                child: child ?? const SizedBox(),
+                child: shadcn.DrawerOverlay(
+                  child: child ?? const SizedBox(),
+                ),
               ),
             ),
           );
