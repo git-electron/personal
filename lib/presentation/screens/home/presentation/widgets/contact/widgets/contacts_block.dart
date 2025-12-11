@@ -8,48 +8,38 @@ class _ContactsBlock extends StatelessWidget {
     return Column(
       spacing: 20,
       children: [
-        AlignedGridView.count(
-          itemCount: 4,
-          shrinkWrap: true,
-          mainAxisSpacing: 20,
-          crossAxisSpacing: 20,
-          physics: const NeverScrollableScrollPhysics(),
-          crossAxisCount: context.layoutDependantValue(mobile: 2, orElse: 1),
-          itemBuilder: (context, index) => [
-            _ContactItem(
-              onTap: () => $<UrlLauncher>().launchEmailString(Constants.email),
-              icon: Assets.icons.contacts.email.brand,
-              title: context.t.home.contact.contacts.email,
-              value: Constants.email,
-            ),
-            _ContactItem(
-              onTap: () => $<UrlLauncher>().launchPhoneNumberString(Constants.phone),
-              icon: Assets.icons.contacts.phone.brand,
-              title: context.t.home.contact.contacts.phone,
-              value: Constants.phone,
-            ),
-            _ContactItem(
-              onTap: () => $<UrlLauncher>().launchUrlString(Constants.telegramUrl),
-              image: Assets.images.contacts.telegram.brand,
-              title: context.t.home.contact.contacts.telegram,
-              value: Constants.telegramUsername,
-            ),
-            _ContactItem(
-              onTap: () {
-                Clipboard.setData(
-                  ClipboardData(text: context.t.home.contact.contacts.location),
-                );
-                $<ToastService>().showToast(
-                  context,
-                  title: context.t.general.toasts.copy_toast.title,
-                  subtitle: context.t.general.toasts.copy_toast.subtitle,
-                );
-              },
-              icon: Assets.icons.general.location.brand,
-              title: context.t.home.contact.contacts.location,
-              value: Constants.location,
-            ),
-          ][index],
+        _ContactItem(
+          onTap: () => $<UrlLauncher>().launchEmailString(Constants.email),
+          icon: Assets.icons.contacts.email.brand,
+          title: context.t.home.contact.contacts.email,
+          value: Constants.email,
+        ),
+        _ContactItem(
+          onTap: () => $<UrlLauncher>().launchPhoneNumberString(Constants.phone),
+          icon: Assets.icons.contacts.phone.brand,
+          title: context.t.home.contact.contacts.phone,
+          value: Constants.phone,
+        ),
+        _ContactItem(
+          onTap: () => $<UrlLauncher>().launchUrlString(Constants.telegramUrl),
+          image: Assets.images.contacts.telegram.brand,
+          title: context.t.home.contact.contacts.telegram,
+          value: Constants.telegramUsername,
+        ),
+        _ContactItem(
+          onTap: () {
+            Clipboard.setData(
+              ClipboardData(text: context.t.home.contact.contacts.location),
+            );
+            $<ToastService>().showToast(
+              context,
+              title: context.t.general.toasts.copy_toast.title,
+              subtitle: context.t.general.toasts.copy_toast.subtitle,
+            );
+          },
+          icon: Assets.icons.general.location.brand,
+          title: context.t.home.contact.contacts.location,
+          value: Constants.location,
         ),
         DecoratedBox(
           decoration: BoxDecoration(

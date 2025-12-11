@@ -54,6 +54,7 @@ class TranslationsHomeEn {
 	late final TranslationsHomeSkillsEn skills = TranslationsHomeSkillsEn.internal(_root);
 	late final TranslationsHomeProjectsEn projects = TranslationsHomeProjectsEn.internal(_root);
 	late final TranslationsHomeContactEn contact = TranslationsHomeContactEn.internal(_root);
+	late final TranslationsHomeAppBarEn app_bar = TranslationsHomeAppBarEn.internal(_root);
 }
 
 // Path: general
@@ -146,6 +147,7 @@ class TranslationsHomeProjectsEn {
 	late final TranslationsHomeProjectsDotoEn doto = TranslationsHomeProjectsDotoEn.internal(_root);
 	late final TranslationsHomeProjectsEmcdEn emcd = TranslationsHomeProjectsEmcdEn.internal(_root);
 	late final TranslationsHomeProjectsFakelabEn fakelab = TranslationsHomeProjectsFakelabEn.internal(_root);
+	late final TranslationsHomeProjectsButtonsEn buttons = TranslationsHomeProjectsButtonsEn.internal(_root);
 }
 
 // Path: home.contact
@@ -164,6 +166,27 @@ class TranslationsHomeContactEn {
 
 	late final TranslationsHomeContactContactsEn contacts = TranslationsHomeContactContactsEn.internal(_root);
 	late final TranslationsHomeContactFormEn form = TranslationsHomeContactFormEn.internal(_root);
+}
+
+// Path: home.app_bar
+class TranslationsHomeAppBarEn {
+	TranslationsHomeAppBarEn.internal(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'Home'
+	String get home => 'Home';
+
+	/// en: 'Skills'
+	String get skills => 'Skills';
+
+	/// en: 'Projects'
+	String get projects => 'Projects';
+
+	/// en: 'Contact me'
+	String get contact_me => 'Contact me';
 }
 
 // Path: general.toasts
@@ -388,6 +411,27 @@ class TranslationsHomeProjectsFakelabEn {
 
 	/// en: 'Sales & Landing'
 	String get category => 'Sales & Landing';
+}
+
+// Path: home.projects.buttons
+class TranslationsHomeProjectsButtonsEn {
+	TranslationsHomeProjectsButtonsEn.internal(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'Code'
+	String get code => 'Code';
+
+	/// en: 'Website'
+	String get website => 'Website';
+
+	/// en: 'Google Play'
+	String get google_play => 'Google Play';
+
+	/// en: 'App Store'
+	String get app_store => 'App Store';
 }
 
 // Path: home.contact.contacts

@@ -86,6 +86,7 @@ flutter:
   
   - assets/images/
   - assets/images/general/
+  - assets/images/locales/
   - assets/images/projects/
   - assets/images/backgrounds/
   - assets/images/contacts/hh/

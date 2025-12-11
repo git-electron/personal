@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 
 import '../../../core/extensions/context_extensions.dart';
 import '../../../core/gen/assets.gen.dart';
@@ -34,7 +35,7 @@ class _AppTextButtonState extends State<AppTextButton> {
         onEnter: (_) => setState(() => _isHovering = true),
         onExit: (_) => setState(() => _isHovering = false),
         child: AnimatedOpacity(
-          duration: const Duration(milliseconds: 100),
+          duration: 100.ms,
           opacity: _isHovering ? 1 : .5,
           child: Row(
             spacing: context.layoutDependantValue(desktop: 10, orElse: 8),

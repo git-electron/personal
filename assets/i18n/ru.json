@@ -4,8 +4,8 @@
     "header": {
       "hello_pt1": "Привет, я ",
       "hello_pt2": "Егор ✨",
-      "introduction_pt1": "Разработчик ",
-      "introduction_pt2": "приложений",
+      "introduction_pt1": "Мобильный ",
+      "introduction_pt2": "разработчик",
       "description": "Создаю <b>высокопроизводительные кроссплатформенные<b> мобильные приложения на <b>Flutter<b>. Превращаю идеи в элегантные, простые приложения для iOS и Android.",
       "contact_button": "Связаться со мной",
       "projects_button": "Смотреть проекты"
@@ -74,6 +74,12 @@
         "title": "Fakelab Records MiniApp",
         "description": "Простой и удобный Telegram MiniApp для студии звукозаписи, разработанный на Flutter Web.\nПриложение позволяет ознакомиться с информацией о студии, забронировать посещение или заказать услуги. Вместе с приложением была разработана CRM-панель для администраторов и Telegram бот на Dart.",
         "category": "Sales & Landing"
+      },
+      "buttons": {
+        "code": "Код",
+        "website": "Сайт",
+        "google_play": "Google Play",
+        "app_store": "App Store"
       }
     },
     "contact": {
@@ -116,6 +122,12 @@
           "submitted_title": "Отправлено"
         }
       }
+    },
+    "app_bar": {
+      "home": "Главная",
+      "skills": "Навыки",
+      "projects": "Проекты",
+      "contact_me": "Связаться"
     }
   },
   "general": {

@@ -6,7 +6,7 @@ class _ContactsContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const Pad(vertical: 80),
+      padding: const Pad(vertical: 100),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         spacing: 20,

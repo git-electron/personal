@@ -74,6 +74,12 @@
         "title": "Fakelab Records MiniApp",
         "description": "A simple and convenient Telegram MiniApp for recording studio, developed on Flutter Web.\nThe application allows you to view information about the studio, book a visit or order services. A CRM panel for administrators and Telegram bot on Dart was developed along with the application.",
         "category": "Sales & Landing"
+      },
+      "buttons": {
+        "code": "Code",
+        "website": "Website",
+        "google_play": "Google Play",
+        "app_store": "App Store"
       }
     },
     "contact": {
@@ -116,6 +122,12 @@
           "submitted_title": "Submitted"
         }
       }
+    },
+    "app_bar": {
+      "home": "Home",
+      "skills": "Skills",
+      "projects": "Projects",
+      "contact_me": "Contact me"
     }
   },
   "general": {

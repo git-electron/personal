@@ -14,6 +14,7 @@ import '../../../../core/domain/services/device_info_service.dart';
 import '../../../../core/domain/services/toast_service.dart';
 import '../../../../core/extensions/color_extensions.dart';
 import '../../../../core/extensions/context_extensions.dart';
+import '../../../../core/extensions/list_controller_extensions.dart';
 import '../../../../core/extensions/list_extensions.dart';
 import '../../../../core/gen/assets.gen.dart';
 import '../../../../core/i18n/app_localization.g.dart';
@@ -23,6 +24,7 @@ import '../../../../core/wrappers/web_scroll_wrapper.dart';
 import '../../../ui/buttons/button.dart';
 import '../../../ui/buttons/icon_button.dart';
 import '../../../ui/buttons/text_button.dart';
+import '../../../ui/logo/logo.dart';
 import '../../../ui/utils/formatted_text.dart';
 import '../../../ui/wrappers/measure_size_wrapper.dart';
 import '../../../ui/wrappers/tappable.dart';
@@ -30,6 +32,7 @@ import '../../../ui/wrappers/web_padding.dart';
 import '../domain/models/project/project_model.dart';
 import '../domain/models/skill/skill_model.dart';
 
+part 'widgets/app_bar.dart';
 part 'widgets/header/header.dart';
 part 'widgets/header/widgets/header_background.dart';
 part 'widgets/header/widgets/header_content.dart';
@@ -75,12 +78,18 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: _AppBar(
+        listController: _listController,
+        scrollController: _scrollController,
+        isMobileLayout: context.isMobileLayout,
+      ),
       extendBody: true,
       extendBodyBehindAppBar: true,
       backgroundColor: context.colors.background,
       body: WebScrollWrapper(
         controller: _scrollController,
         child: SuperListView(
+          padding: Pad.zero,
           clipBehavior: Clip.none,
           controller: _scrollController,
           listController: _listController,

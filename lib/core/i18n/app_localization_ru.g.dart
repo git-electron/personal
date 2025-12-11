@@ -49,6 +49,7 @@ class TranslationsHomeRu extends TranslationsHomeEn {
 	@override late final TranslationsHomeSkillsRu skills = TranslationsHomeSkillsRu._(_root);
 	@override late final TranslationsHomeProjectsRu projects = TranslationsHomeProjectsRu._(_root);
 	@override late final TranslationsHomeContactRu contact = TranslationsHomeContactRu._(_root);
+	@override late final TranslationsHomeAppBarRu app_bar = TranslationsHomeAppBarRu._(_root);
 }
 
 // Path: general
@@ -72,8 +73,8 @@ class TranslationsHomeHeaderRu extends TranslationsHomeHeaderEn {
 	// Translations
 	@override String get hello_pt1 => 'Привет, я ';
 	@override String get hello_pt2 => 'Егор ✨';
-	@override String get introduction_pt1 => 'Разработчик ';
-	@override String get introduction_pt2 => 'приложений';
+	@override String get introduction_pt1 => 'Мобильный ';
+	@override String get introduction_pt2 => 'разработчик';
 	@override String get description => 'Создаю <b>высокопроизводительные кроссплатформенные<b> мобильные приложения на <b>Flutter<b>. Превращаю идеи в элегантные, простые приложения для iOS и Android.';
 	@override String get contact_button => 'Связаться со мной';
 	@override String get projects_button => 'Смотреть проекты';
@@ -112,6 +113,7 @@ class TranslationsHomeProjectsRu extends TranslationsHomeProjectsEn {
 	@override late final TranslationsHomeProjectsDotoRu doto = TranslationsHomeProjectsDotoRu._(_root);
 	@override late final TranslationsHomeProjectsEmcdRu emcd = TranslationsHomeProjectsEmcdRu._(_root);
 	@override late final TranslationsHomeProjectsFakelabRu fakelab = TranslationsHomeProjectsFakelabRu._(_root);
+	@override late final TranslationsHomeProjectsButtonsRu buttons = TranslationsHomeProjectsButtonsRu._(_root);
 }
 
 // Path: home.contact
@@ -125,6 +127,19 @@ class TranslationsHomeContactRu extends TranslationsHomeContactEn {
 	@override String get description => 'Есть идея или проект? Я был бы рад услышать о нем. Давайте создадим что-то потрясающее вместе.';
 	@override late final TranslationsHomeContactContactsRu contacts = TranslationsHomeContactContactsRu._(_root);
 	@override late final TranslationsHomeContactFormRu form = TranslationsHomeContactFormRu._(_root);
+}
+
+// Path: home.app_bar
+class TranslationsHomeAppBarRu extends TranslationsHomeAppBarEn {
+	TranslationsHomeAppBarRu._(TranslationsRu root) : this._root = root, super.internal(root);
+
+	final TranslationsRu _root; // ignore: unused_field
+
+	// Translations
+	@override String get home => 'Главная';
+	@override String get skills => 'Навыки';
+	@override String get projects => 'Проекты';
+	@override String get contact_me => 'Связаться';
 }
 
 // Path: general.toasts
@@ -285,6 +300,19 @@ class TranslationsHomeProjectsFakelabRu extends TranslationsHomeProjectsFakelabE
 	@override String get title => 'Fakelab Records MiniApp';
 	@override String get description => 'Простой и удобный Telegram MiniApp для студии звукозаписи, разработанный на Flutter Web.\nПриложение позволяет ознакомиться с информацией о студии, забронировать посещение или заказать услуги. Вместе с приложением была разработана CRM-панель для администраторов и Telegram бот на Dart.';
 	@override String get category => 'Sales & Landing';
+}
+
+// Path: home.projects.buttons
+class TranslationsHomeProjectsButtonsRu extends TranslationsHomeProjectsButtonsEn {
+	TranslationsHomeProjectsButtonsRu._(TranslationsRu root) : this._root = root, super.internal(root);
+
+	final TranslationsRu _root; // ignore: unused_field
+
+	// Translations
+	@override String get code => 'Код';
+	@override String get website => 'Сайт';
+	@override String get google_play => 'Google Play';
+	@override String get app_store => 'App Store';
 }
 
 // Path: home.contact.contacts

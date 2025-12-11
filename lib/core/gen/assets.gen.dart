@@ -40,6 +40,9 @@ class $AssetsImagesGen {
   /// Directory path: assets/images/general
   $AssetsImagesGeneralGen get general => const $AssetsImagesGeneralGen();
 
+  /// Directory path: assets/images/locales
+  $AssetsImagesLocalesGen get locales => const $AssetsImagesLocalesGen();
+
   /// Directory path: assets/images/projects
   $AssetsImagesProjectsGen get projects => const $AssetsImagesProjectsGen();
 
@@ -157,6 +160,19 @@ class $AssetsImagesGeneralGen {
 
   /// List of all assets
   List<AssetGenImage> get values => [a3dAvatar, a3dAvatarFilled];
+}
+
+class $AssetsImagesLocalesGen {
+  const $AssetsImagesLocalesGen();
+
+  /// File path: assets/images/locales/en.png
+  AssetGenImage get en => const AssetGenImage('assets/images/locales/en.png');
+
+  /// File path: assets/images/locales/ru.png
+  AssetGenImage get ru => const AssetGenImage('assets/images/locales/ru.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [en, ru];
 }
 
 class $AssetsImagesProjectsGen {

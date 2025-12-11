@@ -131,25 +131,25 @@ class _ProjectCardState extends State<_ProjectCard> {
                           AppTextButton(
                             onTap: () => $<UrlLauncher>().launchUrlString(widget.project.gitHubUrl!),
                             image: Assets.images.contacts.github.light,
-                            text: 'Code',
+                            text: context.t.home.projects.buttons.code,
                           ),
                         if (widget.project.hasGooglePlayUrl)
                           AppTextButton(
                             onTap: () => $<UrlLauncher>().launchUrlString(widget.project.googlePlayUrl!),
                             image: Assets.images.stores.googlePlay.light,
-                            text: 'Google Play',
+                            text: context.t.home.projects.buttons.google_play,
                           ),
                         if (widget.project.hasAppStoreUrl)
                           AppTextButton(
                             onTap: () => $<UrlLauncher>().launchUrlString(widget.project.appStoreUrl!),
                             image: Assets.images.stores.appStore.light,
-                            text: 'App Store',
+                            text: context.t.home.projects.buttons.app_store,
                           ),
                         if (widget.project.hasWebsiteUrl)
                           AppTextButton(
                             onTap: () => $<UrlLauncher>().launchUrlString(widget.project.websiteUrl!),
                             icon: Assets.icons.general.link.light,
-                            text: 'Website',
+                            text: context.t.home.projects.buttons.website,
                           ),
                       ],
                     ),

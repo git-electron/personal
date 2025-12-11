@@ -8,7 +8,7 @@ class _ProjectsContent extends StatelessWidget {
     final List<Project> projects = Project.values(context);
 
     return Padding(
-      padding: const Pad(vertical: 80),
+      padding: const Pad(vertical: 100),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -26,6 +26,7 @@ class _ProjectsContent extends StatelessWidget {
           AlignedGridView.count(
             shrinkWrap: true,
             itemCount: projects.length,
+            padding: Pad.zero,
             physics: const NeverScrollableScrollPhysics(),
             mainAxisSpacing: context.layoutDependantValue(desktop: 20, orElse: 10),
             crossAxisSpacing: context.layoutDependantValue(desktop: 20, orElse: 10),

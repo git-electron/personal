@@ -9,7 +9,7 @@ class _Skills extends StatelessWidget {
 
     return WebPaddingWrapper(
       child: Padding(
-        padding: const Pad(vertical: 80),
+        padding: const Pad(vertical: 100),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           spacing: 20,
@@ -26,6 +26,7 @@ class _Skills extends StatelessWidget {
             AlignedGridView.count(
               shrinkWrap: true,
               itemCount: skills.length,
+              padding: Pad.zero,
               physics: const NeverScrollableScrollPhysics(),
               crossAxisCount: context.layoutDependantValue(desktop: 3, orElse: 2),
               mainAxisSpacing: context.layoutDependantValue(desktop: 20, orElse: 10),
