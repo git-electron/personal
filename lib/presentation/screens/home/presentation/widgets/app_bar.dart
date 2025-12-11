@@ -76,18 +76,32 @@ class _AppBar extends StatelessWidget implements PreferredSizeWidget {
                     ),
                   ],
                 ),
-                AppIconButton.image(
-                  size: _getScrollDependantHeight(_buttonHeight, offset: offset),
-                  image: switch (LocaleSettings.currentLocale) {
-                    AppLocale.en => Assets.images.locales.en,
-                    AppLocale.ru => Assets.images.locales.ru,
-                  },
-                  onTap: () => LocaleSettings.setLocale(
-                    switch (LocaleSettings.currentLocale) {
-                      AppLocale.en => AppLocale.ru,
-                      AppLocale.ru => AppLocale.en,
-                    },
+                Row(
+                  spacing: context.layoutDependantValue(
+                    desktop: _getScrollDependantHeight(20, offset: offset),
+                    tablet: _getScrollDependantHeight(10, offset: offset),
+                    mobile: _getScrollDependantHeight(5, offset: offset),
                   ),
+                  children: [
+                    AppIconButton.image(
+                      size: _getScrollDependantHeight(_buttonHeight, offset: offset),
+                      image: switch (LocaleSettings.currentLocale) {
+                        AppLocale.en => Assets.images.locales.en,
+                        AppLocale.ru => Assets.images.locales.ru,
+                      },
+                      onTap: () => LocaleSettings.setLocale(
+                        switch (LocaleSettings.currentLocale) {
+                          AppLocale.en => AppLocale.ru,
+                          AppLocale.ru => AppLocale.en,
+                        },
+                      ),
+                    ),
+                    AppIconButton(
+                      size: _getScrollDependantHeight(_buttonHeight, offset: offset),
+                      icon: context.isDarkTheme ? Assets.icons.theme.moon.light : Assets.icons.theme.sun.dark,
+                      onTap: context.switchThemeMode,
+                    ),
+                  ],
                 ),
               ],
             ),

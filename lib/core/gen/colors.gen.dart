@@ -17,8 +17,11 @@ class AppColors {
   /// Color: #9FA0C3
   static const Color accent = Color(0xFF9FA0C3);
 
-  /// Color: #201f20
-  static const Color accentCardBackground = Color(0xFF201F20);
+  /// Color: #201F20
+  static const Color accentCardBackgroundDark = Color(0xFF201F20);
+
+  /// Color: #E3DEDF
+  static const Color accentCardBackgroundLight = Color(0xFFE3DEDF);
 
   /// Color: #6161AB
   static const Color accentGradientEnd = Color(0xFF6161AB);
@@ -27,25 +30,40 @@ class AppColors {
   static const Color accentGradientStart = Color(0xFFDADAE3);
 
   /// Color: #080708
-  static const Color background = Color(0xFF080708);
+  static const Color backgroundDark = Color(0xFF080708);
+
+  /// Color: #FCF7F8
+  static const Color backgroundLight = Color(0xFFFCF7F8);
 
   /// Color: #000000
   static const Color black = Color(0xFF000000);
 
   /// Color: #383738
-  static const Color buttonHighlight = Color(0xFF383738);
+  static const Color buttonHighlightDark = Color(0xFF383738);
+
+  /// Color: #C2BEBF
+  static const Color buttonHighlightLight = Color(0xFFC2BEBF);
 
   /// Color: #141314
-  static const Color cardBackground = Color(0xFF141314);
+  static const Color cardBackgroundDark = Color(0xFF141314);
 
-  /// Color: #2b2a2b
-  static const Color cardBorder = Color(0xFF2B2A2B);
+  /// Color: #EFEAEB
+  static const Color cardBackgroundLight = Color(0xFFEFEAEB);
+
+  /// Color: #2B2A2B
+  static const Color cardBorderDark = Color(0xFF2B2A2B);
+
+  /// Color: #D8D3D4
+  static const Color cardBorderLight = Color(0xFFD8D3D4);
 
   /// Color: #FF5858
   static const Color error = Color(0xFFFF5858);
 
   /// Color: #FCF7F8
-  static const Color onBackground = Color(0xFFFCF7F8);
+  static const Color onBackgroundDark = Color(0xFFFCF7F8);
+
+  /// Color: #080708
+  static const Color onBackgroundLight = Color(0xFF080708);
 
   /// Color: #59FFA0
   static const Color primary = Color(0xFF59FFA0);
@@ -66,7 +84,10 @@ class AppColors {
   static const Color secondaryGradientStart = Color(0xFFA38CCF);
 
   /// Color: #FCF7F8
-  static const Color text = Color(0xFFFCF7F8);
+  static const Color textDark = Color(0xFFFCF7F8);
+
+  /// Color: #080708
+  static const Color textLight = Color(0xFF080708);
 
   /// Color: #FFE312
   static const Color warning = Color(0xFFFFE312);

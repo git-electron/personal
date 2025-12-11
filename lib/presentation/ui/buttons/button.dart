@@ -4,7 +4,6 @@ import 'package:flutter_animate/flutter_animate.dart';
 
 import '../../../core/extensions/context_extensions.dart';
 import '../../../core/gen/assets.gen.dart';
-import '../../../core/theme/theme_extensions.dart';
 import '../wrappers/tappable.dart';
 
 class AppButton extends StatefulWidget {

@@ -213,10 +213,6 @@ mixin _$ColorsTailorMixin on ThemeExtension<Colors> {
   }
 }
 
-extension ColorsBuildContext on BuildContext {
-  Colors get colors => Theme.of(this).extension<Colors>()!;
-}
-
 mixin _$StylesTailorMixin on ThemeExtension<Styles> {
   TextStyle get headerDesktop;
   TextStyle get titleDesktop;

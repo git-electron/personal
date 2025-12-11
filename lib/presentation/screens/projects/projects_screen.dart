@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
-import '../../../core/theme/theme_extensions.dart';
+import '../../../core/extensions/context_extensions.dart';
 
 @RoutePage()
 class ProjectsScreen extends StatelessWidget {

@@ -103,20 +103,24 @@ class _Description extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ConstrainedBox(
-      constraints: BoxConstraints(
-        maxWidth: context.layoutDependantValue(desktop: 700, orElse: 600),
-      ),
-      child: FormattedText(
-        context.t.home.header.description,
-        style: context.bodyStyle.copyWith(
-          fontSize: context.layoutDependantValue(
-            desktop: 20,
-            tablet: 16,
-            mobile: 14,
+    return BlocBuilder<ThemeBloc, ThemeState>(
+      builder: (context, state) {
+        return ConstrainedBox(
+          constraints: BoxConstraints(
+            maxWidth: context.layoutDependantValue(desktop: 700, orElse: 600),
           ),
-        ),
-      ),
+          child: FormattedText(
+            context.t.home.header.description,
+            style: context.bodyStyle.copyWith(
+              fontSize: context.layoutDependantValue(
+                desktop: 20,
+                tablet: 16,
+                mobile: 14,
+              ),
+            ),
+          ),
+        );
+      },
     );
   }
 }
@@ -137,12 +141,18 @@ class _Buttons extends StatelessWidget {
           children: [
             AppButton(
               onTap: () {},
-              icon: Assets.icons.contacts.contact.light,
+              icon: context.themeDependantValue(
+                dark: Assets.icons.contacts.contact.light,
+                light: Assets.icons.contacts.contact.dark,
+              ),
               text: context.t.home.header.contact_button,
             ),
             AppButton(
               onTap: () {},
-              icon: Assets.icons.general.project.light,
+              icon: context.themeDependantValue(
+                dark: Assets.icons.general.project.light,
+                light: Assets.icons.general.project.dark,
+              ),
               text: context.t.home.header.projects_button,
             ),
             if (!context.isMobileLayout) ...[
@@ -170,22 +180,35 @@ class _Contacts extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      spacing: context.layoutDependantValue(mobile: 40, orElse: 20),
-      children: [
-        AppIconButton.image(
-          image: Assets.images.contacts.github.light,
-          onTap: () => $<UrlLauncher>().launchUrlString(Constants.githubUrl),
-        ),
-        AppIconButton.image(
-          image: Assets.images.contacts.hh.light,
-          onTap: () => $<UrlLauncher>().launchUrlString(Constants.hhUrl),
-        ),
-        AppIconButton.image(
-          image: Assets.images.contacts.linkedin.light,
-          onTap: () => $<UrlLauncher>().launchUrlString(Constants.linkedinUrl),
-        ),
-      ],
+    return BlocBuilder<ThemeBloc, ThemeState>(
+      builder: (context, state) {
+        return Row(
+          spacing: context.layoutDependantValue(mobile: 40, orElse: 20),
+          children: [
+            AppIconButton.image(
+              image: context.themeDependantValue(
+                dark: Assets.images.contacts.github.light,
+                light: Assets.images.contacts.github.dark,
+              ),
+              onTap: () => $<UrlLauncher>().launchUrlString(Constants.githubUrl),
+            ),
+            AppIconButton.image(
+              image: context.themeDependantValue(
+                dark: Assets.images.contacts.hh.light,
+                light: Assets.images.contacts.hh.dark,
+              ),
+              onTap: () => $<UrlLauncher>().launchUrlString(Constants.hhUrl),
+            ),
+            AppIconButton.image(
+              image: context.themeDependantValue(
+                dark: Assets.images.contacts.linkedin.light,
+                light: Assets.images.contacts.linkedin.dark,
+              ),
+              onTap: () => $<UrlLauncher>().launchUrlString(Constants.linkedinUrl),
+            ),
+          ],
+        );
+      },
     );
   }
 }

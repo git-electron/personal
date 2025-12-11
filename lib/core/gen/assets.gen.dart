@@ -25,6 +25,9 @@ class $AssetsIconsGen {
 
   /// Directory path: assets/icons/skills
   $AssetsIconsSkillsGen get skills => const $AssetsIconsSkillsGen();
+
+  /// Directory path: assets/icons/theme
+  $AssetsIconsThemeGen get theme => const $AssetsIconsThemeGen();
 }
 
 class $AssetsImagesGen {
@@ -111,6 +114,16 @@ class $AssetsIconsSkillsGen {
   /// Directory path: assets/icons/skills/pipeline
   $AssetsIconsSkillsPipelineGen get pipeline =>
       const $AssetsIconsSkillsPipelineGen();
+}
+
+class $AssetsIconsThemeGen {
+  const $AssetsIconsThemeGen();
+
+  /// Directory path: assets/icons/theme/moon
+  $AssetsIconsThemeMoonGen get moon => const $AssetsIconsThemeMoonGen();
+
+  /// Directory path: assets/icons/theme/sun
+  $AssetsIconsThemeSunGen get sun => const $AssetsIconsThemeSunGen();
 }
 
 class $AssetsImagesBackgroundsGen {
@@ -441,6 +454,42 @@ class $AssetsIconsSkillsPipelineGen {
   /// File path: assets/icons/skills/pipeline/light.svg
   SvgGenImage get light =>
       const SvgGenImage('assets/icons/skills/pipeline/light.svg');
+
+  /// List of all assets
+  List<SvgGenImage> get values => [brand, dark, light];
+}
+
+class $AssetsIconsThemeMoonGen {
+  const $AssetsIconsThemeMoonGen();
+
+  /// File path: assets/icons/theme/moon/brand.svg
+  SvgGenImage get brand =>
+      const SvgGenImage('assets/icons/theme/moon/brand.svg');
+
+  /// File path: assets/icons/theme/moon/dark.svg
+  SvgGenImage get dark => const SvgGenImage('assets/icons/theme/moon/dark.svg');
+
+  /// File path: assets/icons/theme/moon/light.svg
+  SvgGenImage get light =>
+      const SvgGenImage('assets/icons/theme/moon/light.svg');
+
+  /// List of all assets
+  List<SvgGenImage> get values => [brand, dark, light];
+}
+
+class $AssetsIconsThemeSunGen {
+  const $AssetsIconsThemeSunGen();
+
+  /// File path: assets/icons/theme/sun/brand.svg
+  SvgGenImage get brand =>
+      const SvgGenImage('assets/icons/theme/sun/brand.svg');
+
+  /// File path: assets/icons/theme/sun/dark.svg
+  SvgGenImage get dark => const SvgGenImage('assets/icons/theme/sun/dark.svg');
+
+  /// File path: assets/icons/theme/sun/light.svg
+  SvgGenImage get light =>
+      const SvgGenImage('assets/icons/theme/sun/light.svg');
 
   /// List of all assets
   List<SvgGenImage> get values => [brand, dark, light];

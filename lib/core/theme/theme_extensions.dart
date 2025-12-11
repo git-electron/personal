@@ -8,7 +8,7 @@ part 'theme_colors.dart';
 part 'theme_extensions.tailor.dart';
 part 'theme_styles.dart';
 
-@TailorMixin(themeGetter: ThemeGetter.onBuildContext)
+@TailorMixin(themeGetter: ThemeGetter.none)
 class Colors extends ThemeExtension<Colors> with _$ColorsTailorMixin {
   const Colors({
     required this.transparent,
@@ -110,31 +110,58 @@ class Colors extends ThemeExtension<Colors> with _$ColorsTailorMixin {
   final List<Color> accentGradientColors;
 }
 
-const Colors colors = Colors(
-  transparent: _Colors.transparent,
-  white: _Colors.white,
-  black: _Colors.black,
-  background: _Colors.background,
-  onBackground: _Colors.onBackground,
-  cardBackground: _Colors.cardBackground,
-  accentCardBackground: _Colors.accentCardBackground,
-  cardBorder: _Colors.cardBorder,
-  text: _Colors.text,
-  warning: _Colors.warning,
-  error: _Colors.error,
-  buttonHighlight: _Colors.buttonHighlight,
-  primary: _Colors.primary,
-  primaryGradientEnd: _Colors.primaryGradientEnd,
-  primaryGradientStart: _Colors.primaryGradientStart,
-  primaryGradientColors: _Colors.primaryGradientColors,
-  secondary: _Colors.secondary,
-  secondaryGradientEnd: _Colors.secondaryGradientEnd,
-  secondaryGradientStart: _Colors.secondaryGradientStart,
-  secondaryGradientColors: _Colors.secondaryGradientColors,
-  accent: _Colors.accent,
-  accentGradientEnd: _Colors.accentGradientEnd,
-  accentGradientStart: _Colors.accentGradientStart,
-  accentGradientColors: _Colors.accentGradientColors,
+const Colors darkColors = Colors(
+  transparent: _DarkColors.transparent,
+  white: _DarkColors.white,
+  black: _DarkColors.black,
+  background: _DarkColors.background,
+  onBackground: _DarkColors.onBackground,
+  cardBackground: _DarkColors.cardBackground,
+  accentCardBackground: _DarkColors.accentCardBackground,
+  cardBorder: _DarkColors.cardBorder,
+  text: _DarkColors.text,
+  warning: _DarkColors.warning,
+  error: _DarkColors.error,
+  buttonHighlight: _DarkColors.buttonHighlight,
+  primary: _DarkColors.primary,
+  primaryGradientEnd: _DarkColors.primaryGradientEnd,
+  primaryGradientStart: _DarkColors.primaryGradientStart,
+  primaryGradientColors: _DarkColors.primaryGradientColors,
+  secondary: _DarkColors.secondary,
+  secondaryGradientEnd: _DarkColors.secondaryGradientEnd,
+  secondaryGradientStart: _DarkColors.secondaryGradientStart,
+  secondaryGradientColors: _DarkColors.secondaryGradientColors,
+  accent: _DarkColors.accent,
+  accentGradientEnd: _DarkColors.accentGradientEnd,
+  accentGradientStart: _DarkColors.accentGradientStart,
+  accentGradientColors: _DarkColors.accentGradientColors,
+);
+
+const Colors lightColors = Colors(
+  transparent: _LightColors.transparent,
+  white: _LightColors.white,
+  black: _LightColors.black,
+  background: _LightColors.background,
+  onBackground: _LightColors.onBackground,
+  cardBackground: _LightColors.cardBackground,
+  accentCardBackground: _LightColors.accentCardBackground,
+  cardBorder: _LightColors.cardBorder,
+  text: _LightColors.text,
+  warning: _LightColors.warning,
+  error: _LightColors.error,
+  buttonHighlight: _LightColors.buttonHighlight,
+  primary: _LightColors.primary,
+  primaryGradientEnd: _LightColors.primaryGradientEnd,
+  primaryGradientStart: _LightColors.primaryGradientStart,
+  primaryGradientColors: _LightColors.primaryGradientColors,
+  secondary: _LightColors.secondary,
+  secondaryGradientEnd: _LightColors.secondaryGradientEnd,
+  secondaryGradientStart: _LightColors.secondaryGradientStart,
+  secondaryGradientColors: _LightColors.secondaryGradientColors,
+  accent: _LightColors.accent,
+  accentGradientEnd: _LightColors.accentGradientEnd,
+  accentGradientStart: _LightColors.accentGradientStart,
+  accentGradientColors: _LightColors.accentGradientColors,
 );
 
 @TailorMixin(themeGetter: ThemeGetter.none)
@@ -179,14 +206,26 @@ class Styles extends ThemeExtension<Styles> with _$StylesTailorMixin {
   final TextStyle bodyMobile;
 }
 
-final Styles styles = Styles(
-  headerDesktop: _Styles.headerDesktop,
-  titleDesktop: _Styles.titleDesktop,
-  bodyDesktop: _Styles.bodyDesktop,
-  headerTablet: _Styles.headerTablet,
-  titleTablet: _Styles.titleTablet,
-  bodyTablet: _Styles.bodyTablet,
-  headerMobile: _Styles.headerMobile,
-  titleMobile: _Styles.titleMobile,
-  bodyMobile: _Styles.bodyMobile,
+final Styles darkStyles = Styles(
+  headerDesktop: _DarkStyles.headerDesktop,
+  titleDesktop: _DarkStyles.titleDesktop,
+  bodyDesktop: _DarkStyles.bodyDesktop,
+  headerTablet: _DarkStyles.headerTablet,
+  titleTablet: _DarkStyles.titleTablet,
+  bodyTablet: _DarkStyles.bodyTablet,
+  headerMobile: _DarkStyles.headerMobile,
+  titleMobile: _DarkStyles.titleMobile,
+  bodyMobile: _DarkStyles.bodyMobile,
+);
+
+final Styles lightStyles = Styles(
+  headerDesktop: _LightStyles.headerDesktop,
+  titleDesktop: _LightStyles.titleDesktop,
+  bodyDesktop: _LightStyles.bodyDesktop,
+  headerTablet: _LightStyles.headerTablet,
+  titleTablet: _LightStyles.titleTablet,
+  bodyTablet: _LightStyles.bodyTablet,
+  headerMobile: _LightStyles.headerMobile,
+  titleMobile: _LightStyles.titleMobile,
+  bodyMobile: _LightStyles.bodyMobile,
 );

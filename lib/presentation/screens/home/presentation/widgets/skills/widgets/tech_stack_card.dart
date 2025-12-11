@@ -10,7 +10,7 @@ class _TechStackCard extends StatelessWidget {
     return ClipRRect(
       borderRadius: BorderRadius.circular(10),
       child: ColoredBox(
-        color: context.colors.accentCardBackground,
+        color: context.colors.onBackground.copyWithOpacity(.05),
         child: Padding(
           padding: const Pad(
             vertical: 8,

@@ -83,6 +83,9 @@ flutter:
   - assets/icons/skills/database/
   - assets/icons/skills/pipeline/
   - assets/icons/skills/lightning/
+  - assets/icons/theme/
+  - assets/icons/theme/sun/
+  - assets/icons/theme/moon/
   
   - assets/images/
   - assets/images/general/

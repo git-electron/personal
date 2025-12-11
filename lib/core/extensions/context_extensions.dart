@@ -1,5 +1,7 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide Colors;
 
+import '../di/injector.dart';
+import '../domain/bloc/theme_bloc/theme_bloc.dart';
 import '../domain/models/layout_type.dart';
 import '../theme/theme_extensions.dart';
 
@@ -31,7 +33,21 @@ extension BuildContextExtensions on BuildContext {
   }
 }
 
+extension BuildContextColorExtensions on BuildContext {
+  Colors get colors => Theme.of(this).extension<Colors>()!;
+
+  ThemeMode get themeMode => $<ThemeBloc>().state.themeMode;
+  bool get isDarkTheme => themeMode == ThemeMode.dark;
+  bool get isLightTheme => themeMode == ThemeMode.light;
+
+  T themeDependantValue<T>({required T dark, required T light}) => isDarkTheme ? dark : light;
+
+  void switchThemeMode() => $<ThemeBloc>().add(const ThemeEvent.switchThemeMode());
+}
+
 extension BuildContextStyleExtensions on BuildContext {
+  Styles get styles => isDarkTheme ? darkStyles : lightStyles;
+
   TextStyle get headerStyle => switch (layoutType) {
         LayoutType.desktop => styles.headerDesktop,
         LayoutType.tablet => styles.headerTablet,

@@ -130,25 +130,37 @@ class _ProjectCardState extends State<_ProjectCard> {
                         if (widget.project.hasGithubUrl)
                           AppTextButton(
                             onTap: () => $<UrlLauncher>().launchUrlString(widget.project.gitHubUrl!),
-                            image: Assets.images.contacts.github.light,
+                            image: context.themeDependantValue(
+                              dark: Assets.images.contacts.github.light,
+                              light: Assets.images.contacts.github.dark,
+                            ),
                             text: context.t.home.projects.buttons.code,
                           ),
                         if (widget.project.hasGooglePlayUrl)
                           AppTextButton(
                             onTap: () => $<UrlLauncher>().launchUrlString(widget.project.googlePlayUrl!),
-                            image: Assets.images.stores.googlePlay.light,
+                            image: context.themeDependantValue(
+                              dark: Assets.images.stores.googlePlay.light,
+                              light: Assets.images.stores.googlePlay.dark,
+                            ),
                             text: context.t.home.projects.buttons.google_play,
                           ),
                         if (widget.project.hasAppStoreUrl)
                           AppTextButton(
                             onTap: () => $<UrlLauncher>().launchUrlString(widget.project.appStoreUrl!),
-                            image: Assets.images.stores.appStore.light,
+                            image: context.themeDependantValue(
+                              dark: Assets.images.stores.appStore.light,
+                              light: Assets.images.stores.appStore.dark,
+                            ),
                             text: context.t.home.projects.buttons.app_store,
                           ),
                         if (widget.project.hasWebsiteUrl)
                           AppTextButton(
                             onTap: () => $<UrlLauncher>().launchUrlString(widget.project.websiteUrl!),
-                            icon: Assets.icons.general.link.light,
+                            icon: context.themeDependantValue(
+                              dark: Assets.icons.general.link.light,
+                              light: Assets.icons.general.link.dark,
+                            ),
                             text: context.t.home.projects.buttons.website,
                           ),
                       ],

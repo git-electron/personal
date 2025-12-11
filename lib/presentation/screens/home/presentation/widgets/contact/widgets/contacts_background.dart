@@ -5,9 +5,13 @@ class _ContactsBackground extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Opacity(
-      opacity: .5,
-      child: Assets.images.backgrounds.contactsBackground.image(fit: BoxFit.cover),
+    return BlocBuilder<ThemeBloc, ThemeState>(
+      builder: (context, state) {
+        return Opacity(
+          opacity: context.isDarkTheme ? .5 : 1,
+          child: Assets.images.backgrounds.contactsBackground.image(fit: BoxFit.cover),
+        );
+      },
     );
   }
 }

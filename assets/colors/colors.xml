@@ -3,15 +3,22 @@
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
 
-    <color name="background">#080708</color>
-    <color name="on_background">#FCF7F8</color>
+    <color name="background_dark">#080708</color>
+    <color name="on_background_dark">#FCF7F8</color>
+    <color name="background_light">#FCF7F8</color>
+    <color name="on_background_light">#080708</color>
     
-    <color name="card_background">#141314</color>
-    <color name="accent_card_background">#201f20</color>
-    <color name="card_border">#2b2a2b</color>
+    <color name="card_background_dark">#141314</color>
+    <color name="accent_card_background_dark">#201F20</color>
+    <color name="card_border_dark">#2B2A2B</color>
+    <color name="card_background_light">#EFEAEB</color>
+    <color name="accent_card_background_light">#E3DEDF</color>
+    <color name="card_border_light">#D8D3D4</color>
 
-    <color name="text">#FCF7F8</color>
-    <color name="button_highlight">#383738</color>
+    <color name="text_dark">#FCF7F8</color>
+    <color name="button_highlight_dark">#383738</color>
+    <color name="text_light">#080708</color>
+    <color name="button_highlight_light">#C2BEBF</color>
 
     <color name="warning">#FFE312</color>
     <color name="error">#FF5858</color>
