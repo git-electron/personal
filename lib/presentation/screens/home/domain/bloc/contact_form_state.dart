@@ -6,7 +6,7 @@ sealed class ContactFormState with _$ContactFormState {
 
   const factory ContactFormState.loading() = _Loading;
 
-  const factory ContactFormState.submitted() = _Submitted;
+  const factory ContactFormState.submitted(ContactForm form) = _Submitted;
 
   const factory ContactFormState.error(String message) = _Error;
 
@@ -15,6 +15,11 @@ sealed class ContactFormState with _$ContactFormState {
   bool get isLoading => switch (this) {
         _Loading _ => true,
         _ => false,
+      };
+
+  ContactForm? get submittedForm => switch (this) {
+        final _Submitted submitted => submitted.form,
+        _ => null,
       };
 
   bool get isSubmitted => switch (this) {
@@ -28,7 +33,7 @@ sealed class ContactFormState with _$ContactFormState {
       };
 
   String? get errorMessage => switch (this) {
-        _Error error => error.message,
+        final _Error error => error.message,
         _ => null,
       };
 }

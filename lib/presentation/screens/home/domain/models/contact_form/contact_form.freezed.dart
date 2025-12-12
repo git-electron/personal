@@ -4,7 +4,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'contact_form_request.dart';
+part of 'contact_form.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,27 +14,26 @@ part of 'contact_form_request.dart';
 T _$identity<T>(T value) => value;
 
 /// @nodoc
-mixin _$ContactFormRequest {
+mixin _$ContactForm {
   String get name;
   String get email;
   String get message;
 
-  /// Create a copy of ContactFormRequest
+  /// Create a copy of ContactForm
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
-  $ContactFormRequestCopyWith<ContactFormRequest> get copyWith =>
-      _$ContactFormRequestCopyWithImpl<ContactFormRequest>(
-          this as ContactFormRequest, _$identity);
+  $ContactFormCopyWith<ContactForm> get copyWith =>
+      _$ContactFormCopyWithImpl<ContactForm>(this as ContactForm, _$identity);
 
-  /// Serializes this ContactFormRequest to a JSON map.
+  /// Serializes this ContactForm to a JSON map.
   Map<String, dynamic> toJson();
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is ContactFormRequest &&
+            other is ContactForm &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.email, email) || other.email == email) &&
             (identical(other.message, message) || other.message == message));
@@ -46,28 +45,27 @@ mixin _$ContactFormRequest {
 
   @override
   String toString() {
-    return 'ContactFormRequest(name: $name, email: $email, message: $message)';
+    return 'ContactForm(name: $name, email: $email, message: $message)';
   }
 }
 
 /// @nodoc
-abstract mixin class $ContactFormRequestCopyWith<$Res> {
-  factory $ContactFormRequestCopyWith(
-          ContactFormRequest value, $Res Function(ContactFormRequest) _then) =
-      _$ContactFormRequestCopyWithImpl;
+abstract mixin class $ContactFormCopyWith<$Res> {
+  factory $ContactFormCopyWith(
+          ContactForm value, $Res Function(ContactForm) _then) =
+      _$ContactFormCopyWithImpl;
   @useResult
   $Res call({String name, String email, String message});
 }
 
 /// @nodoc
-class _$ContactFormRequestCopyWithImpl<$Res>
-    implements $ContactFormRequestCopyWith<$Res> {
-  _$ContactFormRequestCopyWithImpl(this._self, this._then);
+class _$ContactFormCopyWithImpl<$Res> implements $ContactFormCopyWith<$Res> {
+  _$ContactFormCopyWithImpl(this._self, this._then);
 
-  final ContactFormRequest _self;
-  final $Res Function(ContactFormRequest) _then;
+  final ContactForm _self;
+  final $Res Function(ContactForm) _then;
 
-  /// Create a copy of ContactFormRequest
+  /// Create a copy of ContactForm
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -95,11 +93,11 @@ class _$ContactFormRequestCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _ContactFormRequest implements ContactFormRequest {
-  _ContactFormRequest(
+class _ContactForm implements ContactForm {
+  _ContactForm(
       {required this.name, required this.email, required this.message});
-  factory _ContactFormRequest.fromJson(Map<String, dynamic> json) =>
-      _$ContactFormRequestFromJson(json);
+  factory _ContactForm.fromJson(Map<String, dynamic> json) =>
+      _$ContactFormFromJson(json);
 
   @override
   final String name;
@@ -108,17 +106,17 @@ class _ContactFormRequest implements ContactFormRequest {
   @override
   final String message;
 
-  /// Create a copy of ContactFormRequest
+  /// Create a copy of ContactForm
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
-  _$ContactFormRequestCopyWith<_ContactFormRequest> get copyWith =>
-      __$ContactFormRequestCopyWithImpl<_ContactFormRequest>(this, _$identity);
+  _$ContactFormCopyWith<_ContactForm> get copyWith =>
+      __$ContactFormCopyWithImpl<_ContactForm>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$ContactFormRequestToJson(
+    return _$ContactFormToJson(
       this,
     );
   }
@@ -127,7 +125,7 @@ class _ContactFormRequest implements ContactFormRequest {
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ContactFormRequest &&
+            other is _ContactForm &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.email, email) || other.email == email) &&
             (identical(other.message, message) || other.message == message));
@@ -139,30 +137,29 @@ class _ContactFormRequest implements ContactFormRequest {
 
   @override
   String toString() {
-    return 'ContactFormRequest(name: $name, email: $email, message: $message)';
+    return 'ContactForm(name: $name, email: $email, message: $message)';
   }
 }
 
 /// @nodoc
-abstract mixin class _$ContactFormRequestCopyWith<$Res>
-    implements $ContactFormRequestCopyWith<$Res> {
-  factory _$ContactFormRequestCopyWith(
-          _ContactFormRequest value, $Res Function(_ContactFormRequest) _then) =
-      __$ContactFormRequestCopyWithImpl;
+abstract mixin class _$ContactFormCopyWith<$Res>
+    implements $ContactFormCopyWith<$Res> {
+  factory _$ContactFormCopyWith(
+          _ContactForm value, $Res Function(_ContactForm) _then) =
+      __$ContactFormCopyWithImpl;
   @override
   @useResult
   $Res call({String name, String email, String message});
 }
 
 /// @nodoc
-class __$ContactFormRequestCopyWithImpl<$Res>
-    implements _$ContactFormRequestCopyWith<$Res> {
-  __$ContactFormRequestCopyWithImpl(this._self, this._then);
+class __$ContactFormCopyWithImpl<$Res> implements _$ContactFormCopyWith<$Res> {
+  __$ContactFormCopyWithImpl(this._self, this._then);
 
-  final _ContactFormRequest _self;
-  final $Res Function(_ContactFormRequest) _then;
+  final _ContactForm _self;
+  final $Res Function(_ContactForm) _then;
 
-  /// Create a copy of ContactFormRequest
+  /// Create a copy of ContactForm
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
@@ -171,7 +168,7 @@ class __$ContactFormRequestCopyWithImpl<$Res>
     Object? email = null,
     Object? message = null,
   }) {
-    return _then(_ContactFormRequest(
+    return _then(_ContactForm(
       name: null == name
           ? _self.name
           : name // ignore: cast_nullable_to_non_nullable

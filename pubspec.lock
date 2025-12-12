@@ -358,6 +358,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "9.1.1"
+  flutter_bloc_side_effect:
+    dependency: "direct main"
+    description:
+      name: flutter_bloc_side_effect
+      sha256: "7e9e48b2ecd35e78ee7561ea4328886331648b3c8f4405ad0cd7125837599497"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0"
   flutter_gen:
     dependency: "direct main"
     description:

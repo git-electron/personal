@@ -151,6 +151,7 @@ class TranslationsGeneralToastsRu extends TranslationsGeneralToastsEn {
 	// Translations
 	@override late final TranslationsGeneralToastsCopyToastRu copy_toast = TranslationsGeneralToastsCopyToastRu._(_root);
 	@override late final TranslationsGeneralToastsSubmitToastRu submit_toast = TranslationsGeneralToastsSubmitToastRu._(_root);
+	@override late final TranslationsGeneralToastsErrorToastRu error_toast = TranslationsGeneralToastsErrorToastRu._(_root);
 }
 
 // Path: home.skills.flutter_and_dart
@@ -362,6 +363,17 @@ class TranslationsGeneralToastsSubmitToastRu extends TranslationsGeneralToastsSu
 	// Translations
 	@override String get title => 'Форма отправлена';
 	@override String get subtitle => 'Я свяжусь с Вами как только получу уведомление';
+}
+
+// Path: general.toasts.error_toast
+class TranslationsGeneralToastsErrorToastRu extends TranslationsGeneralToastsErrorToastEn {
+	TranslationsGeneralToastsErrorToastRu._(TranslationsRu root) : this._root = root, super.internal(root);
+
+	final TranslationsRu _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Ой!';
+	@override String get subtitle => 'Произошла неизвестная ошибка';
 }
 
 // Path: home.contact.contacts.availability

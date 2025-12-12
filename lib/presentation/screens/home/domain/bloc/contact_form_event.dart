@@ -8,5 +8,5 @@ sealed class ContactFormEvent with _$ContactFormEvent {
     required String message,
   }) = _Submit;
 
-  const factory ContactFormEvent.markAsSubmitted() = _MarkAsSubmitted;
+  const factory ContactFormEvent.checkSubmission() = _CheckSubmission;
 }

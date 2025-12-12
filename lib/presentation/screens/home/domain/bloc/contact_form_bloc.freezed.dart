@@ -115,13 +115,13 @@ class __$SubmitCopyWithImpl<$Res> implements _$SubmitCopyWith<$Res> {
 
 /// @nodoc
 
-class _MarkAsSubmitted implements ContactFormEvent {
-  const _MarkAsSubmitted();
+class _CheckSubmission implements ContactFormEvent {
+  const _CheckSubmission();
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _MarkAsSubmitted);
+        (other.runtimeType == runtimeType && other is _CheckSubmission);
   }
 
   @override
@@ -129,7 +129,7 @@ class _MarkAsSubmitted implements ContactFormEvent {
 
   @override
   String toString() {
-    return 'ContactFormEvent.markAsSubmitted()';
+    return 'ContactFormEvent.checkSubmission()';
   }
 }
 
@@ -199,20 +199,75 @@ class _Loading extends ContactFormState {
 /// @nodoc
 
 class _Submitted extends ContactFormState {
-  const _Submitted() : super._();
+  const _Submitted(this.form) : super._();
+
+  final ContactForm form;
+
+  /// Create a copy of ContactFormState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$SubmittedCopyWith<_Submitted> get copyWith =>
+      __$SubmittedCopyWithImpl<_Submitted>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _Submitted);
+        (other.runtimeType == runtimeType &&
+            other is _Submitted &&
+            (identical(other.form, form) || other.form == form));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, form);
 
   @override
   String toString() {
-    return 'ContactFormState.submitted()';
+    return 'ContactFormState.submitted(form: $form)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$SubmittedCopyWith<$Res>
+    implements $ContactFormStateCopyWith<$Res> {
+  factory _$SubmittedCopyWith(
+          _Submitted value, $Res Function(_Submitted) _then) =
+      __$SubmittedCopyWithImpl;
+  @useResult
+  $Res call({ContactForm form});
+
+  $ContactFormCopyWith<$Res> get form;
+}
+
+/// @nodoc
+class __$SubmittedCopyWithImpl<$Res> implements _$SubmittedCopyWith<$Res> {
+  __$SubmittedCopyWithImpl(this._self, this._then);
+
+  final _Submitted _self;
+  final $Res Function(_Submitted) _then;
+
+  /// Create a copy of ContactFormState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? form = null,
+  }) {
+    return _then(_Submitted(
+      null == form
+          ? _self.form
+          : form // ignore: cast_nullable_to_non_nullable
+              as ContactForm,
+    ));
+  }
+
+  /// Create a copy of ContactFormState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $ContactFormCopyWith<$Res> get form {
+    return $ContactFormCopyWith<$Res>(_self.form, (value) {
+      return _then(_self.copyWith(form: value));
+    });
   }
 }
 
@@ -274,6 +329,135 @@ class __$ErrorCopyWithImpl<$Res> implements _$ErrorCopyWith<$Res> {
           ? _self.message
           : message // ignore: cast_nullable_to_non_nullable
               as String,
+    ));
+  }
+}
+
+/// @nodoc
+mixin _$ContactFormSideEffect {
+  ToastType get type;
+
+  /// Create a copy of ContactFormSideEffect
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $ContactFormSideEffectCopyWith<ContactFormSideEffect> get copyWith =>
+      _$ContactFormSideEffectCopyWithImpl<ContactFormSideEffect>(
+          this as ContactFormSideEffect, _$identity);
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is ContactFormSideEffect &&
+            (identical(other.type, type) || other.type == type));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, type);
+
+  @override
+  String toString() {
+    return 'ContactFormSideEffect(type: $type)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $ContactFormSideEffectCopyWith<$Res> {
+  factory $ContactFormSideEffectCopyWith(ContactFormSideEffect value,
+          $Res Function(ContactFormSideEffect) _then) =
+      _$ContactFormSideEffectCopyWithImpl;
+  @useResult
+  $Res call({ToastType type});
+}
+
+/// @nodoc
+class _$ContactFormSideEffectCopyWithImpl<$Res>
+    implements $ContactFormSideEffectCopyWith<$Res> {
+  _$ContactFormSideEffectCopyWithImpl(this._self, this._then);
+
+  final ContactFormSideEffect _self;
+  final $Res Function(ContactFormSideEffect) _then;
+
+  /// Create a copy of ContactFormSideEffect
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? type = null,
+  }) {
+    return _then(_self.copyWith(
+      type: null == type
+          ? _self.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as ToastType,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _ShowToast extends ContactFormSideEffect {
+  const _ShowToast({required this.type}) : super._();
+
+  @override
+  final ToastType type;
+
+  /// Create a copy of ContactFormSideEffect
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$ShowToastCopyWith<_ShowToast> get copyWith =>
+      __$ShowToastCopyWithImpl<_ShowToast>(this, _$identity);
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _ShowToast &&
+            (identical(other.type, type) || other.type == type));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, type);
+
+  @override
+  String toString() {
+    return 'ContactFormSideEffect.showToast(type: $type)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$ShowToastCopyWith<$Res>
+    implements $ContactFormSideEffectCopyWith<$Res> {
+  factory _$ShowToastCopyWith(
+          _ShowToast value, $Res Function(_ShowToast) _then) =
+      __$ShowToastCopyWithImpl;
+  @override
+  @useResult
+  $Res call({ToastType type});
+}
+
+/// @nodoc
+class __$ShowToastCopyWithImpl<$Res> implements _$ShowToastCopyWith<$Res> {
+  __$ShowToastCopyWithImpl(this._self, this._then);
+
+  final _ShowToast _self;
+  final $Res Function(_ShowToast) _then;
+
+  /// Create a copy of ContactFormSideEffect
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? type = null,
+  }) {
+    return _then(_ShowToast(
+      type: null == type
+          ? _self.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as ToastType,
     ));
   }
 }

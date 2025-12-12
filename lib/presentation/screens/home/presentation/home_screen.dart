@@ -3,7 +3,8 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_bloc/flutter_bloc.dart' show BlocProvider;
+import 'package:flutter_bloc_side_effect/flutter_bloc_side_effect.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:gap/gap.dart';
 import 'package:shadcn_flutter/shadcn_flutter.dart' as shadcn;
@@ -35,6 +36,10 @@ import '../domain/models/project/project_model.dart';
 import '../domain/models/skill/skill_model.dart';
 
 part 'widgets/app_bar.dart';
+part 'widgets/contact/contact.dart';
+part 'widgets/contact/widgets/contact_form.dart';
+part 'widgets/contact/widgets/contacts_block.dart';
+part 'widgets/contact/widgets/contacts_content.dart';
 part 'widgets/header/header.dart';
 part 'widgets/header/widgets/header_background.dart';
 part 'widgets/header/widgets/header_content.dart';
@@ -45,11 +50,6 @@ part 'widgets/projects/widgets/projects_content.dart';
 part 'widgets/skills/skills.dart';
 part 'widgets/skills/widgets/skill_card.dart';
 part 'widgets/skills/widgets/tech_stack_card.dart';
-part 'widgets/contact/contact.dart';
-part 'widgets/contact/widgets/contact_form.dart';
-part 'widgets/contact/widgets/contacts_block.dart';
-part 'widgets/contact/widgets/contacts_content.dart';
-part 'widgets/contact/widgets/contacts_background.dart';
 
 @RoutePage()
 class HomeScreen extends StatefulWidget {

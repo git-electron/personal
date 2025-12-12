@@ -4,6 +4,7 @@ analyzer:
   errors:
     invalid_annotation_target: ignore
     avoid_web_libraries_in_flutter: ignore
+    avoid_shadowing_type_parameters: ignore
   exclude:
     - build/**
     - lib/**/*.g.dart

@@ -135,16 +135,16 @@ class $AssetsIconsThemeGen {
 class $AssetsImagesBackgroundsGen {
   const $AssetsImagesBackgroundsGen();
 
-  /// File path: assets/images/backgrounds/contacts_background.png
-  AssetGenImage get contactsBackground =>
-      const AssetGenImage('assets/images/backgrounds/contacts_background.png');
+  /// Directory path: assets/images/backgrounds/contacts_background
+  $AssetsImagesBackgroundsContactsBackgroundGen get contactsBackground =>
+      const $AssetsImagesBackgroundsContactsBackgroundGen();
 
   /// File path: assets/images/backgrounds/header_background.png
   AssetGenImage get headerBackground =>
       const AssetGenImage('assets/images/backgrounds/header_background.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [contactsBackground, headerBackground];
+  List<AssetGenImage> get values => [headerBackground];
 }
 
 class $AssetsImagesContactsGen {
@@ -537,6 +537,21 @@ class $AssetsIconsThemeSunGen {
 
   /// List of all assets
   List<SvgGenImage> get values => [brand, dark, light];
+}
+
+class $AssetsImagesBackgroundsContactsBackgroundGen {
+  const $AssetsImagesBackgroundsContactsBackgroundGen();
+
+  /// File path: assets/images/backgrounds/contacts_background/dark.png
+  AssetGenImage get dark => const AssetGenImage(
+      'assets/images/backgrounds/contacts_background/dark.png');
+
+  /// File path: assets/images/backgrounds/contacts_background/light.png
+  AssetGenImage get light => const AssetGenImage(
+      'assets/images/backgrounds/contacts_background/light.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [dark, light];
 }
 
 class $AssetsImagesContactsGithubGen {

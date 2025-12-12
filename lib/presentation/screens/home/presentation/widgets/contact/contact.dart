@@ -7,19 +7,21 @@ class _Contact extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => $<ContactFormBloc>(),
-      child: MeasureSizeWrapper(
-        shouldMeasureOnce: false,
-        builder: (context, size) {
-          return Stack(
-            alignment: Alignment.center,
-            children: [
-              SizedBox(
-                height: size.height,
-                width: size.width,
-                child: const _ContactsBackground(),
+      child: BlocBuilder<ThemeBloc, ThemeState>(
+        bloc: context.read(),
+        builder: (context, state) {
+          return DecoratedBox(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                fit: BoxFit.cover,
+                opacity: context.isDarkTheme ? .5 : 1,
+                image: context.themeDependantValue(
+                  dark: Assets.images.backgrounds.contactsBackground.dark.provider(),
+                  light: Assets.images.backgrounds.contactsBackground.light.provider(),
+                ),
               ),
-              const WebPaddingWrapper(child: _ContactsContent()),
-            ],
+            ),
+            child: const WebPaddingWrapper(child: _ContactsContent()),
           );
         },
       ),

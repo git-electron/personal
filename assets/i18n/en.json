@@ -141,6 +141,10 @@
       "submit_toast": {
         "title": "Form submitted",
         "subtitle": "I will contact you as soon as I receive the notification"
+      },
+      "error_toast": {
+        "title": "Oops!",
+        "subtitle": "There is an unknown error"
       }
     }
   }

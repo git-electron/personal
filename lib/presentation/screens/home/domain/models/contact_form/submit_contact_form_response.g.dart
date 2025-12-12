@@ -1,19 +1,20 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'contact_form_response.dart';
+part of 'submit_contact_form_response.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_ContactFormResponse _$ContactFormResponseFromJson(Map<String, dynamic> json) =>
-    _ContactFormResponse(
+_SubmitContactFormResponse _$SubmitContactFormResponseFromJson(
+        Map<String, dynamic> json) =>
+    _SubmitContactFormResponse(
       isSuccess: json['success'] as bool,
       message: json['message'] as String,
     );
 
-Map<String, dynamic> _$ContactFormResponseToJson(
-        _ContactFormResponse instance) =>
+Map<String, dynamic> _$SubmitContactFormResponseToJson(
+        _SubmitContactFormResponse instance) =>
     <String, dynamic>{
       'success': instance.isSuccess,
       'message': instance.message,

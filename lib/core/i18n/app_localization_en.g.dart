@@ -198,6 +198,7 @@ class TranslationsGeneralToastsEn {
 	// Translations
 	late final TranslationsGeneralToastsCopyToastEn copy_toast = TranslationsGeneralToastsCopyToastEn.internal(_root);
 	late final TranslationsGeneralToastsSubmitToastEn submit_toast = TranslationsGeneralToastsSubmitToastEn.internal(_root);
+	late final TranslationsGeneralToastsErrorToastEn error_toast = TranslationsGeneralToastsErrorToastEn.internal(_root);
 }
 
 // Path: home.skills.flutter_and_dart
@@ -498,6 +499,21 @@ class TranslationsGeneralToastsSubmitToastEn {
 
 	/// en: 'I will contact you as soon as I receive the notification'
 	String get subtitle => 'I will contact you as soon as I receive the notification';
+}
+
+// Path: general.toasts.error_toast
+class TranslationsGeneralToastsErrorToastEn {
+	TranslationsGeneralToastsErrorToastEn.internal(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'Oops!'
+	String get title => 'Oops!';
+
+	/// en: 'There is an unknown error'
+	String get subtitle => 'There is an unknown error';
 }
 
 // Path: home.contact.contacts.availability

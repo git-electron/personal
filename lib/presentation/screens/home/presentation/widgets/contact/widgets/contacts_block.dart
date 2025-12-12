@@ -7,6 +7,7 @@ class _ContactsBlock extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       spacing: 20,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         _ContactItem(
           onTap: () => $<UrlLauncher>().launchEmailString(Constants.email),
@@ -123,6 +124,7 @@ class _ContactItem extends StatelessWidget {
       onTap: onTap,
       child: Row(
         spacing: 20,
+        mainAxisSize: MainAxisSize.min,
         children: [
           DecoratedBox(
             decoration: BoxDecoration(

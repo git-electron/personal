@@ -15,8 +15,10 @@ import 'package:injectable/injectable.dart' as _i526;
 import 'package:landing/core/di/locator.dart' as _i518;
 import 'package:landing/core/domain/bloc/theme_bloc/theme_bloc.dart' as _i442;
 import 'package:landing/core/domain/services/device_info_service.dart' as _i785;
-import 'package:landing/core/domain/services/local_storage_service.dart'
-    as _i932;
+import 'package:landing/core/domain/services/local_storage_service/local_storage_service.dart'
+    as _i984;
+import 'package:landing/core/domain/services/local_storage_service/local_storage_service_impl.dart'
+    as _i341;
 import 'package:landing/core/domain/services/toast_service.dart' as _i210;
 import 'package:landing/core/router/router.dart' as _i136;
 import 'package:landing/core/utils/debouncer/debouncer.dart' as _i516;
@@ -27,10 +29,14 @@ import 'package:landing/presentation/screens/home/data/contact_form_repository_i
     as _i229;
 import 'package:landing/presentation/screens/home/domain/bloc/contact_form_bloc.dart'
     as _i696;
-import 'package:landing/presentation/screens/home/domain/services/contact_form_service.dart'
-    as _i581;
-import 'package:landing/presentation/screens/home/domain/services/contact_form_service_impl.dart'
-    as _i374;
+import 'package:landing/presentation/screens/home/domain/services/contact_form_local_storage_service/contact_form_local_storage_service.dart'
+    as _i528;
+import 'package:landing/presentation/screens/home/domain/services/contact_form_local_storage_service/contact_form_local_storage_service_impl.dart'
+    as _i260;
+import 'package:landing/presentation/screens/home/domain/services/contact_form_service/contact_form_service.dart'
+    as _i776;
+import 'package:landing/presentation/screens/home/domain/services/contact_form_service/contact_form_service_impl.dart'
+    as _i372;
 import 'package:logger/logger.dart' as _i974;
 
 extension GetItInjectableX on _i174.GetIt {
@@ -49,7 +55,6 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i833.DeviceInfoPlugin>(() => locator.deviceInfoPlugin);
     gh.factory<_i1054.UrlLauncher>(() => _i1054.UrlLauncher());
     gh.factory<_i516.Debouncer>(() => _i516.Debouncer());
-    gh.factory<_i932.LocalStorageService>(() => _i932.LocalStorageService());
     gh.singleton<_i210.ToastService>(() => _i210.ToastService());
     gh.singleton<_i442.ThemeBloc>(() => _i442.ThemeBloc());
     gh.singleton<_i136.AppRouter>(() => _i136.AppRouter(gh<_i974.Logger>()));
@@ -60,14 +65,19 @@ extension GetItInjectableX on _i174.GetIt {
       },
       preResolve: true,
     );
+    gh.factory<_i984.LocalStorageService<dynamic>>(
+        () => _i341.LocalStorageServiceImpl());
     gh.factory<_i693.ContactFormRepository>(
         () => _i229.ContactFormRepositoryImpl());
-    gh.factory<_i581.ContactFormService>(
-        () => _i374.ContactFormServiceImpl(gh<_i693.ContactFormRepository>()));
-    gh.factory<_i696.ContactFormBloc>(() => _i696.ContactFormBloc(
-          gh<_i581.ContactFormService>(),
-          gh<_i932.LocalStorageService>(),
+    gh.factory<_i528.ContactFormLocalStorageService>(() =>
+        _i260.ContactFormLocalStorageServiceImpl(
+            gh<_i984.LocalStorageService<dynamic>>()));
+    gh.factory<_i776.ContactFormService>(() => _i372.ContactFormServiceImpl(
+          gh<_i693.ContactFormRepository>(),
+          gh<_i528.ContactFormLocalStorageService>(),
         ));
+    gh.factory<_i696.ContactFormBloc>(
+        () => _i696.ContactFormBloc(gh<_i776.ContactFormService>()));
     return this;
   }
 }

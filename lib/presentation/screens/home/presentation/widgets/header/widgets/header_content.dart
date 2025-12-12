@@ -104,6 +104,7 @@ class _Description extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<ThemeBloc, ThemeState>(
+      bloc: context.read(),
       builder: (context, state) {
         return ConstrainedBox(
           constraints: BoxConstraints(
@@ -181,6 +182,7 @@ class _Contacts extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<ThemeBloc, ThemeState>(
+      bloc: context.read(),
       builder: (context, state) {
         return Row(
           spacing: context.layoutDependantValue(mobile: 40, orElse: 20),

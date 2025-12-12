@@ -1,48 +1,47 @@
-import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_bloc_side_effect/flutter_bloc_side_effect.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 
-import '../../../../../core/domain/services/local_storage_service.dart';
-import '../models/contact_form/contact_form_request.dart';
-import '../services/contact_form_service.dart';
+import '../models/contact_form/contact_form.dart';
+import '../models/contact_form/submit_contact_form_response.dart';
+import '../services/contact_form_service/contact_form_service.dart';
 
 part 'contact_form_bloc.freezed.dart';
 part 'contact_form_event.dart';
 part 'contact_form_state.dart';
+part 'contact_form_side_effect.dart';
 
 @injectable
-class ContactFormBloc extends Bloc<ContactFormEvent, ContactFormState> {
-  ContactFormBloc(
-    this._contactFormService,
-    this._localStorageService,
-  ) : super(const _Initial()) {
+class ContactFormBloc extends Bloc<ContactFormEvent, ContactFormState>
+    with BlocSideEffectMixin<ContactFormEvent, ContactFormState, ContactFormSideEffect> {
+  ContactFormBloc(this._contactFormService) : super(const _Initial()) {
     on<_Submit>(_onSubmit);
-    on<_MarkAsSubmitted>(_onMarkAsSubmitted);
+    on<_CheckSubmission>(_onCheckSubmission);
+
+    add(const ContactFormEvent.checkSubmission());
   }
 
   final ContactFormService _contactFormService;
-  final LocalStorageService _localStorageService;
 
   Future<void> _onSubmit(_Submit event, Emitter<ContactFormState> emit) async {
     emit(const ContactFormState.loading());
-    
-    final response = await _contactFormService.submitForm(
-      ContactFormRequest(
-        name: event.name,
-        email: event.email,
-        message: event.message,
-      ),
-    );
+
+    final ContactForm form = ContactForm(name: event.name, email: event.email, message: event.message);
+    final SubmitContactFormResponse response = await _contactFormService.submitForm(form);
 
     if (response.isSuccess) {
-      emit(const ContactFormState.submitted());
+      emit(ContactFormState.submitted(form));
+      emitSideEffect(const ContactFormSideEffect.showToast(type: ToastType.success));
     } else {
       emit(ContactFormState.error(response.message));
+      emitSideEffect(const ContactFormSideEffect.showToast(type: ToastType.error));
     }
   }
 
-  Future<void> _onMarkAsSubmitted(_MarkAsSubmitted event, Emitter<ContactFormState> emit) async =>
-      emit(const ContactFormState.submitted());
-
-  bool get isFormSubmitted => _localStorageService.getValue<bool>('form_submitted') ?? false;
+  Future<void> _onCheckSubmission(_CheckSubmission event, Emitter<ContactFormState> emit) async {
+    if (!_contactFormService.isSubmitted) return;
+    final ContactForm? form = _contactFormService.getSubmittedFormData();
+    if (form == null) return;
+    emit(ContactFormState.submitted(form));
+  }
 }

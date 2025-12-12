@@ -24,17 +24,17 @@ class _ContactsContent extends StatelessWidget {
             Row(
               spacing: 40,
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: _contacts.map((widget) => Expanded(child: widget)).toList(),
+              children: _widgets.map((widget) => Expanded(child: widget)).toList(),
             )
           else
             const Column(
               spacing: 40,
-              children: _contacts,
+              children: _widgets,
             ),
         ],
       ),
     );
   }
 
-  static const List<Widget> _contacts = [_ContactsBlock(), _ContactForm()];
+  static const List<Widget> _widgets = [_ContactsBlock(), _ContactForm()];
 }

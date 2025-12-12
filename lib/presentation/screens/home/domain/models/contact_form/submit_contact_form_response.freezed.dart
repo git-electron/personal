@@ -4,7 +4,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'contact_form_response.dart';
+part of 'submit_contact_form_response.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,27 +14,27 @@ part of 'contact_form_response.dart';
 T _$identity<T>(T value) => value;
 
 /// @nodoc
-mixin _$ContactFormResponse {
+mixin _$SubmitContactFormResponse {
   @JsonKey(name: 'success')
   bool get isSuccess;
   String get message;
 
-  /// Create a copy of ContactFormResponse
+  /// Create a copy of SubmitContactFormResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
-  $ContactFormResponseCopyWith<ContactFormResponse> get copyWith =>
-      _$ContactFormResponseCopyWithImpl<ContactFormResponse>(
-          this as ContactFormResponse, _$identity);
+  $SubmitContactFormResponseCopyWith<SubmitContactFormResponse> get copyWith =>
+      _$SubmitContactFormResponseCopyWithImpl<SubmitContactFormResponse>(
+          this as SubmitContactFormResponse, _$identity);
 
-  /// Serializes this ContactFormResponse to a JSON map.
+  /// Serializes this SubmitContactFormResponse to a JSON map.
   Map<String, dynamic> toJson();
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is ContactFormResponse &&
+            other is SubmitContactFormResponse &&
             (identical(other.isSuccess, isSuccess) ||
                 other.isSuccess == isSuccess) &&
             (identical(other.message, message) || other.message == message));
@@ -46,28 +46,28 @@ mixin _$ContactFormResponse {
 
   @override
   String toString() {
-    return 'ContactFormResponse(isSuccess: $isSuccess, message: $message)';
+    return 'SubmitContactFormResponse(isSuccess: $isSuccess, message: $message)';
   }
 }
 
 /// @nodoc
-abstract mixin class $ContactFormResponseCopyWith<$Res> {
-  factory $ContactFormResponseCopyWith(
-          ContactFormResponse value, $Res Function(ContactFormResponse) _then) =
-      _$ContactFormResponseCopyWithImpl;
+abstract mixin class $SubmitContactFormResponseCopyWith<$Res> {
+  factory $SubmitContactFormResponseCopyWith(SubmitContactFormResponse value,
+          $Res Function(SubmitContactFormResponse) _then) =
+      _$SubmitContactFormResponseCopyWithImpl;
   @useResult
   $Res call({@JsonKey(name: 'success') bool isSuccess, String message});
 }
 
 /// @nodoc
-class _$ContactFormResponseCopyWithImpl<$Res>
-    implements $ContactFormResponseCopyWith<$Res> {
-  _$ContactFormResponseCopyWithImpl(this._self, this._then);
+class _$SubmitContactFormResponseCopyWithImpl<$Res>
+    implements $SubmitContactFormResponseCopyWith<$Res> {
+  _$SubmitContactFormResponseCopyWithImpl(this._self, this._then);
 
-  final ContactFormResponse _self;
-  final $Res Function(ContactFormResponse) _then;
+  final SubmitContactFormResponse _self;
+  final $Res Function(SubmitContactFormResponse) _then;
 
-  /// Create a copy of ContactFormResponse
+  /// Create a copy of SubmitContactFormResponse
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -90,12 +90,12 @@ class _$ContactFormResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _ContactFormResponse implements ContactFormResponse {
-  _ContactFormResponse(
+class _SubmitContactFormResponse implements SubmitContactFormResponse {
+  _SubmitContactFormResponse(
       {@JsonKey(name: 'success') required this.isSuccess,
       required this.message});
-  factory _ContactFormResponse.fromJson(Map<String, dynamic> json) =>
-      _$ContactFormResponseFromJson(json);
+  factory _SubmitContactFormResponse.fromJson(Map<String, dynamic> json) =>
+      _$SubmitContactFormResponseFromJson(json);
 
   @override
   @JsonKey(name: 'success')
@@ -103,18 +103,19 @@ class _ContactFormResponse implements ContactFormResponse {
   @override
   final String message;
 
-  /// Create a copy of ContactFormResponse
+  /// Create a copy of SubmitContactFormResponse
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
-  _$ContactFormResponseCopyWith<_ContactFormResponse> get copyWith =>
-      __$ContactFormResponseCopyWithImpl<_ContactFormResponse>(
-          this, _$identity);
+  _$SubmitContactFormResponseCopyWith<_SubmitContactFormResponse>
+      get copyWith =>
+          __$SubmitContactFormResponseCopyWithImpl<_SubmitContactFormResponse>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$ContactFormResponseToJson(
+    return _$SubmitContactFormResponseToJson(
       this,
     );
   }
@@ -123,7 +124,7 @@ class _ContactFormResponse implements ContactFormResponse {
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ContactFormResponse &&
+            other is _SubmitContactFormResponse &&
             (identical(other.isSuccess, isSuccess) ||
                 other.isSuccess == isSuccess) &&
             (identical(other.message, message) || other.message == message));
@@ -135,30 +136,30 @@ class _ContactFormResponse implements ContactFormResponse {
 
   @override
   String toString() {
-    return 'ContactFormResponse(isSuccess: $isSuccess, message: $message)';
+    return 'SubmitContactFormResponse(isSuccess: $isSuccess, message: $message)';
   }
 }
 
 /// @nodoc
-abstract mixin class _$ContactFormResponseCopyWith<$Res>
-    implements $ContactFormResponseCopyWith<$Res> {
-  factory _$ContactFormResponseCopyWith(_ContactFormResponse value,
-          $Res Function(_ContactFormResponse) _then) =
-      __$ContactFormResponseCopyWithImpl;
+abstract mixin class _$SubmitContactFormResponseCopyWith<$Res>
+    implements $SubmitContactFormResponseCopyWith<$Res> {
+  factory _$SubmitContactFormResponseCopyWith(_SubmitContactFormResponse value,
+          $Res Function(_SubmitContactFormResponse) _then) =
+      __$SubmitContactFormResponseCopyWithImpl;
   @override
   @useResult
   $Res call({@JsonKey(name: 'success') bool isSuccess, String message});
 }
 
 /// @nodoc
-class __$ContactFormResponseCopyWithImpl<$Res>
-    implements _$ContactFormResponseCopyWith<$Res> {
-  __$ContactFormResponseCopyWithImpl(this._self, this._then);
+class __$SubmitContactFormResponseCopyWithImpl<$Res>
+    implements _$SubmitContactFormResponseCopyWith<$Res> {
+  __$SubmitContactFormResponseCopyWithImpl(this._self, this._then);
 
-  final _ContactFormResponse _self;
-  final $Res Function(_ContactFormResponse) _then;
+  final _SubmitContactFormResponse _self;
+  final $Res Function(_SubmitContactFormResponse) _then;
 
-  /// Create a copy of ContactFormResponse
+  /// Create a copy of SubmitContactFormResponse
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
@@ -166,7 +167,7 @@ class __$ContactFormResponseCopyWithImpl<$Res>
     Object? isSuccess = null,
     Object? message = null,
   }) {
-    return _then(_ContactFormResponse(
+    return _then(_SubmitContactFormResponse(
       isSuccess: null == isSuccess
           ? _self.isSuccess
           : isSuccess // ignore: cast_nullable_to_non_nullable
