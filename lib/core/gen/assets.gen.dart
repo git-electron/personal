@@ -72,6 +72,9 @@ class $AssetsIconsContactsGen {
 class $AssetsIconsGeneralGen {
   const $AssetsIconsGeneralGen();
 
+  /// Directory path: assets/icons/general/check
+  $AssetsIconsGeneralCheckGen get check => const $AssetsIconsGeneralCheckGen();
+
   /// Directory path: assets/icons/general/link
   $AssetsIconsGeneralLinkGen get link => const $AssetsIconsGeneralLinkGen();
 
@@ -286,6 +289,25 @@ class $AssetsIconsContactsPhoneGen {
   /// File path: assets/icons/contacts/phone/light.svg
   SvgGenImage get light =>
       const SvgGenImage('assets/icons/contacts/phone/light.svg');
+
+  /// List of all assets
+  List<SvgGenImage> get values => [brand, dark, light];
+}
+
+class $AssetsIconsGeneralCheckGen {
+  const $AssetsIconsGeneralCheckGen();
+
+  /// File path: assets/icons/general/check/brand.svg
+  SvgGenImage get brand =>
+      const SvgGenImage('assets/icons/general/check/brand.svg');
+
+  /// File path: assets/icons/general/check/dark.svg
+  SvgGenImage get dark =>
+      const SvgGenImage('assets/icons/general/check/dark.svg');
+
+  /// File path: assets/icons/general/check/light.svg
+  SvgGenImage get light =>
+      const SvgGenImage('assets/icons/general/check/light.svg');
 
   /// List of all assets
   List<SvgGenImage> get values => [brand, dark, light];

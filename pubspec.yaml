@@ -72,6 +72,7 @@ flutter:
   - assets/icons/general/
   - assets/icons/general/link/
   - assets/icons/general/menu/
+  - assets/icons/general/check/
   - assets/icons/general/project/
   - assets/icons/general/location/
   - assets/icons/contacts/email/

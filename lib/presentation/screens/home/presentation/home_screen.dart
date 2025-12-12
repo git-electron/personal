@@ -30,6 +30,7 @@ import '../../../ui/utils/formatted_text.dart';
 import '../../../ui/wrappers/measure_size_wrapper.dart';
 import '../../../ui/wrappers/tappable.dart';
 import '../../../ui/wrappers/web_padding.dart';
+import '../domain/bloc/contact_form_bloc.dart';
 import '../domain/models/project/project_model.dart';
 import '../domain/models/skill/skill_model.dart';
 

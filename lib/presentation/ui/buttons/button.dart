@@ -12,6 +12,8 @@ class AppButton extends StatefulWidget {
     required this.text,
     this.icon,
     this.image,
+    this.isEnabled = true,
+    this.isLoading = false,
     super.key,
   });
 
@@ -19,6 +21,9 @@ class AppButton extends StatefulWidget {
   final String text;
   final SvgGenImage? icon;
   final AssetGenImage? image;
+
+  final bool isEnabled;
+  final bool isLoading;
 
   @override
   State<AppButton> createState() => _AppButtonState();
@@ -29,47 +34,76 @@ class _AppButtonState extends State<AppButton> {
 
   @override
   Widget build(BuildContext context) {
-    return Tappable(
-      onTap: widget.onTap,
-      child: MouseRegion(
-        opaque: false,
-        onEnter: (_) => setState(() => _isHovering = true),
-        onExit: (_) => setState(() => _isHovering = false),
-        child: RepaintBoundary(
-          child: AnimatedContainer(
-            duration: 100.ms,
-            decoration: BoxDecoration(
-              color: _isHovering ? context.colors.buttonHighlight : context.colors.background,
-              borderRadius: BorderRadius.circular(5),
-              border: Border.all(
-                strokeAlign: BorderSide.strokeAlignOutside,
-                color: context.colors.buttonHighlight,
-              ),
-            ),
-            padding: const Pad(
-              vertical: 8,
-              horizontal: 20,
-            ),
-            child: Row(
-              mainAxisSize: MainAxisSize.min,
-              mainAxisAlignment: MainAxisAlignment.center,
-              spacing: context.layoutDependantValue(desktop: 10, orElse: 8),
-              children: [
-                if (widget.icon != null)
-                  SizedBox.square(
-                    dimension: context.layoutDependantValue(desktop: 20, orElse: 16),
-                    child: widget.icon!.svg(),
+    return Opacity(
+      opacity: widget.isEnabled ? 1 : .5,
+      child: IgnorePointer(
+        ignoring: !widget.isEnabled || widget.isLoading,
+        child: Tappable(
+          onTap: widget.onTap,
+          child: MouseRegion(
+            opaque: false,
+            onEnter: (_) => setState(() => _isHovering = true),
+            onExit: (_) => setState(() => _isHovering = false),
+            child: RepaintBoundary(
+              child: AnimatedContainer(
+                duration: 100.ms,
+                decoration: BoxDecoration(
+                  color: _isHovering ? context.colors.buttonHighlight : context.colors.background,
+                  borderRadius: BorderRadius.circular(5),
+                  border: Border.all(
+                    strokeAlign: BorderSide.strokeAlignOutside,
+                    color: context.colors.buttonHighlight,
                   ),
-                if (widget.image != null && widget.icon == null)
-                  SizedBox.square(
-                    dimension: context.layoutDependantValue(desktop: 20, orElse: 16),
-                    child: widget.image!.image(),
-                  ),
-                Text(
-                  widget.text,
-                  style: context.bodyStyle,
                 ),
-              ],
+                padding: const Pad(
+                  vertical: 8,
+                  horizontal: 20,
+                ),
+                child: !widget.isLoading
+                    ? Row(
+                        mainAxisSize: MainAxisSize.min,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        spacing: context.layoutDependantValue(desktop: 10, orElse: 8),
+                        children: [
+                          if (widget.icon != null)
+                            SizedBox.square(
+                              dimension: context.layoutDependantValue(desktop: 20, orElse: 16),
+                              child: widget.icon!.svg(),
+                            ),
+                          if (widget.image != null && widget.icon == null)
+                            SizedBox.square(
+                              dimension: context.layoutDependantValue(desktop: 20, orElse: 16),
+                              child: widget.image!.image(),
+                            ),
+                          Text(
+                            widget.text,
+                            style: context.bodyStyle,
+                          ),
+                        ],
+                      )
+                    : SizedBox(
+                        height: (context.bodyStyle.fontSize as double) +
+                            context.layoutDependantValue(
+                              desktop: 7,
+                              tablet: 6,
+                              mobile: 5,
+                            ),
+                        child: Center(
+                          child: SizedBox.square(
+                            dimension: context.layoutDependantValue(
+                              desktop: 18,
+                              tablet: 16,
+                              mobile: 14,
+                            ),
+                            child: CircularProgressIndicator(
+                              color: context.colors.onBackground,
+                              strokeCap: StrokeCap.round,
+                              strokeWidth: 3,
+                            ),
+                          ),
+                        ),
+                      ),
+              ),
             ),
           ),
         ),
