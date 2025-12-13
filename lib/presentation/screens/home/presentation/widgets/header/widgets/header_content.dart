@@ -1,9 +1,9 @@
 part of '../../../home_screen.dart';
 
 class _HeaderContent extends StatelessWidget {
-  const _HeaderContent({required this.animateToItem});
+  const _HeaderContent({required this.animateTo});
 
-  final void Function(int index) animateToItem;
+  final void Function(_NavigationItem item) animateTo;
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +35,7 @@ class _HeaderContent extends StatelessWidget {
           ),
         ),
         const _Description(),
-        _Buttons(animateToItem: animateToItem),
+        _Buttons(animateTo: animateTo),
       ],
     );
   }
@@ -129,9 +129,9 @@ class _Description extends StatelessWidget {
 }
 
 class _Buttons extends StatelessWidget {
-  const _Buttons({required this.animateToItem});
+  const _Buttons({required this.animateTo});
 
-  final void Function(int index) animateToItem;
+  final void Function(_NavigationItem item) animateTo;
 
   @override
   Widget build(BuildContext context) {
@@ -145,7 +145,7 @@ class _Buttons extends StatelessWidget {
           spacing: context.dependsOnLayout(desktop: 20, orElse: 10),
           children: [
             AppButton(
-              onTap: () => animateToItem(3),
+              onTap: () => animateTo(_NavigationItem.contacts),
               icon: context.dependsOnTheme(
                 dark: Assets.icons.contacts.contact.light,
                 light: Assets.icons.contacts.contact.dark,
@@ -153,7 +153,7 @@ class _Buttons extends StatelessWidget {
               text: context.t.home.header.contact_button,
             ),
             AppButton(
-              onTap: () => animateToItem(2),
+              onTap: () => animateTo(_NavigationItem.projects),
               icon: context.dependsOnTheme(
                 dark: Assets.icons.general.project.light,
                 light: Assets.icons.general.project.dark,

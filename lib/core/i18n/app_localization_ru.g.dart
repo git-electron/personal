@@ -50,6 +50,7 @@ class TranslationsHomeRu extends TranslationsHomeEn {
 	@override late final TranslationsHomeProjectsRu projects = TranslationsHomeProjectsRu._(_root);
 	@override late final TranslationsHomeContactRu contact = TranslationsHomeContactRu._(_root);
 	@override late final TranslationsHomeAppBarRu app_bar = TranslationsHomeAppBarRu._(_root);
+	@override late final TranslationsHomeFooterRu footer = TranslationsHomeFooterRu._(_root);
 }
 
 // Path: general
@@ -140,6 +141,18 @@ class TranslationsHomeAppBarRu extends TranslationsHomeAppBarEn {
 	@override String get skills => 'Навыки';
 	@override String get projects => 'Проекты';
 	@override String get contact_me => 'Связаться';
+}
+
+// Path: home.footer
+class TranslationsHomeFooterRu extends TranslationsHomeFooterEn {
+	TranslationsHomeFooterRu._(TranslationsRu root) : this._root = root, super.internal(root);
+
+	final TranslationsRu _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Егор Мядзюта';
+	@override String get description => 'Дизайн создан в Figma. Разработано на Flutter Web. Размещено с помощью Vercel';
+	@override String get button => 'Посмотреть код сайта';
 }
 
 // Path: general.toasts

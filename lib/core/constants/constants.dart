@@ -10,6 +10,8 @@ class Constants {
   static const String location = 'St. Petersburg, Russia';
   static const String telegramUsername = '@drwwzy';
   static const String telegramUrl = 'https://t.me/drwwzy';
+  
+  static const String websiteRepoUrl = '$githubUrl/personal';
 
   static const Availability availability = Availability.available;
 }

@@ -1,9 +1,9 @@
 part of '../../home_screen.dart';
 
 class _Header extends StatelessWidget {
-  const _Header({required this.animateToItem});
+  const _Header({required this.animateTo});
 
-  final void Function(int index) animateToItem;
+  final void Function(_NavigationItem item) animateTo;
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class _Header extends StatelessWidget {
         alignment: Alignment.center,
         children: [
           const _HeaderBackground(),
-          WebPaddingWrapper(child: _HeaderContent(animateToItem: animateToItem)),
+          WebPaddingWrapper(child: _HeaderContent(animateTo: animateTo)),
         ],
       ),
     );

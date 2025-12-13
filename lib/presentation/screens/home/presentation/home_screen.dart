@@ -36,20 +36,22 @@ import '../domain/models/project/project_model.dart';
 import '../domain/models/skill/skill_model.dart';
 
 part 'widgets/app_bar.dart';
-part 'widgets/contact/contact.dart';
-part 'widgets/contact/widgets/contact_form.dart';
-part 'widgets/contact/widgets/contacts_block.dart';
-part 'widgets/contact/widgets/contacts_content.dart';
 part 'widgets/header/header.dart';
 part 'widgets/header/widgets/header_background.dart';
 part 'widgets/header/widgets/header_content.dart';
+part 'widgets/skills/skills.dart';
+part 'widgets/skills/widgets/skill_card.dart';
+part 'widgets/skills/widgets/tech_stack_card.dart';
 part 'widgets/projects/projects.dart';
 part 'widgets/projects/widgets/project_card.dart';
 part 'widgets/projects/widgets/projects_background.dart';
 part 'widgets/projects/widgets/projects_content.dart';
-part 'widgets/skills/skills.dart';
-part 'widgets/skills/widgets/skill_card.dart';
-part 'widgets/skills/widgets/tech_stack_card.dart';
+part 'widgets/contact/contact.dart';
+part 'widgets/contact/widgets/contact_form.dart';
+part 'widgets/contact/widgets/contacts_block.dart';
+part 'widgets/contact/widgets/contacts_content.dart';
+part 'widgets/footer/footer.dart';
+part '../domain/models/navigation_item.dart';
 
 @RoutePage()
 class HomeScreen extends StatefulWidget {
@@ -81,7 +83,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: _AppBar(
-        animateToItem: _animateToItem,
+        animateTo: _animateTo,
         scrollController: _scrollController,
       ),
       extendBody: true,
@@ -96,10 +98,11 @@ class _HomeScreenState extends State<HomeScreen> {
           listController: _listController,
           physics: $<DeviceInfoService>().isMobileDevice ? null : const NeverScrollableScrollPhysics(),
           children: [
-            _Header(animateToItem: _animateToItem),
+            _Header(animateTo: _animateTo),
             const _Skills(),
             const _Projects(),
             const _Contact(),
+            const _Footer(),
           ].alternateWith(
             Divider(
               height: 0,
@@ -112,5 +115,8 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  void _animateToItem(int index) => _listController.animateTo(index * 2, scrollController: _scrollController);
+  void _animateTo(_NavigationItem item) => _listController.animateTo(
+        item.index * 2,
+        scrollController: _scrollController,
+      );
 }

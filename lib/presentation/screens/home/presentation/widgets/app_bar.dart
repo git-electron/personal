@@ -2,12 +2,12 @@ part of '../home_screen.dart';
 
 class _AppBar extends StatelessWidget implements PreferredSizeWidget {
   const _AppBar({
-    required this.animateToItem,
+    required this.animateTo,
     required this.scrollController,
   });
 
   final ScrollController scrollController;
-  final void Function(int index) animateToItem;
+  final void Function(_NavigationItem item) animateTo;
 
   double get _height => 80;
   double get _iconHeight => _height - 40;
@@ -39,7 +39,7 @@ class _AppBar extends StatelessWidget implements PreferredSizeWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Tappable(
-                    onTap: () => animateToItem(0),
+                    onTap: () => animateTo(_NavigationItem.home),
                     child: SizedBox.square(
                       dimension: _iconHeight + 10,
                       child: Center(
@@ -131,7 +131,7 @@ class _AppBar extends StatelessWidget implements PreferredSizeWidget {
                   ),
                   children: [
                     Tappable(
-                      onTap: () => animateToItem(0),
+                      onTap: () => animateTo(_NavigationItem.home),
                       child: SizedBox.square(
                         dimension: _iconHeight + 10,
                         child: Center(
@@ -196,7 +196,7 @@ class _AppBar extends StatelessWidget implements PreferredSizeWidget {
         onTap: () async {
           if (context.isMobileLayout) shadcn.closeDrawer(context);
           if (context.isMobileLayout) await Future.delayed(500.ms);
-          animateToItem(index);
+          animateTo(_NavigationItem.values[index]);
         },
       );
     });

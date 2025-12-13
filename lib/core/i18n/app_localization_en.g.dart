@@ -55,6 +55,7 @@ class TranslationsHomeEn {
 	late final TranslationsHomeProjectsEn projects = TranslationsHomeProjectsEn.internal(_root);
 	late final TranslationsHomeContactEn contact = TranslationsHomeContactEn.internal(_root);
 	late final TranslationsHomeAppBarEn app_bar = TranslationsHomeAppBarEn.internal(_root);
+	late final TranslationsHomeFooterEn footer = TranslationsHomeFooterEn.internal(_root);
 }
 
 // Path: general
@@ -187,6 +188,24 @@ class TranslationsHomeAppBarEn {
 
 	/// en: 'Contact me'
 	String get contact_me => 'Contact me';
+}
+
+// Path: home.footer
+class TranslationsHomeFooterEn {
+	TranslationsHomeFooterEn.internal(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'Egor Myadzuta'
+	String get title => 'Egor Myadzuta';
+
+	/// en: 'Designed in Figma. Developed with Flutter Web. Hosted with Vercel'
+	String get description => 'Designed in Figma. Developed with Flutter Web. Hosted with Vercel';
+
+	/// en: 'Browse website's code'
+	String get button => 'Browse website\'s code';
 }
 
 // Path: general.toasts

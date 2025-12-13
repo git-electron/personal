@@ -128,6 +128,11 @@
       "skills": "Skills",
       "projects": "Projects",
       "contact_me": "Contact me"
+    },
+    "footer": {
+      "title": "Egor Myadzuta",
+      "description": "Designed in Figma. Developed with Flutter Web. Hosted with Vercel",
+      "button": "Browse website's code"
     }
   },
   "general": {
