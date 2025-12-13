@@ -2,12 +2,12 @@ part of '../home_screen.dart';
 
 class _AppBar extends StatelessWidget implements PreferredSizeWidget {
   const _AppBar({
-    required this.listController,
+    required this.animateToItem,
     required this.scrollController,
   });
 
-  final ListController listController;
   final ScrollController scrollController;
+  final void Function(int index) animateToItem;
 
   double get _height => 80;
   double get _iconHeight => _height - 40;
@@ -39,25 +39,25 @@ class _AppBar extends StatelessWidget implements PreferredSizeWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Tappable(
-                    onTap: () => _animateToItem(0),
+                    onTap: () => animateToItem(0),
                     child: SizedBox.square(
                       dimension: _iconHeight + 10,
                       child: Center(
                         child: Logo(
-                          size: _getScrollDependantHeight(_iconHeight, offset: offset),
+                          size: _getScrollDependsOnHeight(_iconHeight, offset: offset),
                         ),
                       ),
                     ),
                   ),
                   Row(
-                    spacing: context.layoutDependantValue(
-                      desktop: _getScrollDependantHeight(20, offset: offset),
-                      tablet: _getScrollDependantHeight(10, offset: offset),
-                      mobile: _getScrollDependantHeight(5, offset: offset),
+                    spacing: context.dependsOnLayout(
+                      desktop: _getScrollDependsOnHeight(20, offset: offset),
+                      tablet: _getScrollDependsOnHeight(10, offset: offset),
+                      mobile: _getScrollDependsOnHeight(5, offset: offset),
                     ),
                     children: [
                       AppIconButton.image(
-                        size: _getScrollDependantHeight(_buttonHeight, offset: offset),
+                        size: _getScrollDependsOnHeight(_buttonHeight, offset: offset),
                         image: switch (LocaleSettings.currentLocale) {
                           AppLocale.en => Assets.images.locales.en,
                           AppLocale.ru => Assets.images.locales.ru,
@@ -70,12 +70,12 @@ class _AppBar extends StatelessWidget implements PreferredSizeWidget {
                         ),
                       ),
                       AppIconButton(
-                        size: _getScrollDependantHeight(
+                        size: _getScrollDependsOnHeight(
                           _buttonHeight,
                           offset: offset,
                           clampMinValue: 5,
                         ),
-                        icon: context.themeDependantValue(
+                        icon: context.dependsOnTheme(
                           dark: Assets.icons.theme.moon.light,
                           light: Assets.icons.theme.sun.dark,
                         ),
@@ -83,12 +83,12 @@ class _AppBar extends StatelessWidget implements PreferredSizeWidget {
                         onTap: context.switchThemeMode,
                       ),
                       AppIconButton(
-                        size: _getScrollDependantHeight(
+                        size: _getScrollDependsOnHeight(
                           _buttonHeight,
                           offset: offset,
                           clampMinValue: 5,
                         ),
-                        icon: context.themeDependantValue(
+                        icon: context.dependsOnTheme(
                           dark: Assets.icons.general.menu.light,
                           light: Assets.icons.general.menu.dark,
                         ),
@@ -99,63 +99,7 @@ class _AppBar extends StatelessWidget implements PreferredSizeWidget {
                           showDragHandle: false,
                           borderRadius: BorderRadius.zero,
                           position: shadcn.OverlayPosition.top,
-                          builder: (context) => SizedBox(
-                            width: double.maxFinite,
-                            child: Padding(
-                              padding: const Pad(all: 25),
-                              child: Column(
-                                spacing: 15,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Logo(
-                                    size: _getScrollDependantHeight(_iconHeight, offset: offset),
-                                  ),
-                                  const Gap(0),
-                                  Padding(
-                                    padding: const Pad(all: 5),
-                                    child: Column(
-                                      spacing: 15,
-                                      crossAxisAlignment: CrossAxisAlignment.start,
-                                      children: [
-                                        _AppBarNavigationItem(
-                                          text: context.t.home.app_bar.home,
-                                          onTap: () async {
-                                            shadcn.closeDrawer(context);
-                                            await Future.delayed(500.ms);
-                                            _animateToItem(0);
-                                          },
-                                        ),
-                                        _AppBarNavigationItem(
-                                          text: context.t.home.app_bar.skills,
-                                          onTap: () async {
-                                            shadcn.closeDrawer(context);
-                                            await Future.delayed(500.ms);
-                                            _animateToItem(2);
-                                          },
-                                        ),
-                                        _AppBarNavigationItem(
-                                          text: context.t.home.app_bar.projects,
-                                          onTap: () async {
-                                            shadcn.closeDrawer(context);
-                                            await Future.delayed(500.ms);
-                                            _animateToItem(4);
-                                          },
-                                        ),
-                                        _AppBarNavigationItem(
-                                          text: context.t.home.app_bar.contact_me,
-                                          onTap: () async {
-                                            shadcn.closeDrawer(context);
-                                            await Future.delayed(500.ms);
-                                            _animateToItem(6);
-                                          },
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
+                          builder: _buildDrawer,
                         ),
                       ),
                     ],
@@ -180,51 +124,36 @@ class _AppBar extends StatelessWidget implements PreferredSizeWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Row(
-                  spacing: context.layoutDependantValue(
-                    desktop: _getScrollDependantHeight(20, offset: offset),
-                    tablet: _getScrollDependantHeight(10, offset: offset),
-                    mobile: _getScrollDependantHeight(5, offset: offset),
+                  spacing: context.dependsOnLayout(
+                    desktop: _getScrollDependsOnHeight(20, offset: offset),
+                    tablet: _getScrollDependsOnHeight(10, offset: offset),
+                    mobile: _getScrollDependsOnHeight(5, offset: offset),
                   ),
                   children: [
                     Tappable(
-                      onTap: () => _animateToItem(0),
+                      onTap: () => animateToItem(0),
                       child: SizedBox.square(
                         dimension: _iconHeight + 10,
                         child: Center(
                           child: Logo(
-                            size: _getScrollDependantHeight(_iconHeight, offset: offset),
+                            size: _getScrollDependsOnHeight(_iconHeight, offset: offset),
                           ),
                         ),
                       ),
                     ),
                     const Gap(0),
-                    _AppBarNavigationItem(
-                      text: context.t.home.app_bar.home,
-                      onTap: () => _animateToItem(0),
-                    ),
-                    _AppBarNavigationItem(
-                      text: context.t.home.app_bar.skills,
-                      onTap: () => _animateToItem(2),
-                    ),
-                    _AppBarNavigationItem(
-                      text: context.t.home.app_bar.projects,
-                      onTap: () => _animateToItem(4),
-                    ),
-                    _AppBarNavigationItem(
-                      text: context.t.home.app_bar.contact_me,
-                      onTap: () => _animateToItem(6),
-                    ),
+                    ..._getNavigationItems(context),
                   ],
                 ),
                 Row(
-                  spacing: context.layoutDependantValue(
-                    desktop: _getScrollDependantHeight(20, offset: offset),
-                    tablet: _getScrollDependantHeight(10, offset: offset),
-                    mobile: _getScrollDependantHeight(5, offset: offset),
+                  spacing: context.dependsOnLayout(
+                    desktop: _getScrollDependsOnHeight(20, offset: offset),
+                    tablet: _getScrollDependsOnHeight(10, offset: offset),
+                    mobile: _getScrollDependsOnHeight(5, offset: offset),
                   ),
                   children: [
                     AppIconButton.image(
-                      size: _getScrollDependantHeight(_buttonHeight, offset: offset),
+                      size: _getScrollDependsOnHeight(_buttonHeight, offset: offset),
                       image: switch (LocaleSettings.currentLocale) {
                         AppLocale.en => Assets.images.locales.en,
                         AppLocale.ru => Assets.images.locales.ru,
@@ -237,8 +166,8 @@ class _AppBar extends StatelessWidget implements PreferredSizeWidget {
                       ),
                     ),
                     AppIconButton(
-                      size: _getScrollDependantHeight(_buttonHeight, offset: offset),
-                      icon: context.themeDependantValue(
+                      size: _getScrollDependsOnHeight(_buttonHeight, offset: offset),
+                      icon: context.dependsOnTheme(
                         dark: Assets.icons.theme.moon.light,
                         light: Assets.icons.theme.sun.dark,
                       ),
@@ -255,9 +184,50 @@ class _AppBar extends StatelessWidget implements PreferredSizeWidget {
     );
   }
 
-  void _animateToItem(int index) => listController.animateTo(index, scrollController: scrollController);
+  List<_AppBarNavigationItem> _getNavigationItems(BuildContext context) {
+    return List.generate(4, (index) {
+      return _AppBarNavigationItem(
+        text: [
+          context.t.home.app_bar.home,
+          context.t.home.app_bar.skills,
+          context.t.home.app_bar.projects,
+          context.t.home.app_bar.contact_me,
+        ][index],
+        onTap: () async {
+          if (context.isMobileLayout) shadcn.closeDrawer(context);
+          if (context.isMobileLayout) await Future.delayed(500.ms);
+          animateToItem(index);
+        },
+      );
+    });
+  }
 
-  double _getScrollDependantHeight(
+  Widget _buildDrawer(BuildContext context) {
+    return SizedBox(
+      width: double.maxFinite,
+      child: Padding(
+        padding: const Pad(all: 25),
+        child: Column(
+          spacing: 15,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Logo(size: _iconHeight),
+            const Gap(0),
+            Padding(
+              padding: const Pad(all: 5),
+              child: Column(
+                spacing: 15,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: _getNavigationItems(context),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  double _getScrollDependsOnHeight(
     double value, {
     required double offset,
     double? clampMinValue,
@@ -279,7 +249,7 @@ class _AppBarNavigationItem extends StatelessWidget {
     return AppTextButton(
       onTap: onTap,
       text: text,
-      style: context.layoutDependantValue(
+      style: context.dependsOnLayout(
         mobile: context.bodyStyle.copyWith(fontSize: 14),
         orElse: context.bodyStyle,
       ),

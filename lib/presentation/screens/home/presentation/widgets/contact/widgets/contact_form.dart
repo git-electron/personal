@@ -75,7 +75,7 @@ class _ContactForm extends StatelessWidget {
             ),
           ),
           child: Padding(
-            padding: Pad(all: context.layoutDependantValue(desktop: 30, orElse: 20)),
+            padding: Pad(all: context.dependsOnLayout(desktop: 30, orElse: 20)),
             child: shadcn.Form(
               child: Column(
                 spacing: 20,

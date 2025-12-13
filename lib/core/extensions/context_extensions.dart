@@ -22,7 +22,7 @@ extension BuildContextExtensions on BuildContext {
   bool get isTabletLayout => layoutType == LayoutType.tablet;
   bool get isMobileLayout => layoutType == LayoutType.mobile;
 
-  T layoutDependantValue<T>({T? desktop, T? tablet, T? mobile, T? orElse}) {
+  T dependsOnLayout<T>({T? desktop, T? tablet, T? mobile, T? orElse}) {
     assert((desktop != null && tablet != null && mobile != null) || orElse != null);
 
     return switch (layoutType) {
@@ -34,13 +34,13 @@ extension BuildContextExtensions on BuildContext {
 }
 
 extension BuildContextColorExtensions on BuildContext {
+  T dependsOnTheme<T>({required T dark, required T light}) => isDarkTheme ? dark : light;
+
   Colors get colors => Theme.of(this).extension<Colors>()!;
 
   ThemeMode get themeMode => $<ThemeBloc>().state.themeMode;
   bool get isDarkTheme => themeMode == ThemeMode.dark;
   bool get isLightTheme => themeMode == ThemeMode.light;
-
-  T themeDependantValue<T>({required T dark, required T light}) => isDarkTheme ? dark : light;
 
   void switchThemeMode() => $<ThemeBloc>().add(const ThemeEvent.switchThemeMode());
 }

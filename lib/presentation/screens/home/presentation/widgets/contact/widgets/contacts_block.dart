@@ -51,7 +51,7 @@ class _ContactsBlock extends StatelessWidget {
             ),
           ),
           child: Padding(
-            padding: Pad(all: context.layoutDependantValue(desktop: 30, orElse: 20)),
+            padding: Pad(all: context.dependsOnLayout(desktop: 30, orElse: 20)),
             child: Column(
               spacing: 10,
               mainAxisSize: MainAxisSize.min,

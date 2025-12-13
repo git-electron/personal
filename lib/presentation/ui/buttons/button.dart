@@ -63,16 +63,16 @@ class _AppButtonState extends State<AppButton> {
                     ? Row(
                         mainAxisSize: MainAxisSize.min,
                         mainAxisAlignment: MainAxisAlignment.center,
-                        spacing: context.layoutDependantValue(desktop: 10, orElse: 8),
+                        spacing: context.dependsOnLayout(desktop: 10, orElse: 8),
                         children: [
                           if (widget.icon != null)
                             SizedBox.square(
-                              dimension: context.layoutDependantValue(desktop: 20, orElse: 16),
+                              dimension: context.dependsOnLayout(desktop: 20, orElse: 16),
                               child: widget.icon!.svg(),
                             ),
                           if (widget.image != null && widget.icon == null)
                             SizedBox.square(
-                              dimension: context.layoutDependantValue(desktop: 20, orElse: 16),
+                              dimension: context.dependsOnLayout(desktop: 20, orElse: 16),
                               child: widget.image!.image(),
                             ),
                           Text(
@@ -83,14 +83,14 @@ class _AppButtonState extends State<AppButton> {
                       )
                     : SizedBox(
                         height: (context.bodyStyle.fontSize as double) +
-                            context.layoutDependantValue(
+                            context.dependsOnLayout(
                               desktop: 7,
                               tablet: 6,
                               mobile: 5,
                             ),
                         child: Center(
                           child: SizedBox.square(
-                            dimension: context.layoutDependantValue(
+                            dimension: context.dependsOnLayout(
                               desktop: 18,
                               tablet: 16,
                               mobile: 14,

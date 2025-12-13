@@ -15,7 +15,7 @@ class _Contact extends StatelessWidget {
               image: DecorationImage(
                 fit: BoxFit.cover,
                 opacity: context.isDarkTheme ? .5 : 1,
-                image: context.themeDependantValue(
+                image: context.dependsOnTheme(
                   dark: Assets.images.backgrounds.contactsBackground.dark.provider(),
                   light: Assets.images.backgrounds.contactsBackground.light.provider(),
                 ),

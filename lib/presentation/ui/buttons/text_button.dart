@@ -40,17 +40,17 @@ class _AppTextButtonState extends State<AppTextButton> {
           duration: 100.ms,
           opacity: _isHovering ? 1 : .5,
           child: Row(
-            spacing: context.layoutDependantValue(desktop: 10, orElse: 8),
+            spacing: context.dependsOnLayout(desktop: 10, orElse: 8),
             mainAxisSize: MainAxisSize.min,
             children: [
               if (widget.icon != null)
                 SizedBox.square(
-                  dimension: context.layoutDependantValue(desktop: 20, orElse: 16),
+                  dimension: context.dependsOnLayout(desktop: 20, orElse: 16),
                   child: widget.icon!.svg(),
                 ),
               if (widget.image != null && widget.icon == null)
                 SizedBox.square(
-                  dimension: context.layoutDependantValue(desktop: 20, orElse: 16),
+                  dimension: context.dependsOnLayout(desktop: 20, orElse: 16),
                   child: widget.image!.image(),
                 ),
               Text(

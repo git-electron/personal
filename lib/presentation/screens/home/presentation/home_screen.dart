@@ -81,7 +81,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: _AppBar(
-        listController: _listController,
+        animateToItem: _animateToItem,
         scrollController: _scrollController,
       ),
       extendBody: true,
@@ -96,7 +96,7 @@ class _HomeScreenState extends State<HomeScreen> {
           listController: _listController,
           physics: $<DeviceInfoService>().isMobileDevice ? null : const NeverScrollableScrollPhysics(),
           children: [
-            const _Header(),
+            _Header(animateToItem: _animateToItem),
             const _Skills(),
             const _Projects(),
             const _Contact(),
@@ -111,4 +111,6 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
   }
+
+  void _animateToItem(int index) => _listController.animateTo(index * 2, scrollController: _scrollController);
 }

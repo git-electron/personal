@@ -67,7 +67,7 @@ class _ProjectCardState extends State<_ProjectCard> {
                             child: Text(
                               widget.project.category,
                               style: context.bodyStyle.copyWith(
-                                fontSize: context.layoutDependantValue(desktop: 12, orElse: 10),
+                                fontSize: context.dependsOnLayout(desktop: 12, orElse: 10),
                                 color: context.colors.background,
                               ),
                             ),
@@ -114,8 +114,8 @@ class _ProjectCardState extends State<_ProjectCard> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Wrap(
-                      spacing: context.layoutDependantValue(desktop: 10, orElse: 8),
-                      runSpacing: context.layoutDependantValue(desktop: 10, orElse: 8),
+                      spacing: context.dependsOnLayout(desktop: 10, orElse: 8),
+                      runSpacing: context.dependsOnLayout(desktop: 10, orElse: 8),
                       children: widget.project.skills.map(_ProjectSkillCard.new).toList(),
                     ),
                     Divider(
@@ -130,7 +130,7 @@ class _ProjectCardState extends State<_ProjectCard> {
                         if (widget.project.hasGithubUrl)
                           AppTextButton(
                             onTap: () => $<UrlLauncher>().launchUrlString(widget.project.gitHubUrl!),
-                            image: context.themeDependantValue(
+                            image: context.dependsOnTheme(
                               dark: Assets.images.contacts.github.light,
                               light: Assets.images.contacts.github.dark,
                             ),
@@ -139,7 +139,7 @@ class _ProjectCardState extends State<_ProjectCard> {
                         if (widget.project.hasGooglePlayUrl)
                           AppTextButton(
                             onTap: () => $<UrlLauncher>().launchUrlString(widget.project.googlePlayUrl!),
-                            image: context.themeDependantValue(
+                            image: context.dependsOnTheme(
                               dark: Assets.images.stores.googlePlay.light,
                               light: Assets.images.stores.googlePlay.dark,
                             ),
@@ -148,7 +148,7 @@ class _ProjectCardState extends State<_ProjectCard> {
                         if (widget.project.hasAppStoreUrl)
                           AppTextButton(
                             onTap: () => $<UrlLauncher>().launchUrlString(widget.project.appStoreUrl!),
-                            image: context.themeDependantValue(
+                            image: context.dependsOnTheme(
                               dark: Assets.images.stores.appStore.light,
                               light: Assets.images.stores.appStore.dark,
                             ),
@@ -157,7 +157,7 @@ class _ProjectCardState extends State<_ProjectCard> {
                         if (widget.project.hasWebsiteUrl)
                           AppTextButton(
                             onTap: () => $<UrlLauncher>().launchUrlString(widget.project.websiteUrl!),
-                            icon: context.themeDependantValue(
+                            icon: context.dependsOnTheme(
                               dark: Assets.icons.general.link.light,
                               light: Assets.icons.general.link.dark,
                             ),
@@ -175,7 +175,7 @@ class _ProjectCardState extends State<_ProjectCard> {
     );
   }
 
-  double _getCardPadding(BuildContext context) => context.layoutDependantValue(desktop: 30, orElse: 20);
+  double _getCardPadding(BuildContext context) => context.dependsOnLayout(desktop: 30, orElse: 20);
 }
 
 class _ProjectSkillCard extends StatelessWidget {
@@ -200,7 +200,7 @@ class _ProjectSkillCard extends StatelessWidget {
           title,
           style: context.bodyStyle.copyWith(
             color: context.colors.primary,
-            fontSize: context.layoutDependantValue(desktop: 12, orElse: 10),
+            fontSize: context.dependsOnLayout(desktop: 12, orElse: 10),
           ),
         ),
       ),

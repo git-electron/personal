@@ -1,7 +1,9 @@
 part of '../../../home_screen.dart';
 
 class _HeaderContent extends StatelessWidget {
-  const _HeaderContent();
+  const _HeaderContent({required this.animateToItem});
+
+  final void Function(int index) animateToItem;
 
   @override
   Widget build(BuildContext context) {
@@ -11,9 +13,9 @@ class _HeaderContent extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        context.layoutDependantValue(
+        context.dependsOnLayout(
           orElse: Row(
-            spacing: context.layoutDependantValue(desktop: 40, orElse: 20),
+            spacing: context.dependsOnLayout(desktop: 40, orElse: 20),
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.center,
             children: const [
@@ -33,7 +35,7 @@ class _HeaderContent extends StatelessWidget {
           ),
         ),
         const _Description(),
-        const _Buttons(),
+        _Buttons(animateToItem: animateToItem),
       ],
     );
   }
@@ -45,7 +47,7 @@ class _Avatar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox.square(
-      dimension: context.layoutDependantValue(
+      dimension: context.dependsOnLayout(
         tablet: 120,
         orElse: 150,
       ),
@@ -108,12 +110,12 @@ class _Description extends StatelessWidget {
       builder: (context, state) {
         return ConstrainedBox(
           constraints: BoxConstraints(
-            maxWidth: context.layoutDependantValue(desktop: 700, orElse: 600),
+            maxWidth: context.dependsOnLayout(desktop: 700, orElse: 600),
           ),
           child: FormattedText(
             context.t.home.header.description,
             style: context.bodyStyle.copyWith(
-              fontSize: context.layoutDependantValue(
+              fontSize: context.dependsOnLayout(
                 desktop: 20,
                 tablet: 16,
                 mobile: 14,
@@ -127,7 +129,9 @@ class _Description extends StatelessWidget {
 }
 
 class _Buttons extends StatelessWidget {
-  const _Buttons();
+  const _Buttons({required this.animateToItem});
+
+  final void Function(int index) animateToItem;
 
   @override
   Widget build(BuildContext context) {
@@ -138,19 +142,19 @@ class _Buttons extends StatelessWidget {
       children: [
         Row(
           mainAxisSize: MainAxisSize.min,
-          spacing: context.layoutDependantValue(desktop: 20, orElse: 10),
+          spacing: context.dependsOnLayout(desktop: 20, orElse: 10),
           children: [
             AppButton(
-              onTap: () {},
-              icon: context.themeDependantValue(
+              onTap: () => animateToItem(3),
+              icon: context.dependsOnTheme(
                 dark: Assets.icons.contacts.contact.light,
                 light: Assets.icons.contacts.contact.dark,
               ),
               text: context.t.home.header.contact_button,
             ),
             AppButton(
-              onTap: () {},
-              icon: context.themeDependantValue(
+              onTap: () => animateToItem(2),
+              icon: context.dependsOnTheme(
                 dark: Assets.icons.general.project.light,
                 light: Assets.icons.general.project.dark,
               ),
@@ -158,7 +162,7 @@ class _Buttons extends StatelessWidget {
             ),
             if (!context.isMobileLayout) ...[
               Container(
-                height: context.layoutDependantValue(desktop: 20, orElse: 16),
+                height: context.dependsOnLayout(desktop: 20, orElse: 16),
                 width: 2,
                 margin: const Pad(horizontal: 20),
                 decoration: BoxDecoration(
@@ -185,24 +189,24 @@ class _Contacts extends StatelessWidget {
       bloc: context.read(),
       builder: (context, state) {
         return Row(
-          spacing: context.layoutDependantValue(mobile: 40, orElse: 20),
+          spacing: context.dependsOnLayout(mobile: 40, orElse: 20),
           children: [
             AppIconButton.image(
-              image: context.themeDependantValue(
+              image: context.dependsOnTheme(
                 dark: Assets.images.contacts.github.light,
                 light: Assets.images.contacts.github.dark,
               ),
               onTap: () => $<UrlLauncher>().launchUrlString(Constants.githubUrl),
             ),
             AppIconButton.image(
-              image: context.themeDependantValue(
+              image: context.dependsOnTheme(
                 dark: Assets.images.contacts.hh.light,
                 light: Assets.images.contacts.hh.dark,
               ),
               onTap: () => $<UrlLauncher>().launchUrlString(Constants.hhUrl),
             ),
             AppIconButton.image(
-              image: context.themeDependantValue(
+              image: context.dependsOnTheme(
                 dark: Assets.images.contacts.linkedin.light,
                 light: Assets.images.contacts.linkedin.dark,
               ),
