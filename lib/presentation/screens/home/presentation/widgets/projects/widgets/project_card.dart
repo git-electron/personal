@@ -17,10 +17,10 @@ class _ProjectCardState extends State<_ProjectCard> {
     final List<String> descriptionSplitted = widget.project.description.split('\n');
 
     return Tappable(
-      // onTap: () {},
+      // onTap: () {}, //TODO: add navigation to project route
       child: MouseRegion(
         opaque: false,
-        cursor: SystemMouseCursors.basic, //TODO: remove after creating projects route
+        cursor: SystemMouseCursors.basic, //TODO: remove after creating project route
         onEnter: (_) => setState(() => _isHovering = true),
         onExit: (_) => setState(() => _isHovering = false),
         child: AnimatedContainer(

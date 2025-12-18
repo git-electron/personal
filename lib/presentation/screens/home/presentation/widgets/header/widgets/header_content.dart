@@ -181,7 +181,9 @@ class _Buttons extends StatelessWidget {
 }
 
 class _Contacts extends StatelessWidget {
-  const _Contacts();
+  const _Contacts({this.shouldDependsOnLayout = true});
+
+  final bool shouldDependsOnLayout;
 
   @override
   Widget build(BuildContext context) {
@@ -189,7 +191,10 @@ class _Contacts extends StatelessWidget {
       bloc: context.read(),
       builder: (context, state) {
         return Row(
-          spacing: context.dependsOnLayout(mobile: 40, orElse: 20),
+          spacing: context.dependsOnLayout(
+            mobile: shouldDependsOnLayout ? 40 : 20,
+            orElse: 20,
+          ),
           children: [
             AppIconButton.image(
               image: context.dependsOnTheme(

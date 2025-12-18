@@ -25,7 +25,7 @@ class _Footer extends StatelessWidget {
             ),
             const Gap(10),
             Row(
-              spacing: context.dependsOnLayout(desktop: 30, tablet: 15, mobile: 10),
+              spacing: context.dependsOnLayout(desktop: 30, tablet: 15, mobile: 8),
               children: [
                 AppButton(
                   onTap: () => $<UrlLauncher>().launchUrlString(Constants.websiteRepoUrl),
@@ -40,7 +40,7 @@ class _Footer extends StatelessWidget {
                     color: context.colors.onBackground.copyWithOpacity(.75),
                   ),
                 ),
-                const _Contacts(),
+                const _Contacts(shouldDependsOnLayout: false),
               ],
             ),
           ],
