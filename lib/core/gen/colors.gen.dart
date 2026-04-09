@@ -66,13 +66,16 @@ class AppColors {
   static const Color onBackgroundLight = Color(0xFF080708);
 
   /// Color: #59FFA0
-  static const Color primary = Color(0xFF59FFA0);
+  static const Color primaryDark = Color(0xFF59FFA0);
 
   /// Color: #24FF82
   static const Color primaryGradientEnd = Color(0xFF24FF82);
 
   /// Color: #CCFFE2
   static const Color primaryGradientStart = Color(0xFFCCFFE2);
+
+  /// Color: #3CCF8E
+  static const Color primaryLight = Color(0xFF3CCF8E);
 
   /// Color: #593C8F
   static const Color secondary = Color(0xFF593C8F);

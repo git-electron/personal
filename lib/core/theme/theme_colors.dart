@@ -19,7 +19,7 @@ class _DarkColors {
   static const Color warning = AppColors.warning;
   static const Color error = AppColors.error;
 
-  static const Color primary = AppColors.primary;
+  static const Color primary = AppColors.primaryDark;
   static const Color primaryGradientStart = AppColors.primaryGradientStart;
   static const Color primaryGradientEnd = AppColors.primaryGradientEnd;
   static const List<Color> primaryGradientColors = [primaryGradientStart, primaryGradientEnd];
@@ -54,7 +54,7 @@ class _LightColors {
   static const Color warning = AppColors.warning;
   static const Color error = AppColors.error;
 
-  static const Color primary = AppColors.primary;
+  static const Color primary = AppColors.primaryLight;
   static const Color primaryGradientStart = AppColors.primaryGradientStart;
   static const Color primaryGradientEnd = AppColors.primaryGradientEnd;
   static const List<Color> primaryGradientColors = [primaryGradientStart, primaryGradientEnd];

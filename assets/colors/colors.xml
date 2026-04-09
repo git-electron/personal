@@ -23,7 +23,8 @@
     <color name="warning">#FFE312</color>
     <color name="error">#FF5858</color>
     
-    <color name="primary">#59FFA0</color>
+    <color name="primary_dark">#59FFA0</color>
+    <color name="primary_light">#3CCF8E</color>
     <color name="secondary">#593C8F</color>
     <color name="accent">#9FA0C3</color>
 
