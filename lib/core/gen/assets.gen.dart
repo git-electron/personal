@@ -139,16 +139,12 @@ class $AssetsImagesBackgroundsGen {
   $AssetsImagesBackgroundsContactsBackgroundGen get contactsBackground =>
       const $AssetsImagesBackgroundsContactsBackgroundGen();
 
-  /// File path: assets/images/backgrounds/header_background.png
-  AssetGenImage get headerBackgroundPng =>
-      const AssetGenImage('assets/images/backgrounds/header_background.png');
-
   /// File path: assets/images/backgrounds/header_background.webp
-  AssetGenImage get headerBackgroundWebp =>
+  AssetGenImage get headerBackground =>
       const AssetGenImage('assets/images/backgrounds/header_background.webp');
 
   /// List of all assets
-  List<AssetGenImage> get values => [headerBackgroundPng, headerBackgroundWebp];
+  List<AssetGenImage> get values => [headerBackground];
 }
 
 class $AssetsImagesContactsGen {
