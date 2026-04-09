@@ -140,11 +140,15 @@ class $AssetsImagesBackgroundsGen {
       const $AssetsImagesBackgroundsContactsBackgroundGen();
 
   /// File path: assets/images/backgrounds/header_background.png
-  AssetGenImage get headerBackground =>
+  AssetGenImage get headerBackgroundPng =>
       const AssetGenImage('assets/images/backgrounds/header_background.png');
 
+  /// File path: assets/images/backgrounds/header_background.webp
+  AssetGenImage get headerBackgroundWebp =>
+      const AssetGenImage('assets/images/backgrounds/header_background.webp');
+
   /// List of all assets
-  List<AssetGenImage> get values => [headerBackground];
+  List<AssetGenImage> get values => [headerBackgroundPng, headerBackgroundWebp];
 }
 
 class $AssetsImagesContactsGen {
@@ -184,11 +188,11 @@ class $AssetsImagesGeneralGen {
 class $AssetsImagesLocalesGen {
   const $AssetsImagesLocalesGen();
 
-  /// File path: assets/images/locales/en.png
-  AssetGenImage get en => const AssetGenImage('assets/images/locales/en.png');
+  /// File path: assets/images/locales/en.webp
+  AssetGenImage get en => const AssetGenImage('assets/images/locales/en.webp');
 
-  /// File path: assets/images/locales/ru.png
-  AssetGenImage get ru => const AssetGenImage('assets/images/locales/ru.png');
+  /// File path: assets/images/locales/ru.webp
+  AssetGenImage get ru => const AssetGenImage('assets/images/locales/ru.webp');
 
   /// List of all assets
   List<AssetGenImage> get values => [en, ru];
@@ -197,29 +201,29 @@ class $AssetsImagesLocalesGen {
 class $AssetsImagesProjectsGen {
   const $AssetsImagesProjectsGen();
 
-  /// File path: assets/images/projects/doto.png
+  /// File path: assets/images/projects/doto.webp
   AssetGenImage get doto =>
-      const AssetGenImage('assets/images/projects/doto.png');
+      const AssetGenImage('assets/images/projects/doto.webp');
 
-  /// File path: assets/images/projects/emcd.png
+  /// File path: assets/images/projects/emcd.webp
   AssetGenImage get emcd =>
-      const AssetGenImage('assets/images/projects/emcd.png');
+      const AssetGenImage('assets/images/projects/emcd.webp');
 
-  /// File path: assets/images/projects/fakelab.png
+  /// File path: assets/images/projects/fakelab.webp
   AssetGenImage get fakelab =>
-      const AssetGenImage('assets/images/projects/fakelab.png');
+      const AssetGenImage('assets/images/projects/fakelab.webp');
 
-  /// File path: assets/images/projects/irealt.png
+  /// File path: assets/images/projects/irealt.webp
   AssetGenImage get irealt =>
-      const AssetGenImage('assets/images/projects/irealt.png');
+      const AssetGenImage('assets/images/projects/irealt.webp');
 
-  /// File path: assets/images/projects/octa.png
+  /// File path: assets/images/projects/octa.webp
   AssetGenImage get octa =>
-      const AssetGenImage('assets/images/projects/octa.png');
+      const AssetGenImage('assets/images/projects/octa.webp');
 
-  /// File path: assets/images/projects/seline.png
+  /// File path: assets/images/projects/seline.webp
   AssetGenImage get seline =>
-      const AssetGenImage('assets/images/projects/seline.png');
+      const AssetGenImage('assets/images/projects/seline.webp');
 
   /// List of all assets
   List<AssetGenImage> get values => [doto, emcd, fakelab, irealt, octa, seline];
@@ -542,13 +546,13 @@ class $AssetsIconsThemeSunGen {
 class $AssetsImagesBackgroundsContactsBackgroundGen {
   const $AssetsImagesBackgroundsContactsBackgroundGen();
 
-  /// File path: assets/images/backgrounds/contacts_background/dark.png
+  /// File path: assets/images/backgrounds/contacts_background/dark.webp
   AssetGenImage get dark => const AssetGenImage(
-      'assets/images/backgrounds/contacts_background/dark.png');
+      'assets/images/backgrounds/contacts_background/dark.webp');
 
-  /// File path: assets/images/backgrounds/contacts_background/light.png
+  /// File path: assets/images/backgrounds/contacts_background/light.webp
   AssetGenImage get light => const AssetGenImage(
-      'assets/images/backgrounds/contacts_background/light.png');
+      'assets/images/backgrounds/contacts_background/light.webp');
 
   /// List of all assets
   List<AssetGenImage> get values => [dark, light];
@@ -557,17 +561,17 @@ class $AssetsImagesBackgroundsContactsBackgroundGen {
 class $AssetsImagesContactsGithubGen {
   const $AssetsImagesContactsGithubGen();
 
-  /// File path: assets/images/contacts/github/brand.png
+  /// File path: assets/images/contacts/github/brand.webp
   AssetGenImage get brand =>
-      const AssetGenImage('assets/images/contacts/github/brand.png');
+      const AssetGenImage('assets/images/contacts/github/brand.webp');
 
-  /// File path: assets/images/contacts/github/dark.png
+  /// File path: assets/images/contacts/github/dark.webp
   AssetGenImage get dark =>
-      const AssetGenImage('assets/images/contacts/github/dark.png');
+      const AssetGenImage('assets/images/contacts/github/dark.webp');
 
-  /// File path: assets/images/contacts/github/light.png
+  /// File path: assets/images/contacts/github/light.webp
   AssetGenImage get light =>
-      const AssetGenImage('assets/images/contacts/github/light.png');
+      const AssetGenImage('assets/images/contacts/github/light.webp');
 
   /// List of all assets
   List<AssetGenImage> get values => [brand, dark, light];
@@ -576,17 +580,17 @@ class $AssetsImagesContactsGithubGen {
 class $AssetsImagesContactsHhGen {
   const $AssetsImagesContactsHhGen();
 
-  /// File path: assets/images/contacts/hh/brand.png
+  /// File path: assets/images/contacts/hh/brand.webp
   AssetGenImage get brand =>
-      const AssetGenImage('assets/images/contacts/hh/brand.png');
+      const AssetGenImage('assets/images/contacts/hh/brand.webp');
 
-  /// File path: assets/images/contacts/hh/dark.png
+  /// File path: assets/images/contacts/hh/dark.webp
   AssetGenImage get dark =>
-      const AssetGenImage('assets/images/contacts/hh/dark.png');
+      const AssetGenImage('assets/images/contacts/hh/dark.webp');
 
-  /// File path: assets/images/contacts/hh/light.png
+  /// File path: assets/images/contacts/hh/light.webp
   AssetGenImage get light =>
-      const AssetGenImage('assets/images/contacts/hh/light.png');
+      const AssetGenImage('assets/images/contacts/hh/light.webp');
 
   /// List of all assets
   List<AssetGenImage> get values => [brand, dark, light];
@@ -595,17 +599,17 @@ class $AssetsImagesContactsHhGen {
 class $AssetsImagesContactsLinkedinGen {
   const $AssetsImagesContactsLinkedinGen();
 
-  /// File path: assets/images/contacts/linkedin/brand.png
+  /// File path: assets/images/contacts/linkedin/brand.webp
   AssetGenImage get brand =>
-      const AssetGenImage('assets/images/contacts/linkedin/brand.png');
+      const AssetGenImage('assets/images/contacts/linkedin/brand.webp');
 
-  /// File path: assets/images/contacts/linkedin/dark.png
+  /// File path: assets/images/contacts/linkedin/dark.webp
   AssetGenImage get dark =>
-      const AssetGenImage('assets/images/contacts/linkedin/dark.png');
+      const AssetGenImage('assets/images/contacts/linkedin/dark.webp');
 
-  /// File path: assets/images/contacts/linkedin/light.png
+  /// File path: assets/images/contacts/linkedin/light.webp
   AssetGenImage get light =>
-      const AssetGenImage('assets/images/contacts/linkedin/light.png');
+      const AssetGenImage('assets/images/contacts/linkedin/light.webp');
 
   /// List of all assets
   List<AssetGenImage> get values => [brand, dark, light];
@@ -614,17 +618,17 @@ class $AssetsImagesContactsLinkedinGen {
 class $AssetsImagesContactsTelegramGen {
   const $AssetsImagesContactsTelegramGen();
 
-  /// File path: assets/images/contacts/telegram/brand.png
+  /// File path: assets/images/contacts/telegram/brand.webp
   AssetGenImage get brand =>
-      const AssetGenImage('assets/images/contacts/telegram/brand.png');
+      const AssetGenImage('assets/images/contacts/telegram/brand.webp');
 
-  /// File path: assets/images/contacts/telegram/dark.png
+  /// File path: assets/images/contacts/telegram/dark.webp
   AssetGenImage get dark =>
-      const AssetGenImage('assets/images/contacts/telegram/dark.png');
+      const AssetGenImage('assets/images/contacts/telegram/dark.webp');
 
-  /// File path: assets/images/contacts/telegram/light.png
+  /// File path: assets/images/contacts/telegram/light.webp
   AssetGenImage get light =>
-      const AssetGenImage('assets/images/contacts/telegram/light.png');
+      const AssetGenImage('assets/images/contacts/telegram/light.webp');
 
   /// List of all assets
   List<AssetGenImage> get values => [brand, dark, light];
@@ -633,17 +637,17 @@ class $AssetsImagesContactsTelegramGen {
 class $AssetsImagesStoresAppStoreGen {
   const $AssetsImagesStoresAppStoreGen();
 
-  /// File path: assets/images/stores/app_store/brand.png
+  /// File path: assets/images/stores/app_store/brand.webp
   AssetGenImage get brand =>
-      const AssetGenImage('assets/images/stores/app_store/brand.png');
+      const AssetGenImage('assets/images/stores/app_store/brand.webp');
 
-  /// File path: assets/images/stores/app_store/dark.png
+  /// File path: assets/images/stores/app_store/dark.webp
   AssetGenImage get dark =>
-      const AssetGenImage('assets/images/stores/app_store/dark.png');
+      const AssetGenImage('assets/images/stores/app_store/dark.webp');
 
-  /// File path: assets/images/stores/app_store/light.png
+  /// File path: assets/images/stores/app_store/light.webp
   AssetGenImage get light =>
-      const AssetGenImage('assets/images/stores/app_store/light.png');
+      const AssetGenImage('assets/images/stores/app_store/light.webp');
 
   /// List of all assets
   List<AssetGenImage> get values => [brand, dark, light];
@@ -652,17 +656,17 @@ class $AssetsImagesStoresAppStoreGen {
 class $AssetsImagesStoresGooglePlayGen {
   const $AssetsImagesStoresGooglePlayGen();
 
-  /// File path: assets/images/stores/google_play/brand.png
+  /// File path: assets/images/stores/google_play/brand.webp
   AssetGenImage get brand =>
-      const AssetGenImage('assets/images/stores/google_play/brand.png');
+      const AssetGenImage('assets/images/stores/google_play/brand.webp');
 
-  /// File path: assets/images/stores/google_play/dark.png
+  /// File path: assets/images/stores/google_play/dark.webp
   AssetGenImage get dark =>
-      const AssetGenImage('assets/images/stores/google_play/dark.png');
+      const AssetGenImage('assets/images/stores/google_play/dark.webp');
 
-  /// File path: assets/images/stores/google_play/light.png
+  /// File path: assets/images/stores/google_play/light.webp
   AssetGenImage get light =>
-      const AssetGenImage('assets/images/stores/google_play/light.png');
+      const AssetGenImage('assets/images/stores/google_play/light.webp');
 
   /// List of all assets
   List<AssetGenImage> get values => [brand, dark, light];

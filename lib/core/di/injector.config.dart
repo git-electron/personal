@@ -53,10 +53,10 @@ extension GetItInjectableX on _i174.GetIt {
     final locator = _$Locator();
     gh.factory<_i974.Logger>(() => locator.logger);
     gh.factory<_i833.DeviceInfoPlugin>(() => locator.deviceInfoPlugin);
-    gh.factory<_i1054.UrlLauncher>(() => _i1054.UrlLauncher());
     gh.factory<_i516.Debouncer>(() => _i516.Debouncer());
-    gh.singleton<_i210.ToastService>(() => _i210.ToastService());
+    gh.factory<_i1054.UrlLauncher>(() => _i1054.UrlLauncher());
     gh.singleton<_i442.ThemeBloc>(() => _i442.ThemeBloc());
+    gh.singleton<_i210.ToastService>(() => _i210.ToastService());
     gh.singleton<_i136.AppRouter>(() => _i136.AppRouter(gh<_i974.Logger>()));
     await gh.singletonAsync<_i785.DeviceInfoService>(
       () {
