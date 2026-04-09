@@ -76,6 +76,15 @@ class _Title extends StatelessWidget {
                   height: 0.95,
                 ),
               ),
+              WidgetSpan(
+                child: Padding(
+                  padding: const Pad(left: 15),
+                  child: SizedBox.square(
+                    dimension: context.headerStyle.fontSize! * 1.1,
+                    child: Image(image: Assets.images.general.sparkles.provider()),
+                  ),
+                ),
+              ),
             ],
             style: context.headerStyle.copyWith(height: 0.95),
           ),

@@ -86,8 +86,8 @@ class TranslationsHomeHeaderEn {
 	/// en: 'Hey, I'm '
 	String get hello_pt1 => 'Hey, I\'m ';
 
-	/// en: 'Egor ✨'
-	String get hello_pt2 => 'Egor ✨';
+	/// en: 'Egor'
+	String get hello_pt2 => 'Egor';
 
 	/// en: 'A '
 	String get introduction_pt1 => 'A ';

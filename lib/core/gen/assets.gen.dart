@@ -177,8 +177,12 @@ class $AssetsImagesGeneralGen {
   AssetGenImage get a3dAvatarFilled =>
       const AssetGenImage('assets/images/general/3d_avatar_filled.webp');
 
+  /// File path: assets/images/general/sparkles.webp
+  AssetGenImage get sparkles =>
+      const AssetGenImage('assets/images/general/sparkles.webp');
+
   /// List of all assets
-  List<AssetGenImage> get values => [a3dAvatar, a3dAvatarFilled];
+  List<AssetGenImage> get values => [a3dAvatar, a3dAvatarFilled, sparkles];
 }
 
 class $AssetsImagesLocalesGen {
