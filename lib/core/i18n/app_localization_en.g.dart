@@ -95,8 +95,8 @@ class TranslationsHomeHeaderEn {
 	/// en: 'Software Developer'
 	String get introduction_pt2 => 'Software Developer';
 
-	/// en: 'Crafting <b>high-performance, cross-platform<b> mobile applications with <b>Flutter<b>. Transforming ideas into elegant, user-friendly apps for iOS and Android.'
-	String get description => 'Crafting <b>high-performance, cross-platform<b> mobile applications with <b>Flutter<b>. Transforming ideas into elegant, user-friendly apps for iOS and Android.';
+	/// en: 'Crafting <b>high-performance, native and cross-platform<b> mobile applications. Transforming ideas into elegant, user-friendly apps for iOS and Android.'
+	String get description => 'Crafting <b>high-performance, native and cross-platform<b> mobile applications. Transforming ideas into elegant, user-friendly apps for iOS and Android.';
 
 	/// en: 'Contact me'
 	String get contact_button => 'Contact me';
@@ -228,11 +228,11 @@ class TranslationsHomeSkillsFlutterAndDartEn {
 
 	// Translations
 
-	/// en: 'Flutter & Dart'
-	String get title => 'Flutter & Dart';
+	/// en: 'Native'
+	String get title => 'Native';
 
-	/// en: 'Expert in building cross-platform apps with Flutter framework and Dart programming language.'
-	String get description => 'Expert in building cross-platform apps with Flutter framework and Dart programming language.';
+	/// en: 'Expert in building native iOS and Android apps with Swift and Kotlin.'
+	String get description => 'Expert in building native iOS and Android apps with Swift and Kotlin.';
 }
 
 // Path: home.skills.cross_platform

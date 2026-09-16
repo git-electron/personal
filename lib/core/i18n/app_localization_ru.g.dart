@@ -76,7 +76,7 @@ class TranslationsHomeHeaderRu extends TranslationsHomeHeaderEn {
 	@override String get hello_pt2 => 'Егор';
 	@override String get introduction_pt1 => 'Мобильный ';
 	@override String get introduction_pt2 => 'разработчик';
-	@override String get description => 'Создаю <b>высокопроизводительные кроссплатформенные<b> мобильные приложения на <b>Flutter<b>. Превращаю идеи в элегантные, простые приложения для iOS и Android.';
+	@override String get description => 'Создаю <b>высокопроизводительные кроссплатформенные и нативные<b> мобильные приложения. Превращаю идеи в элегантные, простые приложения для iOS и Android.';
 	@override String get contact_button => 'Связаться со мной';
 	@override String get projects_button => 'Смотреть проекты';
 }
@@ -174,8 +174,8 @@ class TranslationsHomeSkillsFlutterAndDartRu extends TranslationsHomeSkillsFlutt
 	final TranslationsRu _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'Flutter & Dart';
-	@override String get description => 'Эксперт в области создания кросс-платформенных приложений на фреймворке Flutter framework и языке программирования Dart.';
+	@override String get title => 'Native';
+	@override String get description => 'Эксперт в области создания нативных приложений для iOS и Android на Swift и Kotlin.';
 }
 
 // Path: home.skills.cross_platform
