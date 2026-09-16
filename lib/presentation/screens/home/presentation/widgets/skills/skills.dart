@@ -76,15 +76,14 @@ class _Skills extends StatelessWidget {
   }
 
   static const List<String> _techStackItems = [
+    'Swift',
+    'Kotlin',
     'Flutter',
     'Dart',
-    'Kotlin',
-    'Mobile',
     'Android',
     'iOS',
-    'Web',
-    'Future',
-    'Streams',
+    'Task/Future',
+    'Reactivity',
     'Animation',
     'State',
     'API',
