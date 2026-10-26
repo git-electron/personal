@@ -214,13 +214,6 @@ class _Contacts extends StatelessWidget {
             ),
             AppIconButton.image(
               image: context.dependsOnTheme(
-                dark: Assets.images.contacts.hh.light,
-                light: Assets.images.contacts.hh.dark,
-              ),
-              onTap: () => $<UrlLauncher>().launchUrlString(Constants.hhUrl),
-            ),
-            AppIconButton.image(
-              image: context.dependsOnTheme(
                 dark: Assets.images.contacts.linkedin.light,
                 light: Assets.images.contacts.linkedin.dark,
               ),
